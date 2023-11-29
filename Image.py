@@ -79,6 +79,7 @@ class Image():
     def plot(self):
         for comp in self.components_shifted:
             plt.imshow(comp, cmap='gray')
+            plt.gca().invert_yaxis()
             plt.show()
 
 
@@ -116,4 +117,4 @@ cv2.waitKey(0)
 
 me.compute_fourier_transform()
 joker.compute_fourier_transform()
-joker.plot()
+me.plot()
