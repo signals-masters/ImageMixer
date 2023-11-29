@@ -16,6 +16,7 @@ class Image():
         self.phase = None
         self.real = None
         self.imaginary = None
+        self.components_shifted = None
 
     def load_img(self, show=True):
         try:
@@ -52,40 +53,34 @@ class Image():
 
     def compute_fourier_transform(self, show=True):
         # Compute the 2D Fourier Transform
-        self.fft = cv2.dft(np.float32(self.img), flags=cv2.DFT_COMPLEX_OUTPUT)
+        self.fft = np.fft.fft2(self.img)
 
         # Shift the zero-frequency component to the center
         self.fft_shifted = np.fft.fftshift(self.fft)
 
         # Compute the magnitude of the spectrum
-        self.mag = 20*np.log(cv2.magnitude(self.fft_shifted[:,:,0],self.fft_shifted[:,:,1]))
+        self.mag = np.abs(self.fft)
 
-        # Normalize the magnitude spectrum
-        self.mag = cv2.normalize(self.mag, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8UC1)
 
         # Compute the phase of the spectrum
-        self.phase = cv2.phase(self.fft_shifted[:,:,0], self.fft_shifted[:,:,1], angleInDegrees=True)
+        self.phase = np.angle(self.fft)
 
-        #real ft components
-        self.real = self.fft_shifted[:,:,0]
+        # real ft components
+        self.real = self.fft.real
 
         #imaginary ft components
-        self.imaginary = self.fft_shifted[:,:,1]
+        self.imaginary = self.fft.imag
+
+        self.components_shifted=[np.log(np.abs(self.fft_shifted)+1) , np.angle(self.fft_shifted) , np.log(self.fft_shifted.real+1) , np.log(self.fft_shifted.imag+1)]
 
 
-    def plot(self, arr, type):
-        plt.figure(figsize=(8, 8))
-        if type == 'magnitude': 
-            plt.imshow(np.log1p(arr), cmap='gray')
-        elif type == "phase":
-            plt.imshow(arr, cmap='hsv')
-            plt.colorbar()
-        else:
-            plt.imshow(arr, cmap='gray')
 
-        plt.title(f'{self.name} {type}')
-        plt.colorbar()
-        plt.show()
+
+    def plot(self):
+        for comp in self.components_shifted:
+            plt.imshow(comp, cmap='gray')
+            plt.show()
+
 
 
 
@@ -121,9 +116,4 @@ cv2.waitKey(0)
 
 me.compute_fourier_transform()
 joker.compute_fourier_transform()
-joker.plot(me.mag, 'magnitude')
-joker.plot(me.phase, 'phase')
-joker.plot(me.real, 'real')
-joker.plot(me.imaginary, 'imaginary')
-plt.plot(joker.imaginary, 'o')
-plt.show()
+joker.plot()
