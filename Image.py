@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import warnings
+#from PIL import Image as pil_image , ImageEnhance
 #warnings.filterwarnings("ignore")
 
 class Image():
@@ -35,7 +36,7 @@ class Image():
         self.imaginary = None
         self.components_shifted = None
 
-    def load_img(self, pth, show=True):
+    def load_img(self, pth, show=False):
 
         """
         Load and process the image from the specified file path.
@@ -52,10 +53,9 @@ class Image():
         """
 
         try:
-            self.img = cv2.imread(pth)
+            self.img = cv2.imread(pth).astype(np.float32)
             self.img = cv2.cvtColor(self.img, cv2.COLOR_BGR2GRAY)
             self.shape = self.img.shape
-            print(self.img.shape)
 
             if show:
                 # Display the image (you can also perform further processing here)
@@ -133,27 +133,62 @@ class Image():
         # Compute the components of the shifted Fourier Transform
         self.components_shifted=[np.log(np.abs(self.fft_shifted)+1) , np.angle(self.fft_shifted) , np.log(self.fft_shifted.real+1) , np.log(self.fft_shifted.imag+1)]
 
-    def plot(self):
+    def change_brightness(self, img, brightness_factor):
+        """
+        Change the brightness of the image.
+
+        Parameters:
+        - brightness_factor (float): The factor by which to change the brightness.
+
+        Returns:
+        - None
+        """
+        # Change the brightness of the image
+        return np.clip(img + brightness_factor , 0, 255.0)
+    
+    def change_contrast(self, img, contrast_factor):
+        """
+        Change the contrast of the image.
+
+        Parameters:
+        - contrast_factor (float): The factor by which to change the contrast.
+
+        Returns:
+        - None
+        """
+        # Change the contrast of the image
+        return np.clip(img * contrast_factor , 0, 255.0)
+    
+    def plot(self, gamma=1, contrast_factor=None, brightness_factor=None):
         for comp in self.components_shifted:
-            plt.imshow(comp, cmap='gray')
+            #gamma correction
+            #comp = np.power(comp, gamma)
+            if contrast_factor:
+                comp = self.change_contrast(comp, contrast_factor)
+            if brightness_factor:
+                comp = self.change_brightness(comp, brightness_factor)
+            plt.imshow(np.clip(comp, 0, 255), cmap='gray')
             plt.gca().invert_yaxis()
             plt.show()
 
 
-# # Example usage:
-# joker = Image()
-# me = Image()
+    
 
-# # Load images
-# joker.load_img("joker_PNG35.png")
-# me.load_img("Screenshot 2023-08-22 182109.png")
+
+# Example usage:
+joker = Image()
+me = Image()
+
+# Load images
+joker.load_img("joker_PNG35.png")
+me.load_img("Screenshot 2023-08-22 182109.png")
 
 # # Print initial shapes
 # print(joker.shape)
 # print(me.shape)
 
-# # Reshape all images to the smallest dimensions
-# Image.reshape_all([joker, me])
+# Reshape all images to the smallest dimensions
+Image.reshape_all([joker, me])
 
 # # Print shapes after reshaping
 # print(joker.shape)
@@ -164,6 +199,13 @@ class Image():
 # cv2.imshow('Image', me.img)
 # cv2.waitKey(0)
 
-# me.compute_fourier_transform()
-# joker.compute_fourier_transform()
-# me.plot()
+me.compute_fourier_transform()
+joker.compute_fourier_transform()
+me.plot()
+
+# im = pil_image.fromarray(me)
+# contrast_enhancer = ImageEnhance.Contrast(im)
+# plt.imshow(contrast_enhancer.enhance(5), cmap='gray')
+# plt.show()
+
+
