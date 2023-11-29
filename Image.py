@@ -5,6 +5,27 @@ import matplotlib.pyplot as plt
 class Image():
     
     def __init__(self, img_pth):
+
+        """
+        Initialize an Image object.
+
+        Parameters:
+        - img_pth (str): The file path to the image.
+
+        Attributes:
+        - path (str): The file path to the image.
+        - name (str): The name of the image extracted from the file path.
+        - img (numpy.ndarray): The image data loaded from the specified path.
+        - shape (tuple): The shape of the loaded image.
+        - fft (numpy.ndarray): The 2D Fourier Transform of the image.
+        - fft_shifted (numpy.ndarray): The shifted version of the Fourier Transform.
+        - mag (numpy.ndarray): The magnitude spectrum of the shifted Fourier Transform.
+        - phase (numpy.ndarray): The phase spectrum of the shifted Fourier Transform.
+        - real (numpy.ndarray): The real part of the shifted Fourier Transform.
+        - imaginary (numpy.ndarray): The imaginary part of the shifted Fourier Transform.
+        - components_shifted (None): Placeholder for components of the shifted Fourier Transform.
+        """
+
         self.path = img_pth
         self.name = img_pth.split('/')[-1]
         self.img = None
@@ -19,6 +40,21 @@ class Image():
         self.components_shifted = None
 
     def load_img(self, show=True):
+
+        """
+        Load and process the image from the specified file path.
+
+        Parameters:
+        - show (bool, optional): If True, display the loaded image using cv2.imshow.
+                                Default is True.
+
+        Raises:
+        - Exception: Raises an exception if there's an error loading or processing the image.
+
+        Returns:
+        - None
+        """
+
         try:
             self.img = cv2.imread(self.path)
             self.img = cv2.cvtColor(self.img, cv2.COLOR_BGR2GRAY)
@@ -34,6 +70,16 @@ class Image():
             print(f"Error: Couldn't load the image at {self.path}")
 
     def reshape(self, new_height, new_width):
+        """
+        Resize the image to the specified dimensions.
+
+        Parameters:
+        - new_height (int): The new height of the image.
+        - new_width (int): The new width of the image.
+
+        Returns:
+        - None
+        """
         # Resize the image
         self.img = cv2.resize(self.img, (new_width, new_height))
         # Update the shape attribute
@@ -41,6 +87,16 @@ class Image():
 
     @classmethod
     def reshape_all(cls, image_instances):
+        """
+        Resize all images in a list of Image instances to the smallest dimensions among them.
+
+        Parameters:
+        - cls (class): The class reference.
+        - image_instances (list): List of Image instances to be resized.
+
+        Returns:
+        - None
+        """
         # Find the smallest image dimensions among all instances
         min_height = min(inst.img.shape[0] for inst in image_instances)
         min_width = min(inst.img.shape[1] for inst in image_instances)
@@ -49,9 +105,17 @@ class Image():
         for inst in image_instances:
             inst.reshape(min_height, min_width)
 
-
-
     def compute_fourier_transform(self, show=True):
+        """
+        Compute the 2D Fourier Transform and related components of the image.
+
+        Parameters:
+        - show (bool, optional): If True, display visualizations of the Fourier Transform components.
+                                Default is True.
+
+        Returns:
+        - None
+        """
         # Compute the 2D Fourier Transform
         self.fft = np.fft.fft2(self.img)
 
@@ -60,7 +124,6 @@ class Image():
 
         # Compute the magnitude of the spectrum
         self.mag = np.abs(self.fft)
-
 
         # Compute the phase of the spectrum
         self.phase = np.angle(self.fft)
@@ -71,10 +134,8 @@ class Image():
         #imaginary ft components
         self.imaginary = self.fft.imag
 
+        # Compute the components of the shifted Fourier Transform
         self.components_shifted=[np.log(np.abs(self.fft_shifted)+1) , np.angle(self.fft_shifted) , np.log(self.fft_shifted.real+1) , np.log(self.fft_shifted.imag+1)]
-
-
-
 
     def plot(self):
         for comp in self.components_shifted:
