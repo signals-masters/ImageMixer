@@ -1,19 +1,17 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+import warnings
+#warnings.filterwarnings("ignore")
 
 class Image():
     
-    def __init__(self, img_pth):
+    def __init__(self):
 
         """
         Initialize an Image object.
 
-        Parameters:
-        - img_pth (str): The file path to the image.
-
         Attributes:
-        - path (str): The file path to the image.
         - name (str): The name of the image extracted from the file path.
         - img (numpy.ndarray): The image data loaded from the specified path.
         - shape (tuple): The shape of the loaded image.
@@ -26,8 +24,6 @@ class Image():
         - components_shifted (None): Placeholder for components of the shifted Fourier Transform.
         """
 
-        self.path = img_pth
-        self.name = img_pth.split('/')[-1]
         self.img = None
         self.shape = None
 
@@ -39,7 +35,7 @@ class Image():
         self.imaginary = None
         self.components_shifted = None
 
-    def load_img(self, show=True):
+    def load_img(self, pth, show=True):
 
         """
         Load and process the image from the specified file path.
@@ -56,7 +52,7 @@ class Image():
         """
 
         try:
-            self.img = cv2.imread(self.path)
+            self.img = cv2.imread(pth)
             self.img = cv2.cvtColor(self.img, cv2.COLOR_BGR2GRAY)
             self.shape = self.img.shape
             print(self.img.shape)
@@ -67,7 +63,7 @@ class Image():
                 cv2.waitKey(0)
                 cv2.destroyAllWindows()
         except:
-            print(f"Error: Couldn't load the image at {self.path}")
+            print(f"Error: Couldn't load the image at {pth}")
 
     def reshape(self, new_height, new_width):
         """
@@ -144,38 +140,30 @@ class Image():
             plt.show()
 
 
+# # Example usage:
+# joker = Image()
+# me = Image()
 
+# # Load images
+# joker.load_img("joker_PNG35.png")
+# me.load_img("Screenshot 2023-08-22 182109.png")
 
-        
+# # Print initial shapes
+# print(joker.shape)
+# print(me.shape)
 
+# # Reshape all images to the smallest dimensions
+# Image.reshape_all([joker, me])
 
+# # Print shapes after reshaping
+# print(joker.shape)
+# print(me.shape)
 
+# cv2.imshow('Image', joker.img)
+# cv2.waitKey(0)
+# cv2.imshow('Image', me.img)
+# cv2.waitKey(0)
 
-
-# Example usage:
-joker = Image("joker_PNG35.png")
-me = Image("Screenshot 2023-08-22 182109.png")
-
-# Load images
-joker.load_img()
-me.load_img()
-
-# Print initial shapes
-print(joker.shape)
-print(me.shape)
-
-# Reshape all images to the smallest dimensions
-Image.reshape_all([joker, me])
-
-# Print shapes after reshaping
-print(joker.shape)
-print(me.shape)
-
-cv2.imshow('Image', joker.img)
-cv2.waitKey(0)
-cv2.imshow('Image', me.img)
-cv2.waitKey(0)
-
-me.compute_fourier_transform()
-joker.compute_fourier_transform()
-me.plot()
+# me.compute_fourier_transform()
+# joker.compute_fourier_transform()
+# me.plot()
