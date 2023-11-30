@@ -2,10 +2,10 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import warnings
-#from PIL import Image as pil_image , ImageEnhance
 #warnings.filterwarnings("ignore")
 
 class Image():
+    id = 0
     
     def __init__(self):
 
@@ -24,7 +24,7 @@ class Image():
         - imaginary (numpy.ndarray): The imaginary part of the shifted Fourier Transform.
         - components_shifted (None): Placeholder for components of the shifted Fourier Transform.
         """
-
+        self.id = Image.id+1
         self.img = None
         self.shape = None
 
@@ -58,7 +58,6 @@ class Image():
             self.shape = self.img.shape
 
             if show:
-                # Display the image (you can also perform further processing here)
                 cv2.imshow('Image', self.img)
                 cv2.waitKey(0)
                 cv2.destroyAllWindows()
@@ -159,18 +158,29 @@ class Image():
         # Change the contrast of the image
         return np.clip(img * contrast_factor , 0, 255.0)
     
-    def plot(self, gamma=1, contrast_factor=None, brightness_factor=None):
-        for comp in self.components_shifted:
-            #gamma correction
-            #comp = np.power(comp, gamma)
-            if contrast_factor:
-                comp = self.change_contrast(comp, contrast_factor)
-            if brightness_factor:
-                comp = self.change_brightness(comp, brightness_factor)
-            plt.imshow(np.clip(comp, 0, 255), cmap='gray')
-            plt.gca().invert_yaxis()
-            plt.show()
+    def plot(self, gamma=1, contrast_factor=1, brightness_factor=128, plot_components=True, plot_img=True):
+        if plot_components:
+            for comp in self.components_shifted:
+                #gamma correction
+                #comp = np.power(comp, gamma)S
+                if contrast_factor:
+                    comp = self.change_contrast(comp, contrast_factor)
+                if brightness_factor:
+                    comp = self.change_brightness(comp, brightness_factor)
+                plt.imshow(comp, cmap='gray')
+                plt.gca().invert_yaxis()
+                plt.show()
 
+        if plot_img:
+            img = self.img.copy()
+            #gamma correction
+            #self.img = np.power(self.img, gamma)
+            if contrast_factor:
+                img = self.change_contrast(img, contrast_factor)
+            if brightness_factor:
+                img = self.change_brightness(img, brightness_factor)
+            plt.imshow(img, cmap='gray')
+            plt.show()
 
     
 
