@@ -5,8 +5,8 @@ import warnings
 #warnings.filterwarnings("ignore")
 
 class Image():
+
     id = 0
-    
     def __init__(self):
 
         """
@@ -24,7 +24,8 @@ class Image():
         - imaginary (numpy.ndarray): The imaginary part of the shifted Fourier Transform.
         - components_shifted (None): Placeholder for components of the shifted Fourier Transform.
         """
-        self.id = Image.id+1
+        self.id = Image.id
+        Image.id += 1
         self.img = None
         self.shape = None
 
@@ -35,6 +36,7 @@ class Image():
         self.real = None
         self.imaginary = None
         self.components_shifted = None
+        self.type_to_component = None # contatiner for the types mapped to components of the shifted Fourier Transform
 
     def load_img(self, pth, show=False):
 
@@ -132,6 +134,9 @@ class Image():
         # Compute the components of the shifted Fourier Transform
         self.components_shifted=[np.log(np.abs(self.fft_shifted)+1) , np.angle(self.fft_shifted) , np.log(self.fft_shifted.real+1) , np.log(self.fft_shifted.imag+1)]
 
+        #contruct a dictionary to map each component to its type
+        self.type_to_component = dict(zip(["magnitude", "phase", "real", "imaginary"], self.components_shifted))
+
     def change_brightness(self, img, brightness_factor):
         """
         Change the brightness of the image.
@@ -186,36 +191,38 @@ class Image():
 
 
 # Example usage:
-joker = Image()
-me = Image()
+# joker = Image()
+# me = Image()
 
-# Load images
-joker.load_img("joker_PNG35.png")
-me.load_img("Screenshot 2023-08-22 182109.png")
+# # Load images
+# joker.load_img("joker_PNG35.png")
+# me.load_img("Screenshot 2023-08-22 182109.png")
 
-# # Print initial shapes
-# print(joker.shape)
-# print(me.shape)
+# # # # Print initial shapes
+# # # print(joker.shape)
+# # # print(me.shape)
 
-# Reshape all images to the smallest dimensions
-Image.reshape_all([joker, me])
+# # Reshape all images to the smallest dimensions
+# Image.reshape_all([joker, me])
 
-# # Print shapes after reshaping
-# print(joker.shape)
-# print(me.shape)
+# # # # Print shapes after reshaping
+# # # print(joker.shape)
+# # # print(me.shape)
 
-# cv2.imshow('Image', joker.img)
-# cv2.waitKey(0)
-# cv2.imshow('Image', me.img)
-# cv2.waitKey(0)
+# # # cv2.imshow('Image', joker.img)
+# # # cv2.waitKey(0)
+# # # cv2.imshow('Image', me.img)
+# # # cv2.waitKey(0)
 
-me.compute_fourier_transform()
-joker.compute_fourier_transform()
-me.plot()
+# me.compute_fourier_transform()
+# joker.compute_fourier_transform()
+# # me.plot()
 
-# im = pil_image.fromarray(me)
-# contrast_enhancer = ImageEnhance.Contrast(im)
-# plt.imshow(contrast_enhancer.enhance(5), cmap='gray')
+# # im = pil_image.fromarray(me)
+# # contrast_enhancer = ImageEnhance.Contrast(im)
+# # plt.imshow(contrast_enhancer.enhance(5), cmap='gray')
+# # plt.show()
+
+# x = np.fft.ifft2(joker.mag * np.exp(1j * me.phase))
+# plt.imshow(np.abs(x), cmap='gray')
 # plt.show()
-
-
