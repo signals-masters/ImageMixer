@@ -190,39 +190,42 @@ class Image():
     
 
 
-# Example usage:
+# # Example usage:
 # joker = Image()
 # me = Image()
+# moza = Image()
 
-# # Load images
-# joker.load_img("joker_PNG35.png")
+# # # Load images
+# # joker.load_img("joker_PNG35.png")
 # me.load_img("Screenshot 2023-08-22 182109.png")
+# moza.load_img("moza1.png")
 
-# # # # Print initial shapes
-# # # print(joker.shape)
-# # # print(me.shape)
+# # # # # Print initial shapes
+# # # # print(joker.shape)
+# # # # print(me.shape)
 
-# # Reshape all images to the smallest dimensions
-# Image.reshape_all([joker, me])
+# # # Reshape all images to the smallest dimensions
+# Image.reshape_all([moza, me])
 
-# # # # Print shapes after reshaping
-# # # print(joker.shape)
-# # # print(me.shape)
+# # # # # Print shapes after reshaping
+# # # # print(joker.shape)
+# # # # print(me.shape)
 
-# # # cv2.imshow('Image', joker.img)
-# # # cv2.waitKey(0)
-# # # cv2.imshow('Image', me.img)
-# # # cv2.waitKey(0)
+# # # # cv2.imshow('Image', joker.img)
+# # # # cv2.waitKey(0)
+# # # # cv2.imshow('Image', me.img)
+# # # # cv2.waitKey(0)
 
 # me.compute_fourier_transform()
-# joker.compute_fourier_transform()
-# # me.plot()
+# moza.compute_fourier_transform()
+# # joker.compute_fourier_transform()
+# # # me.plot()
 
-# # im = pil_image.fromarray(me)
-# # contrast_enhancer = ImageEnhance.Contrast(im)
-# # plt.imshow(contrast_enhancer.enhance(5), cmap='gray')
-# # plt.show()
+# # # im = pil_image.fromarray(me)
+# # # contrast_enhancer = ImageEnhance.Contrast(im)
+# # # plt.imshow(contrast_enhancer.enhance(5), cmap='gray')
+# # # plt.show()
 
-# x = np.fft.ifft2(joker.mag * np.exp(1j * me.phase))
+# x = np.fft.ifft2(me.mag * np.exp(1j * moza.phase))
 # plt.imshow(np.abs(x), cmap='gray')
 # plt.show()

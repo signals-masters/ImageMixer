@@ -6,4 +6,4 @@ class Gallery():
         self.ids_to_objs[img_id] = img_obj
     
     def get_gallery(self):
-        return self.ids_to_objs
+        return self.ids_to_objs 
