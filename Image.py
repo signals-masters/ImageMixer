@@ -38,6 +38,39 @@ class Image():
         self.components_shifted = None
         self.type_to_component = None # contatiner for the types mapped to components of the shifted Fourier Transform
 
+    ######################################getters####################################################
+    def get_id(self):
+        return self.id
+    
+    def get_img(self):
+        return self.img
+    
+    def get_shape(self):
+        return self.shape
+    
+    def get_fft(self):
+        return self.fft
+    
+    def get_fft_shifted(self):
+        return self.fft_shifted
+    
+    def get_mag(self):
+        return self.mag
+    
+    def get_phase(self):
+        return self.phase
+    
+    def get_real(self):
+        return self.real
+    
+    def get_imaginary(self):
+        return self.imaginary
+    
+    def get_components_shifted(self):
+        return self.components_shifted
+    
+    ##################################__main__functions__ #######################################################
+        
     def load_img(self, pth, show=False):
 
         """
@@ -196,7 +229,7 @@ class Image():
 # moza = Image()
 
 # # # Load images
-# # joker.load_img("joker_PNG35.png")
+# joker.load_img("joker_PNG35.png")
 # me.load_img("Screenshot 2023-08-22 182109.png")
 # moza.load_img("moza1.png")
 
@@ -205,7 +238,7 @@ class Image():
 # # # # print(me.shape)
 
 # # # Reshape all images to the smallest dimensions
-# Image.reshape_all([moza, me])
+#Image.reshape_all([joker, me])
 
 # # # # # Print shapes after reshaping
 # # # # print(joker.shape)
@@ -217,15 +250,15 @@ class Image():
 # # # # cv2.waitKey(0)
 
 # me.compute_fourier_transform()
-# moza.compute_fourier_transform()
-# # joker.compute_fourier_transform()
-# # # me.plot()
+# # moza.compute_fourier_transform()
+# joker.compute_fourier_transform()
+# # # # me.plot()
 
-# # # im = pil_image.fromarray(me)
-# # # contrast_enhancer = ImageEnhance.Contrast(im)
-# # # plt.imshow(contrast_enhancer.enhance(5), cmap='gray')
-# # # plt.show()
+# # # # im = pil_image.fromarray(me)
+# # # # contrast_enhancer = ImageEnhance.Contrast(im)
+# # # # plt.imshow(contrast_enhancer.enhance(5), cmap='gray')
+# # # # plt.show()
 
-# x = np.fft.ifft2(me.mag * np.exp(1j * moza.phase))
+# x = np.fft.ifft2(joker.real + 1j * me.imaginary)
 # plt.imshow(np.abs(x), cmap='gray')
 # plt.show()
