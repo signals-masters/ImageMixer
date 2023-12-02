@@ -3,6 +3,7 @@ from OutputImage import OutputImage
 from Gallery import Gallery
 from Image import Image
 import matplotlib.pyplot as plt
+from tqdm import tqdm
 
 class Mixer():
 
@@ -89,6 +90,48 @@ class Mixer():
         else:
             raise ValueError("Invalid types")  
 
+    # def inverse_fft(self, gallery):
+    #     """
+    #     Performs inverse FFT on images extracted from the given gallery based on stored parameters.
+
+    #     Parameters:
+    #     - gallery (dict): A dictionary representing a gallery of images where keys are image IDs.
+
+    #     Returns:
+    #     - ndarray: Reconstructed image using inverse FFT.
+
+    #     Raises:
+    #     - ValueError: If the mode determined by the types is not supported (not all "magnitude" or "phase").
+    #     """
+    #     img_objs = self.extract_img_from_gallery(gallery)
+    #     mode = self.choose_mode()
+    #     if mode == 2:
+    #         magnitudes = np.zeros(img_objs[0].shape)
+    #         phases = np.zeros(img_objs[0].shape)
+
+    #         for i, img_obj in enumerate(img_objs):
+    #             if self.types[i] == "magnitude":
+    #                 magnitudes += self.weights[i] * img_obj.mag
+    #             elif self.types[i] == "phase":
+    #                 phases += self.weights[i] * img_obj.phase
+
+    #         print("using mag phase")
+    #         return np.clip(np.abs(np.fft.ifft2(magnitudes * np.exp(1j * phases))), 0,225) 
+
+    #     elif mode == 1:
+    #         real = np.zeros(img_objs[0].shape)
+    #         imaginary = np.zeros(img_objs[0].shape)
+
+    #         for i, img_obj in enumerate(img_objs):
+    #             if self.types[i] == "real":
+    #                 real += self.weights[i] * img_obj.real
+    #             elif self.types[i] == "imaginary":
+    #                 imaginary += self.weights[i] * img_obj.imaginary
+
+    #         print("using real imag")
+    #         return np.clip(np.abs(np.fft.ifft2(real + imaginary * 1j)), 0, 225)
+
+
     def inverse_fft(self, gallery):
         """
         Performs inverse FFT on images extracted from the given gallery based on stored parameters.
@@ -104,6 +147,13 @@ class Mixer():
         """
         img_objs = self.extract_img_from_gallery(gallery)
         mode = self.choose_mode()
+
+        # Determine the total number of iterations for the progress bar
+        total_iterations = len(img_objs)
+
+        # Create a tqdm progress bar
+        progress_bar = tqdm(total=total_iterations, desc="Processing images", unit="image")
+
         if mode == 2:
             magnitudes = np.zeros(img_objs[0].shape)
             phases = np.zeros(img_objs[0].shape)
@@ -114,8 +164,14 @@ class Mixer():
                 elif self.types[i] == "phase":
                     phases += self.weights[i] * img_obj.phase
 
+                # Update the progress bar
+                progress_bar.update(1)
+
+            # Close the progress bar when the loop is done
+            progress_bar.close()
+
             print("using mag phase")
-            return np.clip(np.abs(np.fft.ifft2(magnitudes * np.exp(1j * phases))), 0,225) 
+            return np.clip(np.abs(np.fft.ifft2(magnitudes * np.exp(1j * phases))), 0, 225) 
 
         elif mode == 1:
             real = np.zeros(img_objs[0].shape)
@@ -127,43 +183,50 @@ class Mixer():
                 elif self.types[i] == "imaginary":
                     imaginary += self.weights[i] * img_obj.imaginary
 
+                # Update the progress bar
+                progress_bar.update(1)
+
+            # Close the progress bar when the loop is done
+            progress_bar.close()
+
             print("using real imag")
             return np.clip(np.abs(np.fft.ifft2(real + imaginary * 1j)), 0, 225)
 
 
+
     
 
-# gallery = Gallery()
-# me = Image()
-# joker = Image()
-# moza1 = Image()
-# moza2 = Image()
+gallery = Gallery()
+me = Image()
+joker = Image()
+moza1 = Image()
+moza2 = Image()
 # # print(me.id, joker.id, moza1.id, moza2.id)
-# joker.load_img("joker_PNG35.png")
-# me.load_img("Screenshot 2023-08-22 182109.png")
-# moza1.load_img("moza1.png")
-# moza2.load_img("moza2.png")
-# Image.reshape_all([joker, me, moza1, moza2])
-# me.compute_fourier_transform()
-# joker.compute_fourier_transform()
-# moza1.compute_fourier_transform()
-# moza2.compute_fourier_transform()
+joker.load_img("joker_PNG35.png")
+me.load_img("Screenshot 2023-08-22 182109.png")
+moza1.load_img("moza1.png")
+moza2.load_img("moza2.png")
+Image.reshape_all([joker, me, moza1, moza2])
+me.compute_fourier_transform()
+joker.compute_fourier_transform()
+moza1.compute_fourier_transform()
+moza2.compute_fourier_transform()
 # # # me.plot()
 # # # joker.plot()
 # # # moza1.plot()
 # # # moza2.plot()
-# gallery.add_image(me, me.id)
-# gallery.add_image(joker, joker.id)
-# gallery.add_image(moza1, moza1.id)
-# gallery.add_image(moza2, moza2.id)
-# g = gallery.get_gallery()
+gallery.add_image(me, me.id)
+gallery.add_image(joker, joker.id)
+gallery.add_image(moza1, moza1.id)
+gallery.add_image(moza2, moza2.id)
+g = gallery.get_gallery()
 # gallery.crop_imgs(50,50,100,100)
-# mixer = Mixer(1,2/3, 1/3, 0, me.id, moza2.id, moza1.id, joker.id, "phase", "magnitude", "magnitude", "magnitude")
-# output = mixer.inverse_fft(g)
+mixer = Mixer(1,2/3, 1/3, 0, me.id, moza2.id, moza1.id, joker.id, "phase", "magnitude", "magnitude", "magnitude")
+output = mixer.inverse_fft(g)
 # # output = OutputImage()
 # # output.img = output
 # # print(output)
-# plt.imshow(output, cmap='gray')
-# plt.title("mixer output")
-# plt.show()
+plt.imshow(output, cmap='gray')
+plt.title("mixer output")
+plt.show()
 
