@@ -7,24 +7,53 @@ import matplotlib.pyplot as plt
 class Mixer():
 
     def __init__(self, w1, w2, w3, w4, img_id1, img_id2, img_id3, img_id4, type_1, type_2, type_3, type_4):
+        """
+        Initializes an instance of a custom object with image IDs, types, and weights.
+
+        Parameters:
+        - w1 (float): Weight for the first item.
+        - w2 (float): Weight for the second item.
+        - w3 (float): Weight for the third item.
+        - w4 (float): Weight for the fourth item.
+        - img_id1 (int): Image ID for the first item.
+        - img_id2 (int): Image ID for the second item.
+        - img_id3 (int): Image ID for the third item.
+        - img_id4 (int): Image ID for the fourth item.
+        - type_1 (str): Type of the first item, must be either 'real + img' or 'mag. + phase'.
+        - type_2 (str): Type of the second item, must be either 'real + img' or 'mag. + phase'.
+        - type_3 (str): Type of the third item, must be either 'real + img' or 'mag. + phase'.
+        - type_4 (str): Type of the fourth item, must be either 'real + img' or 'mag. + phase'.
+
+        Attributes:
+        - img_id1 (int): Image ID for the first item.
+        - img_id2 (int): Image ID for the second item.
+        - img_id3 (int): Image ID for the third item.
+        - img_id4 (int): Image ID for the fourth item.
+        - types (list): List containing the types of all items.
+        - weights (list): List containing the weights of all items.
+        """
         self.img_id1 = img_id1
         self.img_id2 = img_id2
         self.img_id3 = img_id3
         self.img_id4 = img_id4
         # types must be some real + some img or some mag. and some phase
-        self.type_1 = type_1
-        self.type_2 = type_2
-        self.type_3 = type_3
-        self.type_4 = type_4
         self.types = [type_1, type_2, type_3, type_4]
         # weights
-        self.w1 = w1
-        self.w2 = w2
-        self.w3 = w3
-        self.w4 = w4
         self.weights = [w1, w2, w3, w4]
         
     def extract_img_from_gallery(self, gallery):
+        """
+        Extracts object from a given gallery based on the stored image IDs.
+
+        Parameters:
+        - gallery (dict): A dictionary representing a gallery of objects where keys are image IDs.
+
+        Returns:
+        - img1: The object corresponding to img_id1.
+        - img2: The object corresponding to img_id2.
+        - img3: The object corresponding to img_id3.
+        - img4: The object corresponding to img_id4.
+        """
         img1 = gallery[self.img_id1]
         img2 = gallery[self.img_id2]
         img3 = gallery[self.img_id3]
@@ -32,6 +61,17 @@ class Mixer():
         return img1, img2, img3, img4
     
     def choose_mode(self):
+        """
+        Determines the mode based on the types stored in the object.
+
+        Returns:
+        - int: Mode identifier.
+            1: If all types are either "phase" or "magnitude".
+            2: If all types are either "real" or "imaginary".
+
+        Raises:
+        - ValueError: If the types are not valid (neither all "phase" or "magnitude", nor all "real" or "imaginary").
+        """
         phase_mag = 0
         real_imag = 0
         for type in self.types:
@@ -50,6 +90,18 @@ class Mixer():
             raise ValueError("Invalid types")  
 
     def inverse_fft(self, gallery):
+        """
+        Performs inverse FFT on images extracted from the given gallery based on stored parameters.
+
+        Parameters:
+        - gallery (dict): A dictionary representing a gallery of images where keys are image IDs.
+
+        Returns:
+        - ndarray: Reconstructed image using inverse FFT.
+
+        Raises:
+        - ValueError: If the mode determined by the types is not supported (not all "magnitude" or "phase").
+        """
         img_objs = self.extract_img_from_gallery(gallery)
         mode = self.choose_mode()
         if mode == 2:

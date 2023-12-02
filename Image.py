@@ -38,7 +38,7 @@ class Image():
         self.components_shifted = None
         self.type_to_component = None # contatiner for the types mapped to components of the shifted Fourier Transform
 
-    ######################################getters & setters####################################################
+    ######################################Encapsulation Layer####################################################
     def get_id(self):
         return self.id
     
@@ -75,7 +75,7 @@ class Image():
     def get_components_shifted(self):
         return self.components_shifted
     
-    ##################################__main__functions__ #######################################################
+    ##################################__main__functions__#######################################################
         
     def load_img(self, pth, show=False):
 
@@ -203,18 +203,27 @@ class Image():
         return np.clip(img * contrast_factor , 0, 255.0)
     
     def plot(self, gamma=1, contrast_factor=1, brightness_factor=128, plot_components=True, plot_img=True):
+
+        # Plot the image components
         if plot_components:
             for comp in self.components_shifted:
                 #gamma correction
                 #comp = np.power(comp, gamma)S
+
+                # Apply Contrast
                 if contrast_factor:
                     comp = self.change_contrast(comp, contrast_factor)
+
+                # Apply Brightness    
                 if brightness_factor:
                     comp = self.change_brightness(comp, brightness_factor)
+                
+                # Show
                 plt.imshow(comp, cmap='gray')
                 plt.gca().invert_yaxis()
                 plt.show()
 
+        # plot the image itself
         if plot_img:
             img = self.img.copy()
             #gamma correction
@@ -223,6 +232,7 @@ class Image():
                 img = self.change_contrast(img, contrast_factor)
             if brightness_factor:
                 img = self.change_brightness(img, brightness_factor)
+
             plt.imshow(img, cmap='gray')
             plt.show()
 
