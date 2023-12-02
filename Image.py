@@ -26,6 +26,7 @@ class Image():
         """
         self.id = Image.id
         Image.id += 1
+        self.img_back_up = None
         self.img = None
         self.shape = None
 
@@ -97,6 +98,7 @@ class Image():
             self.img = cv2.imread(pth).astype(np.float32)
             self.img = cv2.cvtColor(self.img, cv2.COLOR_BGR2GRAY)
             self.shape = self.img.shape
+            self.img_back_up = self.img.copy()
 
             if show:
                 cv2.imshow('Image', self.img)
