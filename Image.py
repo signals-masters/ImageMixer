@@ -38,15 +38,21 @@ class Image():
         self.components_shifted = None
         self.type_to_component = None # contatiner for the types mapped to components of the shifted Fourier Transform
 
-    ######################################getters####################################################
+    ######################################getters & setters####################################################
     def get_id(self):
         return self.id
     
     def get_img(self):
         return self.img
     
+    def set_img(self, img):
+        self.img = img
+    
     def get_shape(self):
         return self.shape
+    
+    def set_shape(self, shape):
+        self.shape = shape
     
     def get_fft(self):
         return self.fft
@@ -219,6 +225,7 @@ class Image():
                 img = self.change_brightness(img, brightness_factor)
             plt.imshow(img, cmap='gray')
             plt.show()
+
 
     
 
