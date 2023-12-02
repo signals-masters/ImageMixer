@@ -3,7 +3,7 @@ from OutputImage import OutputImage
 from Gallery import Gallery
 from Image import Image
 import matplotlib.pyplot as plt
-from tqdm import tqdm
+from tqdm.auto import tqdm
 
 class Mixer():
 
