@@ -62,16 +62,16 @@ class Image():
         return self.fft_shifted
     
     def get_mag(self):
-        return self.mag
+        return self.components_shifted[0]
     
     def get_phase(self):
-        return self.phase
+        return self.components_shifted[1]
     
     def get_real(self):
-        return self.real
+        return self.components_shifted[2]
     
     def get_imaginary(self):
-        return self.imaginary
+        return self.components_shifted[3]
     
     def get_components_shifted(self):
         return self.components_shifted
@@ -245,30 +245,26 @@ class Image():
 
 
 # # Example usage:
-# joker = Image()
-# me = Image()
-# moza = Image()
+joker = Image()
+me = Image()
+moza = Image()
 
 # # # Load images
-# joker.load_img("joker_PNG35.png")
-# me.load_img("Screenshot 2023-08-22 182109.png")
-# moza.load_img("moza1.png")
+joker.load_img("joker_PNG35.png")
+me.load_img("Screenshot 2023-08-22 182109.png")
+moza.load_img("moza1.png")
 
 # # # # # Print initial shapes
 # # # # print(joker.shape)
 # # # # print(me.shape)
 
 # # # Reshape all images to the smallest dimensions
-#Image.reshape_all([joker, me])
+Image.reshape_all([joker, me, moza])
 
 # # # # # Print shapes after reshaping
 # # # # print(joker.shape)
 # # # # print(me.shape)
 
-# # # # cv2.imshow('Image', joker.img)
-# # # # cv2.waitKey(0)
-# # # # cv2.imshow('Image', me.img)
-# # # # cv2.waitKey(0)
 
 # me.compute_fourier_transform()
 # moza.compute_fourier_transform()
