@@ -44,7 +44,7 @@ class Image():
         return self.id
     
     def get_img(self):
-        return self.img
+        return self.img.T
     
     def set_img(self, img):
         self.img = img
@@ -94,18 +94,20 @@ class Image():
         - None
         """
 
-        try:
-            self.img = cv2.imread(pth).astype(np.float32)
-            self.img = cv2.cvtColor(self.img, cv2.COLOR_BGR2GRAY)
-            self.shape = self.img.shape
-            self.img_back_up = self.img.copy()
+        # try:
+        self.img = cv2.imread(pth).astype(np.float32)
+        self.img = cv2.cvtColor(self.img, cv2.COLOR_BGR2GRAY)
+        self.shape = self.img.shape
+        self.img_back_up = self.img.copy()
 
-            if show:
-                cv2.imshow('Image', self.img)
-                cv2.waitKey(0)
-                cv2.destroyAllWindows()
-        except:
-            print(f"Error: Couldn't load the image at {pth}")
+        if show:
+            # cv2.imshow('Image', self.img)
+            # cv2.waitKey(0)
+            # cv2.destroyAllWindows()
+            # return plt.imshow(self.img, cmap='gray').
+            plt.imsave("./imgs/1.png" , self.img)
+        # except:
+            # print(f"Error: Couldn't load the image at {pth}")
 
     def reshape(self, new_height, new_width):
         """
@@ -264,13 +266,10 @@ Image.reshape_all([joker, me, moza])
 # # # # print(me.shape)
 
 
-
-me.compute_fourier_transform()
-moza.compute_fourier_transform()
-joker.compute_fourier_transform()
-me.plot()
-plt.imshow(me.get_mag())
-plt.show()
+# me.compute_fourier_transform()
+# moza.compute_fourier_transform()
+# joker.compute_fourier_transform()
+# moza.plot()
 
 # # # # im = pil_image.fromarray(me)
 # # # # contrast_enhancer = ImageEnhance.Contrast(im)
