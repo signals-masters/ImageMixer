@@ -44,7 +44,7 @@ class Image():
         return self.id
     
     def get_img(self):
-        return self.img
+        return self.img.T
     
     def set_img(self, img):
         self.img = img
@@ -94,18 +94,20 @@ class Image():
         - None
         """
 
-        try:
-            self.img = cv2.imread(pth).astype(np.float32)
-            self.img = cv2.cvtColor(self.img, cv2.COLOR_BGR2GRAY)
-            self.shape = self.img.shape
-            self.img_back_up = self.img.copy()
+        # try:
+        self.img = cv2.imread(pth).astype(np.float32)
+        self.img = cv2.cvtColor(self.img, cv2.COLOR_BGR2GRAY)
+        self.shape = self.img.shape
+        self.img_back_up = self.img.copy()
 
-            if show:
-                cv2.imshow('Image', self.img)
-                cv2.waitKey(0)
-                cv2.destroyAllWindows()
-        except:
-            print(f"Error: Couldn't load the image at {pth}")
+        if show:
+            # cv2.imshow('Image', self.img)
+            # cv2.waitKey(0)
+            # cv2.destroyAllWindows()
+            # return plt.imshow(self.img, cmap='gray').
+            plt.imsave("./imgs/1.png" , self.img)
+        # except:
+            # print(f"Error: Couldn't load the image at {pth}")
 
     def reshape(self, new_height, new_width):
         """
@@ -204,7 +206,7 @@ class Image():
         # Change the contrast of the image
         return np.clip(img * contrast_factor , 0, 255.0)
     
-    def plot(self, gamma=1, contrast_factor=1, brightness_factor=128, plot_components=True, plot_img=True):
+    def plot(self, gamma=1, contrast_factor=1, brightness_factor=0, plot_components=True, plot_img=True):
 
         # Plot the image components
         if plot_components:
@@ -269,9 +271,9 @@ class Image():
 # # # # cv2.waitKey(0)
 
 # me.compute_fourier_transform()
-# # moza.compute_fourier_transform()
+# moza.compute_fourier_transform()
 # joker.compute_fourier_transform()
-# # # # me.plot()
+# moza.plot()
 
 # # # # im = pil_image.fromarray(me)
 # # # # contrast_enhancer = ImageEnhance.Contrast(im)

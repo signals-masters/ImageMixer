@@ -141,9 +141,9 @@ border: none;
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-619</y>
+         <y>-1419</y>
          <width>577</width>
-         <height>1263</height>
+         <height>2063</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -152,7 +152,7 @@ border: none;
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>300</height>
+            <height>500</height>
            </size>
           </property>
           <property name="frameShape">
@@ -340,9 +340,18 @@ border: none;
             </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <layout class="QVBoxLayout" name="verticalLayout_15">
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
               <widget class="QWidget" name="imgWidget" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>200</height>
+                </size>
+               </property>
                <property name="styleSheet">
                 <string notr="true">QWidget{
 	border:1px solid;
@@ -355,7 +364,7 @@ border: none;
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>222</height>
+                 <height>200</height>
                 </size>
                </property>
                <property name="styleSheet">
@@ -382,7 +391,7 @@ border: none;
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>300</height>
+            <height>500</height>
            </size>
           </property>
           <property name="frameShape">
@@ -543,12 +552,18 @@ border: none;
             </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <layout class="QVBoxLayout" name="verticalLayout_16">
              <property name="spacing">
               <number>0</number>
              </property>
              <item>
-              <widget class="QWidget" name="imgWidget_2" native="true">
+              <widget class="QWidget" name="transWidget_2" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>200</height>
+                </size>
+               </property>
                <property name="styleSheet">
                 <string notr="true">QWidget{
 	border:1px solid;
@@ -557,11 +572,11 @@ border: none;
               </widget>
              </item>
              <item>
-              <widget class="QWidget" name="transWidget_2" native="true">
+              <widget class="QWidget" name="imgWidget_2" native="true">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>222</height>
+                 <height>200</height>
                 </size>
                </property>
                <property name="styleSheet">
@@ -588,7 +603,7 @@ border: none;
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>300</height>
+            <height>500</height>
            </size>
           </property>
           <property name="frameShape">
@@ -752,16 +767,16 @@ border: none;
             </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <layout class="QVBoxLayout" name="verticalLayout_17">
              <property name="spacing">
               <number>0</number>
              </property>
              <item>
-              <widget class="QWidget" name="imgWidget_3" native="true">
+              <widget class="QWidget" name="transWidget_3" native="true">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>222</height>
+                 <height>200</height>
                 </size>
                </property>
                <property name="styleSheet">
@@ -772,11 +787,11 @@ border: none;
               </widget>
              </item>
              <item>
-              <widget class="QWidget" name="transWidget_3" native="true">
+              <widget class="QWidget" name="imgWidget_3" native="true">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>222</height>
+                 <height>200</height>
                 </size>
                </property>
                <property name="styleSheet">
@@ -803,7 +818,7 @@ border: none;
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>300</height>
+            <height>500</height>
            </size>
           </property>
           <property name="frameShape">
@@ -967,12 +982,18 @@ border: none;
             </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <layout class="QVBoxLayout" name="verticalLayout_18">
              <property name="spacing">
               <number>0</number>
              </property>
              <item>
-              <widget class="QWidget" name="imgWidget_4" native="true">
+              <widget class="QWidget" name="transWidget_4" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>200</height>
+                </size>
+               </property>
                <property name="styleSheet">
                 <string notr="true">QWidget{
 	border:1px solid;
@@ -981,11 +1002,11 @@ border: none;
               </widget>
              </item>
              <item>
-              <widget class="QWidget" name="transWidget_4" native="true">
+              <widget class="QWidget" name="imgWidget_4" native="true">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>222</height>
+                 <height>200</height>
                 </size>
                </property>
                <property name="styleSheet">
