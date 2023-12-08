@@ -10,6 +10,12 @@ from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
 import pyqtgraph as pg
 import cv2
+import logging
+
+# Logging
+
+logging.basicConfig(filename='mainLog.log', filemode='w',level=logging.INFO, format='%(asctime)s:%(levelname)s:%(name)s:%(message)s')
+
 
 
 

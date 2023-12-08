@@ -2,7 +2,12 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import warnings
-#warnings.filterwarnings("ignore")
+import logging
+
+# Logging
+logger = logging.getLogger(__name__)
+
+
 
 class Image():
 

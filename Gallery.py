@@ -1,4 +1,10 @@
 from Image import Image
+import logging
+
+# Logging
+logger = logging.getLogger(__name__)
+
+
 
 class Gallery():
     def __init__(self):

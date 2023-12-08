@@ -4,6 +4,11 @@ from Gallery import Gallery
 from Image import Image
 import matplotlib.pyplot as plt
 from tqdm.auto import tqdm
+import logging
+
+# Logging
+logger = logging.getLogger(__name__)
+
 
 class Mixer():
 
