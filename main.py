@@ -236,15 +236,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             Image.Image.reshape_all(self.gallery.get_gallery().values())
 
     def handleConvertBtn(self):
-        currentMixer = Mixer.Mixer(self.sliderValues[0], self.sliderValues[1], self.sliderValues[2], self.sliderValues[3], self.componentsIds[0], self.componentsIds[1], self.componentsIds[2], self.componentsIds[3], self.componentsTypes[0], self.componentsTypes[1], self.componentsTypes[2], self.componentsTypes[3])
-        output = currentMixer.inverse_fft(self.gallery.get_gallery())
+        currentMixer = Mixer.Mixer(0.5, 0.5, 1, 0, self.componentsIds[0], self.componentsIds[1], self.componentsIds[2], self.componentsIds[3], self.componentsTypes[0], self.componentsTypes[1], self.componentsTypes[2], self.componentsTypes[3])
+        output = currentMixer.inverse_fft(self.gallery.get_gallery()).T
         
         print(output)
         layout = QHBoxLayout()
         self.outputOneWidget.setLayout(layout)
         currentOutput = pg.image(output)
         print(currentOutput)
-        self.outputOneWidget.layout().addWidget(self.currentOutput)
+        self.outputOneWidget.layout().addWidget(currentOutput)
 
 
     def handleCropBtn(self,path):

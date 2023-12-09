@@ -149,6 +149,7 @@ class Image():
         # Resize all images to the smallest dimensions
         for inst in image_instances:
             inst.reshape(min_height, min_width)
+            inst.compute_fourier_transform()
 
     def compute_fourier_transform(self, show=True):
         """

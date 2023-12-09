@@ -91,7 +91,8 @@ class Mixer():
             elif type == "real" or type == "imaginary":
                 real_imag += 1
             else:
-                raise ValueError("Invalid type")
+                pass
+                #raise ValueError("Invalid type")
         
         if phase_mag == 0:
             return 1
