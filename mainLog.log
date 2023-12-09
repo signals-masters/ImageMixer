@@ -1,0 +1,2101 @@
+2023-12-09 16:30:00,571:INFO:root:handleSlider: value: 10 , Index: 0
+2023-12-09 16:30:00,571:INFO:root:handleSlider: Sliders Values: [0, 0, 0, 0]
+2023-12-09 16:30:00,571:INFO:root:handleSlider: Current: 0
+2023-12-09 16:30:00,571:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:00,571:INFO:root:handleSlider: Remainder: 100
+2023-12-09 16:30:00,571:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:00,571:INFO:root:handleSlider: Sliders Values: [10, 0, 0, 0]
+2023-12-09 16:30:00,571:INFO:root:handleSlider: Current: 10
+2023-12-09 16:30:00,571:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:00,571:INFO:root:handleSlider: Remainder: 90
+2023-12-09 16:30:00,571:INFO:root:===============================================================
+2023-12-09 16:30:00,984:INFO:root:handleSlider: value: 20 , Index: 0
+2023-12-09 16:30:00,984:INFO:root:handleSlider: Sliders Values: [10, 0, 0, 0]
+2023-12-09 16:30:00,984:INFO:root:handleSlider: Current: 10
+2023-12-09 16:30:00,984:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:00,984:INFO:root:handleSlider: Remainder: 90
+2023-12-09 16:30:00,985:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:00,985:INFO:root:handleSlider: Sliders Values: [20, 0, 0, 0]
+2023-12-09 16:30:00,985:INFO:root:handleSlider: Current: 20
+2023-12-09 16:30:00,985:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:00,985:INFO:root:handleSlider: Remainder: 80
+2023-12-09 16:30:00,985:INFO:root:===============================================================
+2023-12-09 16:30:01,344:INFO:root:handleSlider: value: 30 , Index: 0
+2023-12-09 16:30:01,345:INFO:root:handleSlider: Sliders Values: [20, 0, 0, 0]
+2023-12-09 16:30:01,345:INFO:root:handleSlider: Current: 20
+2023-12-09 16:30:01,345:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:01,345:INFO:root:handleSlider: Remainder: 80
+2023-12-09 16:30:01,345:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:01,345:INFO:root:handleSlider: Sliders Values: [30, 0, 0, 0]
+2023-12-09 16:30:01,345:INFO:root:handleSlider: Current: 30
+2023-12-09 16:30:01,345:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:01,345:INFO:root:handleSlider: Remainder: 70
+2023-12-09 16:30:01,345:INFO:root:===============================================================
+2023-12-09 16:30:01,818:INFO:root:handleSlider: value: 40 , Index: 0
+2023-12-09 16:30:01,818:INFO:root:handleSlider: Sliders Values: [30, 0, 0, 0]
+2023-12-09 16:30:01,818:INFO:root:handleSlider: Current: 30
+2023-12-09 16:30:01,818:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:01,818:INFO:root:handleSlider: Remainder: 70
+2023-12-09 16:30:01,818:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:01,818:INFO:root:handleSlider: Sliders Values: [40, 0, 0, 0]
+2023-12-09 16:30:01,818:INFO:root:handleSlider: Current: 40
+2023-12-09 16:30:01,818:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:01,818:INFO:root:handleSlider: Remainder: 60
+2023-12-09 16:30:01,818:INFO:root:===============================================================
+2023-12-09 16:30:03,394:INFO:root:handleSlider: value: 10 , Index: 1
+2023-12-09 16:30:03,394:INFO:root:handleSlider: Sliders Values: [40, 0, 0, 0]
+2023-12-09 16:30:03,395:INFO:root:handleSlider: Current: 40
+2023-12-09 16:30:03,395:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:03,395:INFO:root:handleSlider: Remainder: 60
+2023-12-09 16:30:03,395:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:03,395:INFO:root:handleSlider: Sliders Values: [40, 10, 0, 0]
+2023-12-09 16:30:03,395:INFO:root:handleSlider: Current: 50
+2023-12-09 16:30:03,395:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:03,395:INFO:root:handleSlider: Remainder: 50
+2023-12-09 16:30:03,395:INFO:root:===============================================================
+2023-12-09 16:30:03,759:INFO:root:handleSlider: value: 20 , Index: 1
+2023-12-09 16:30:03,759:INFO:root:handleSlider: Sliders Values: [40, 10, 0, 0]
+2023-12-09 16:30:03,759:INFO:root:handleSlider: Current: 50
+2023-12-09 16:30:03,759:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:03,759:INFO:root:handleSlider: Remainder: 50
+2023-12-09 16:30:03,759:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:03,759:INFO:root:handleSlider: Sliders Values: [40, 20, 0, 0]
+2023-12-09 16:30:03,759:INFO:root:handleSlider: Current: 60
+2023-12-09 16:30:03,759:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:03,759:INFO:root:handleSlider: Remainder: 40
+2023-12-09 16:30:03,759:INFO:root:===============================================================
+2023-12-09 16:30:04,126:INFO:root:handleSlider: value: 30 , Index: 1
+2023-12-09 16:30:04,127:INFO:root:handleSlider: Sliders Values: [40, 20, 0, 0]
+2023-12-09 16:30:04,127:INFO:root:handleSlider: Current: 60
+2023-12-09 16:30:04,127:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:04,127:INFO:root:handleSlider: Remainder: 40
+2023-12-09 16:30:04,127:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:04,127:INFO:root:handleSlider: Sliders Values: [40, 30, 0, 0]
+2023-12-09 16:30:04,127:INFO:root:handleSlider: Current: 70
+2023-12-09 16:30:04,127:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:04,127:INFO:root:handleSlider: Remainder: 30
+2023-12-09 16:30:04,127:INFO:root:===============================================================
+2023-12-09 16:30:04,564:INFO:root:handleSlider: value: 40 , Index: 1
+2023-12-09 16:30:04,564:INFO:root:handleSlider: Sliders Values: [40, 30, 0, 0]
+2023-12-09 16:30:04,564:INFO:root:handleSlider: Current: 70
+2023-12-09 16:30:04,564:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:04,564:INFO:root:handleSlider: Remainder: 30
+2023-12-09 16:30:04,564:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:04,564:INFO:root:handleSlider: Sliders Values: [40, 40, 0, 0]
+2023-12-09 16:30:04,564:INFO:root:handleSlider: Current: 80
+2023-12-09 16:30:04,564:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:04,564:INFO:root:handleSlider: Remainder: 20
+2023-12-09 16:30:04,564:INFO:root:===============================================================
+2023-12-09 16:30:05,292:INFO:root:handleSlider: value: 50 , Index: 1
+2023-12-09 16:30:05,292:INFO:root:handleSlider: Sliders Values: [40, 40, 0, 0]
+2023-12-09 16:30:05,292:INFO:root:handleSlider: Current: 80
+2023-12-09 16:30:05,292:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:05,292:INFO:root:handleSlider: Remainder: 20
+2023-12-09 16:30:05,292:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:05,292:INFO:root:handleSlider: Sliders Values: [40, 50, 0, 0]
+2023-12-09 16:30:05,292:INFO:root:handleSlider: Current: 90
+2023-12-09 16:30:05,292:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:05,292:INFO:root:handleSlider: Remainder: 10
+2023-12-09 16:30:05,292:INFO:root:===============================================================
+2023-12-09 16:30:06,353:INFO:root:handleSlider: value: 60 , Index: 1
+2023-12-09 16:30:06,353:INFO:root:handleSlider: Sliders Values: [40, 50, 0, 0]
+2023-12-09 16:30:06,353:INFO:root:handleSlider: Current: 90
+2023-12-09 16:30:06,353:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:06,353:INFO:root:handleSlider: Remainder: 10
+2023-12-09 16:30:06,353:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:06,353:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:06,354:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:06,354:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:06,354:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:06,354:INFO:root:===============================================================
+2023-12-09 16:30:06,788:INFO:root:handleSlider: value: 70 , Index: 1
+2023-12-09 16:30:06,788:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:06,788:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:06,788:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:06,788:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:06,788:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:06,788:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:06,788:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:06,788:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:06,788:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:06,788:INFO:root:===============================================================
+2023-12-09 16:30:07,394:INFO:root:handleSlider: value: 80 , Index: 1
+2023-12-09 16:30:07,395:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:07,395:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:07,395:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:07,395:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:07,395:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:07,395:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:07,395:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:07,395:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:07,395:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:07,395:INFO:root:===============================================================
+2023-12-09 16:30:08,414:INFO:root:handleSlider: value: 70 , Index: 1
+2023-12-09 16:30:08,414:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:08,414:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:08,414:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:08,414:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:08,414:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:08,414:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:08,415:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:08,415:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:08,415:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:08,415:INFO:root:===============================================================
+2023-12-09 16:30:08,793:INFO:root:handleSlider: value: 60 , Index: 1
+2023-12-09 16:30:08,793:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:08,793:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:08,793:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:08,793:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:08,793:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:08,793:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:08,793:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:08,793:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:08,793:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:08,793:INFO:root:===============================================================
+2023-12-09 16:30:10,172:INFO:root:handleSlider: value: 50 , Index: 1
+2023-12-09 16:30:10,172:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:10,172:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:10,172:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:10,172:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:10,172:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:10,172:INFO:root:handleSlider: Sliders Values: [40, 50, 0, 0]
+2023-12-09 16:30:10,172:INFO:root:handleSlider: Current: 90
+2023-12-09 16:30:10,172:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:10,172:INFO:root:handleSlider: Remainder: 10
+2023-12-09 16:30:10,172:INFO:root:===============================================================
+2023-12-09 16:30:11,521:INFO:root:handleSlider: value: 60 , Index: 1
+2023-12-09 16:30:11,521:INFO:root:handleSlider: Sliders Values: [40, 50, 0, 0]
+2023-12-09 16:30:11,521:INFO:root:handleSlider: Current: 90
+2023-12-09 16:30:11,521:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:11,521:INFO:root:handleSlider: Remainder: 10
+2023-12-09 16:30:11,521:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:11,521:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:11,521:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:11,521:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:11,521:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:11,521:INFO:root:===============================================================
+2023-12-09 16:30:11,920:INFO:root:handleSlider: value: 70 , Index: 1
+2023-12-09 16:30:11,920:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:11,920:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:11,920:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:11,921:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:11,921:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:11,921:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:11,921:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:11,921:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:11,921:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:11,921:INFO:root:===============================================================
+2023-12-09 16:30:14,158:INFO:root:handleSlider: value: 71 , Index: 1
+2023-12-09 16:30:14,159:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,159:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,159:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,159:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,159:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,159:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,159:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,159:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,159:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,159:INFO:root:===============================================================
+2023-12-09 16:30:14,173:INFO:root:handleSlider: value: 74 , Index: 1
+2023-12-09 16:30:14,173:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,173:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,173:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,173:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,174:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,174:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,174:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,174:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,174:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,174:INFO:root:===============================================================
+2023-12-09 16:30:14,180:INFO:root:handleSlider: value: 79 , Index: 1
+2023-12-09 16:30:14,180:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,180:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,180:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,180:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,181:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,181:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,181:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,181:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,181:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,181:INFO:root:===============================================================
+2023-12-09 16:30:14,187:INFO:root:handleSlider: value: 83 , Index: 1
+2023-12-09 16:30:14,187:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,187:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,187:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,187:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,187:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,187:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,187:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,187:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,188:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,188:INFO:root:===============================================================
+2023-12-09 16:30:14,194:INFO:root:handleSlider: value: 85 , Index: 1
+2023-12-09 16:30:14,194:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,194:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,194:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,194:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,194:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,194:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,194:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,194:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,194:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,194:INFO:root:===============================================================
+2023-12-09 16:30:14,201:INFO:root:handleSlider: value: 89 , Index: 1
+2023-12-09 16:30:14,201:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,201:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,201:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,202:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,202:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,202:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,202:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,202:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,202:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,202:INFO:root:===============================================================
+2023-12-09 16:30:14,208:INFO:root:handleSlider: value: 92 , Index: 1
+2023-12-09 16:30:14,209:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,209:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,209:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,209:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,209:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,209:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,209:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,209:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,209:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,209:INFO:root:===============================================================
+2023-12-09 16:30:14,222:INFO:root:handleSlider: value: 95 , Index: 1
+2023-12-09 16:30:14,222:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,223:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,223:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,223:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,223:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,223:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,223:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,223:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,223:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,223:INFO:root:===============================================================
+2023-12-09 16:30:14,243:INFO:root:handleSlider: value: 98 , Index: 1
+2023-12-09 16:30:14,243:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,243:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,243:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,243:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,243:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,243:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,243:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,243:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,243:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,243:INFO:root:===============================================================
+2023-12-09 16:30:14,264:INFO:root:handleSlider: value: 100 , Index: 1
+2023-12-09 16:30:14,264:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,264:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,264:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,264:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,264:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,264:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,264:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,264:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,265:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,265:INFO:root:===============================================================
+2023-12-09 16:30:14,448:INFO:root:handleSlider: value: 95 , Index: 1
+2023-12-09 16:30:14,448:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,448:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,448:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,448:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,448:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,448:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,449:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,449:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,449:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,449:INFO:root:===============================================================
+2023-12-09 16:30:14,455:INFO:root:handleSlider: value: 93 , Index: 1
+2023-12-09 16:30:14,455:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,455:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,455:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,455:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,455:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,455:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,455:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,455:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,455:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,455:INFO:root:===============================================================
+2023-12-09 16:30:14,463:INFO:root:handleSlider: value: 90 , Index: 1
+2023-12-09 16:30:14,463:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,463:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,463:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,463:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,463:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,463:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,463:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,463:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,463:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,463:INFO:root:===============================================================
+2023-12-09 16:30:14,470:INFO:root:handleSlider: value: 89 , Index: 1
+2023-12-09 16:30:14,470:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,470:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,470:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,470:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,470:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,470:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,470:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,470:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,470:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,470:INFO:root:===============================================================
+2023-12-09 16:30:14,476:INFO:root:handleSlider: value: 88 , Index: 1
+2023-12-09 16:30:14,477:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,477:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,477:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,477:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,477:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,477:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,477:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,477:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,477:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,477:INFO:root:===============================================================
+2023-12-09 16:30:14,483:INFO:root:handleSlider: value: 85 , Index: 1
+2023-12-09 16:30:14,484:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,484:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,484:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,484:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,484:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,484:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,484:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,484:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,484:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,484:INFO:root:===============================================================
+2023-12-09 16:30:14,497:INFO:root:handleSlider: value: 83 , Index: 1
+2023-12-09 16:30:14,498:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,498:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,498:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,498:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,498:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,498:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,498:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,498:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,498:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,498:INFO:root:===============================================================
+2023-12-09 16:30:14,504:INFO:root:handleSlider: value: 80 , Index: 1
+2023-12-09 16:30:14,504:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,504:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,504:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,504:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,505:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,505:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,505:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,505:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,505:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,505:INFO:root:===============================================================
+2023-12-09 16:30:14,519:INFO:root:handleSlider: value: 79 , Index: 1
+2023-12-09 16:30:14,519:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,519:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,519:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,519:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,519:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,519:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,519:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,519:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,519:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,519:INFO:root:===============================================================
+2023-12-09 16:30:14,526:INFO:root:handleSlider: value: 78 , Index: 1
+2023-12-09 16:30:14,527:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,527:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,527:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,527:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,527:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,527:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,527:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,527:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,527:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,527:INFO:root:===============================================================
+2023-12-09 16:30:14,533:INFO:root:handleSlider: value: 77 , Index: 1
+2023-12-09 16:30:14,533:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,533:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,533:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,533:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,533:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,533:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,533:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,533:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,533:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,533:INFO:root:===============================================================
+2023-12-09 16:30:14,547:INFO:root:handleSlider: value: 73 , Index: 1
+2023-12-09 16:30:14,547:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,547:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,547:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,547:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,547:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,547:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,547:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,547:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,547:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,547:INFO:root:===============================================================
+2023-12-09 16:30:14,561:INFO:root:handleSlider: value: 71 , Index: 1
+2023-12-09 16:30:14,562:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,562:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,562:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,562:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,562:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,562:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,562:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,562:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,562:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,562:INFO:root:===============================================================
+2023-12-09 16:30:14,575:INFO:root:handleSlider: value: 68 , Index: 1
+2023-12-09 16:30:14,575:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,575:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,575:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,575:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,576:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,576:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,576:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,576:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,576:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,576:INFO:root:===============================================================
+2023-12-09 16:30:14,583:INFO:root:handleSlider: value: 65 , Index: 1
+2023-12-09 16:30:14,583:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,583:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,583:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,583:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,583:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,583:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,583:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,583:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,583:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,583:INFO:root:===============================================================
+2023-12-09 16:30:14,597:INFO:root:handleSlider: value: 63 , Index: 1
+2023-12-09 16:30:14,597:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,597:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,597:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,597:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,597:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,597:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,597:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,597:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,597:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,597:INFO:root:===============================================================
+2023-12-09 16:30:14,606:INFO:root:handleSlider: value: 62 , Index: 1
+2023-12-09 16:30:14,606:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,606:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,606:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,606:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,606:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,606:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,607:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,607:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,607:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,607:INFO:root:===============================================================
+2023-12-09 16:30:14,611:INFO:root:handleSlider: value: 59 , Index: 1
+2023-12-09 16:30:14,611:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:14,611:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:14,611:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,611:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:14,611:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,611:INFO:root:handleSlider: Sliders Values: [40, 59, 0, 0]
+2023-12-09 16:30:14,611:INFO:root:handleSlider: Current: 99
+2023-12-09 16:30:14,611:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,611:INFO:root:handleSlider: Remainder: 1
+2023-12-09 16:30:14,611:INFO:root:===============================================================
+2023-12-09 16:30:14,625:INFO:root:handleSlider: value: 57 , Index: 1
+2023-12-09 16:30:14,625:INFO:root:handleSlider: Sliders Values: [40, 59, 0, 0]
+2023-12-09 16:30:14,625:INFO:root:handleSlider: Current: 99
+2023-12-09 16:30:14,625:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,625:INFO:root:handleSlider: Remainder: 1
+2023-12-09 16:30:14,625:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,625:INFO:root:handleSlider: Sliders Values: [40, 57, 0, 0]
+2023-12-09 16:30:14,625:INFO:root:handleSlider: Current: 97
+2023-12-09 16:30:14,625:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,626:INFO:root:handleSlider: Remainder: 3
+2023-12-09 16:30:14,626:INFO:root:===============================================================
+2023-12-09 16:30:14,632:INFO:root:handleSlider: value: 53 , Index: 1
+2023-12-09 16:30:14,632:INFO:root:handleSlider: Sliders Values: [40, 57, 0, 0]
+2023-12-09 16:30:14,632:INFO:root:handleSlider: Current: 97
+2023-12-09 16:30:14,632:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,632:INFO:root:handleSlider: Remainder: 3
+2023-12-09 16:30:14,632:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,632:INFO:root:handleSlider: Sliders Values: [40, 53, 0, 0]
+2023-12-09 16:30:14,632:INFO:root:handleSlider: Current: 93
+2023-12-09 16:30:14,632:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,632:INFO:root:handleSlider: Remainder: 7
+2023-12-09 16:30:14,632:INFO:root:===============================================================
+2023-12-09 16:30:14,646:INFO:root:handleSlider: value: 51 , Index: 1
+2023-12-09 16:30:14,646:INFO:root:handleSlider: Sliders Values: [40, 53, 0, 0]
+2023-12-09 16:30:14,646:INFO:root:handleSlider: Current: 93
+2023-12-09 16:30:14,646:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,646:INFO:root:handleSlider: Remainder: 7
+2023-12-09 16:30:14,646:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,646:INFO:root:handleSlider: Sliders Values: [40, 51, 0, 0]
+2023-12-09 16:30:14,646:INFO:root:handleSlider: Current: 91
+2023-12-09 16:30:14,646:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,646:INFO:root:handleSlider: Remainder: 9
+2023-12-09 16:30:14,646:INFO:root:===============================================================
+2023-12-09 16:30:14,660:INFO:root:handleSlider: value: 48 , Index: 1
+2023-12-09 16:30:14,660:INFO:root:handleSlider: Sliders Values: [40, 51, 0, 0]
+2023-12-09 16:30:14,660:INFO:root:handleSlider: Current: 91
+2023-12-09 16:30:14,660:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,660:INFO:root:handleSlider: Remainder: 9
+2023-12-09 16:30:14,660:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,660:INFO:root:handleSlider: Sliders Values: [40, 48, 0, 0]
+2023-12-09 16:30:14,660:INFO:root:handleSlider: Current: 88
+2023-12-09 16:30:14,660:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,660:INFO:root:handleSlider: Remainder: 12
+2023-12-09 16:30:14,660:INFO:root:===============================================================
+2023-12-09 16:30:14,667:INFO:root:handleSlider: value: 47 , Index: 1
+2023-12-09 16:30:14,667:INFO:root:handleSlider: Sliders Values: [40, 48, 0, 0]
+2023-12-09 16:30:14,667:INFO:root:handleSlider: Current: 88
+2023-12-09 16:30:14,667:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,667:INFO:root:handleSlider: Remainder: 12
+2023-12-09 16:30:14,667:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,667:INFO:root:handleSlider: Sliders Values: [40, 47, 0, 0]
+2023-12-09 16:30:14,667:INFO:root:handleSlider: Current: 87
+2023-12-09 16:30:14,667:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,667:INFO:root:handleSlider: Remainder: 13
+2023-12-09 16:30:14,667:INFO:root:===============================================================
+2023-12-09 16:30:14,675:INFO:root:handleSlider: value: 46 , Index: 1
+2023-12-09 16:30:14,675:INFO:root:handleSlider: Sliders Values: [40, 47, 0, 0]
+2023-12-09 16:30:14,675:INFO:root:handleSlider: Current: 87
+2023-12-09 16:30:14,675:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,675:INFO:root:handleSlider: Remainder: 13
+2023-12-09 16:30:14,675:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,675:INFO:root:handleSlider: Sliders Values: [40, 46, 0, 0]
+2023-12-09 16:30:14,675:INFO:root:handleSlider: Current: 86
+2023-12-09 16:30:14,675:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,675:INFO:root:handleSlider: Remainder: 14
+2023-12-09 16:30:14,675:INFO:root:===============================================================
+2023-12-09 16:30:14,682:INFO:root:handleSlider: value: 44 , Index: 1
+2023-12-09 16:30:14,682:INFO:root:handleSlider: Sliders Values: [40, 46, 0, 0]
+2023-12-09 16:30:14,682:INFO:root:handleSlider: Current: 86
+2023-12-09 16:30:14,682:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,682:INFO:root:handleSlider: Remainder: 14
+2023-12-09 16:30:14,682:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,682:INFO:root:handleSlider: Sliders Values: [40, 44, 0, 0]
+2023-12-09 16:30:14,682:INFO:root:handleSlider: Current: 84
+2023-12-09 16:30:14,682:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,682:INFO:root:handleSlider: Remainder: 16
+2023-12-09 16:30:14,682:INFO:root:===============================================================
+2023-12-09 16:30:14,697:INFO:root:handleSlider: value: 42 , Index: 1
+2023-12-09 16:30:14,697:INFO:root:handleSlider: Sliders Values: [40, 44, 0, 0]
+2023-12-09 16:30:14,697:INFO:root:handleSlider: Current: 84
+2023-12-09 16:30:14,698:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,698:INFO:root:handleSlider: Remainder: 16
+2023-12-09 16:30:14,698:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,698:INFO:root:handleSlider: Sliders Values: [40, 42, 0, 0]
+2023-12-09 16:30:14,698:INFO:root:handleSlider: Current: 82
+2023-12-09 16:30:14,698:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,698:INFO:root:handleSlider: Remainder: 18
+2023-12-09 16:30:14,698:INFO:root:===============================================================
+2023-12-09 16:30:14,702:INFO:root:handleSlider: value: 40 , Index: 1
+2023-12-09 16:30:14,702:INFO:root:handleSlider: Sliders Values: [40, 42, 0, 0]
+2023-12-09 16:30:14,702:INFO:root:handleSlider: Current: 82
+2023-12-09 16:30:14,702:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,702:INFO:root:handleSlider: Remainder: 18
+2023-12-09 16:30:14,703:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,703:INFO:root:handleSlider: Sliders Values: [40, 40, 0, 0]
+2023-12-09 16:30:14,703:INFO:root:handleSlider: Current: 80
+2023-12-09 16:30:14,703:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,703:INFO:root:handleSlider: Remainder: 20
+2023-12-09 16:30:14,703:INFO:root:===============================================================
+2023-12-09 16:30:14,716:INFO:root:handleSlider: value: 37 , Index: 1
+2023-12-09 16:30:14,716:INFO:root:handleSlider: Sliders Values: [40, 40, 0, 0]
+2023-12-09 16:30:14,716:INFO:root:handleSlider: Current: 80
+2023-12-09 16:30:14,716:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,716:INFO:root:handleSlider: Remainder: 20
+2023-12-09 16:30:14,716:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,716:INFO:root:handleSlider: Sliders Values: [40, 37, 0, 0]
+2023-12-09 16:30:14,717:INFO:root:handleSlider: Current: 77
+2023-12-09 16:30:14,717:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,717:INFO:root:handleSlider: Remainder: 23
+2023-12-09 16:30:14,717:INFO:root:===============================================================
+2023-12-09 16:30:14,731:INFO:root:handleSlider: value: 36 , Index: 1
+2023-12-09 16:30:14,731:INFO:root:handleSlider: Sliders Values: [40, 37, 0, 0]
+2023-12-09 16:30:14,731:INFO:root:handleSlider: Current: 77
+2023-12-09 16:30:14,731:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,731:INFO:root:handleSlider: Remainder: 23
+2023-12-09 16:30:14,731:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,731:INFO:root:handleSlider: Sliders Values: [40, 36, 0, 0]
+2023-12-09 16:30:14,731:INFO:root:handleSlider: Current: 76
+2023-12-09 16:30:14,731:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,731:INFO:root:handleSlider: Remainder: 24
+2023-12-09 16:30:14,731:INFO:root:===============================================================
+2023-12-09 16:30:14,738:INFO:root:handleSlider: value: 34 , Index: 1
+2023-12-09 16:30:14,738:INFO:root:handleSlider: Sliders Values: [40, 36, 0, 0]
+2023-12-09 16:30:14,738:INFO:root:handleSlider: Current: 76
+2023-12-09 16:30:14,738:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,738:INFO:root:handleSlider: Remainder: 24
+2023-12-09 16:30:14,738:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,738:INFO:root:handleSlider: Sliders Values: [40, 34, 0, 0]
+2023-12-09 16:30:14,738:INFO:root:handleSlider: Current: 74
+2023-12-09 16:30:14,738:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,738:INFO:root:handleSlider: Remainder: 26
+2023-12-09 16:30:14,738:INFO:root:===============================================================
+2023-12-09 16:30:14,759:INFO:root:handleSlider: value: 32 , Index: 1
+2023-12-09 16:30:14,759:INFO:root:handleSlider: Sliders Values: [40, 34, 0, 0]
+2023-12-09 16:30:14,759:INFO:root:handleSlider: Current: 74
+2023-12-09 16:30:14,759:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,759:INFO:root:handleSlider: Remainder: 26
+2023-12-09 16:30:14,759:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,759:INFO:root:handleSlider: Sliders Values: [40, 32, 0, 0]
+2023-12-09 16:30:14,759:INFO:root:handleSlider: Current: 72
+2023-12-09 16:30:14,759:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,759:INFO:root:handleSlider: Remainder: 28
+2023-12-09 16:30:14,759:INFO:root:===============================================================
+2023-12-09 16:30:14,773:INFO:root:handleSlider: value: 31 , Index: 1
+2023-12-09 16:30:14,773:INFO:root:handleSlider: Sliders Values: [40, 32, 0, 0]
+2023-12-09 16:30:14,773:INFO:root:handleSlider: Current: 72
+2023-12-09 16:30:14,773:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,773:INFO:root:handleSlider: Remainder: 28
+2023-12-09 16:30:14,773:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,773:INFO:root:handleSlider: Sliders Values: [40, 31, 0, 0]
+2023-12-09 16:30:14,773:INFO:root:handleSlider: Current: 71
+2023-12-09 16:30:14,773:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,774:INFO:root:handleSlider: Remainder: 29
+2023-12-09 16:30:14,774:INFO:root:===============================================================
+2023-12-09 16:30:14,794:INFO:root:handleSlider: value: 29 , Index: 1
+2023-12-09 16:30:14,794:INFO:root:handleSlider: Sliders Values: [40, 31, 0, 0]
+2023-12-09 16:30:14,794:INFO:root:handleSlider: Current: 71
+2023-12-09 16:30:14,794:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,794:INFO:root:handleSlider: Remainder: 29
+2023-12-09 16:30:14,794:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,794:INFO:root:handleSlider: Sliders Values: [40, 29, 0, 0]
+2023-12-09 16:30:14,794:INFO:root:handleSlider: Current: 69
+2023-12-09 16:30:14,794:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,794:INFO:root:handleSlider: Remainder: 31
+2023-12-09 16:30:14,795:INFO:root:===============================================================
+2023-12-09 16:30:14,815:INFO:root:handleSlider: value: 26 , Index: 1
+2023-12-09 16:30:14,815:INFO:root:handleSlider: Sliders Values: [40, 29, 0, 0]
+2023-12-09 16:30:14,815:INFO:root:handleSlider: Current: 69
+2023-12-09 16:30:14,815:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,815:INFO:root:handleSlider: Remainder: 31
+2023-12-09 16:30:14,815:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,815:INFO:root:handleSlider: Sliders Values: [40, 26, 0, 0]
+2023-12-09 16:30:14,815:INFO:root:handleSlider: Current: 66
+2023-12-09 16:30:14,815:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,815:INFO:root:handleSlider: Remainder: 34
+2023-12-09 16:30:14,815:INFO:root:===============================================================
+2023-12-09 16:30:14,844:INFO:root:handleSlider: value: 25 , Index: 1
+2023-12-09 16:30:14,844:INFO:root:handleSlider: Sliders Values: [40, 26, 0, 0]
+2023-12-09 16:30:14,844:INFO:root:handleSlider: Current: 66
+2023-12-09 16:30:14,844:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,844:INFO:root:handleSlider: Remainder: 34
+2023-12-09 16:30:14,844:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,844:INFO:root:handleSlider: Sliders Values: [40, 25, 0, 0]
+2023-12-09 16:30:14,844:INFO:root:handleSlider: Current: 65
+2023-12-09 16:30:14,844:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,844:INFO:root:handleSlider: Remainder: 35
+2023-12-09 16:30:14,844:INFO:root:===============================================================
+2023-12-09 16:30:14,851:INFO:root:handleSlider: value: 24 , Index: 1
+2023-12-09 16:30:14,851:INFO:root:handleSlider: Sliders Values: [40, 25, 0, 0]
+2023-12-09 16:30:14,851:INFO:root:handleSlider: Current: 65
+2023-12-09 16:30:14,851:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,851:INFO:root:handleSlider: Remainder: 35
+2023-12-09 16:30:14,851:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,851:INFO:root:handleSlider: Sliders Values: [40, 24, 0, 0]
+2023-12-09 16:30:14,851:INFO:root:handleSlider: Current: 64
+2023-12-09 16:30:14,851:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,851:INFO:root:handleSlider: Remainder: 36
+2023-12-09 16:30:14,851:INFO:root:===============================================================
+2023-12-09 16:30:14,872:INFO:root:handleSlider: value: 23 , Index: 1
+2023-12-09 16:30:14,872:INFO:root:handleSlider: Sliders Values: [40, 24, 0, 0]
+2023-12-09 16:30:14,872:INFO:root:handleSlider: Current: 64
+2023-12-09 16:30:14,872:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,872:INFO:root:handleSlider: Remainder: 36
+2023-12-09 16:30:14,872:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,872:INFO:root:handleSlider: Sliders Values: [40, 23, 0, 0]
+2023-12-09 16:30:14,872:INFO:root:handleSlider: Current: 63
+2023-12-09 16:30:14,872:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,872:INFO:root:handleSlider: Remainder: 37
+2023-12-09 16:30:14,872:INFO:root:===============================================================
+2023-12-09 16:30:14,886:INFO:root:handleSlider: value: 22 , Index: 1
+2023-12-09 16:30:14,886:INFO:root:handleSlider: Sliders Values: [40, 23, 0, 0]
+2023-12-09 16:30:14,886:INFO:root:handleSlider: Current: 63
+2023-12-09 16:30:14,886:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,886:INFO:root:handleSlider: Remainder: 37
+2023-12-09 16:30:14,886:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,886:INFO:root:handleSlider: Sliders Values: [40, 22, 0, 0]
+2023-12-09 16:30:14,886:INFO:root:handleSlider: Current: 62
+2023-12-09 16:30:14,886:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,886:INFO:root:handleSlider: Remainder: 38
+2023-12-09 16:30:14,886:INFO:root:===============================================================
+2023-12-09 16:30:14,908:INFO:root:handleSlider: value: 21 , Index: 1
+2023-12-09 16:30:14,908:INFO:root:handleSlider: Sliders Values: [40, 22, 0, 0]
+2023-12-09 16:30:14,908:INFO:root:handleSlider: Current: 62
+2023-12-09 16:30:14,908:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,908:INFO:root:handleSlider: Remainder: 38
+2023-12-09 16:30:14,908:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,908:INFO:root:handleSlider: Sliders Values: [40, 21, 0, 0]
+2023-12-09 16:30:14,908:INFO:root:handleSlider: Current: 61
+2023-12-09 16:30:14,908:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,908:INFO:root:handleSlider: Remainder: 39
+2023-12-09 16:30:14,908:INFO:root:===============================================================
+2023-12-09 16:30:14,971:INFO:root:handleSlider: value: 20 , Index: 1
+2023-12-09 16:30:14,971:INFO:root:handleSlider: Sliders Values: [40, 21, 0, 0]
+2023-12-09 16:30:14,971:INFO:root:handleSlider: Current: 61
+2023-12-09 16:30:14,971:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,971:INFO:root:handleSlider: Remainder: 39
+2023-12-09 16:30:14,971:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,971:INFO:root:handleSlider: Sliders Values: [40, 20, 0, 0]
+2023-12-09 16:30:14,971:INFO:root:handleSlider: Current: 60
+2023-12-09 16:30:14,971:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,971:INFO:root:handleSlider: Remainder: 40
+2023-12-09 16:30:14,972:INFO:root:===============================================================
+2023-12-09 16:30:14,992:INFO:root:handleSlider: value: 19 , Index: 1
+2023-12-09 16:30:14,992:INFO:root:handleSlider: Sliders Values: [40, 20, 0, 0]
+2023-12-09 16:30:14,993:INFO:root:handleSlider: Current: 60
+2023-12-09 16:30:14,993:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,993:INFO:root:handleSlider: Remainder: 40
+2023-12-09 16:30:14,993:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:14,993:INFO:root:handleSlider: Sliders Values: [40, 19, 0, 0]
+2023-12-09 16:30:14,993:INFO:root:handleSlider: Current: 59
+2023-12-09 16:30:14,993:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:14,993:INFO:root:handleSlider: Remainder: 41
+2023-12-09 16:30:14,993:INFO:root:===============================================================
+2023-12-09 16:30:15,027:INFO:root:handleSlider: value: 18 , Index: 1
+2023-12-09 16:30:15,027:INFO:root:handleSlider: Sliders Values: [40, 19, 0, 0]
+2023-12-09 16:30:15,027:INFO:root:handleSlider: Current: 59
+2023-12-09 16:30:15,027:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,027:INFO:root:handleSlider: Remainder: 41
+2023-12-09 16:30:15,027:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,028:INFO:root:handleSlider: Sliders Values: [40, 18, 0, 0]
+2023-12-09 16:30:15,028:INFO:root:handleSlider: Current: 58
+2023-12-09 16:30:15,028:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,028:INFO:root:handleSlider: Remainder: 42
+2023-12-09 16:30:15,028:INFO:root:===============================================================
+2023-12-09 16:30:15,041:INFO:root:handleSlider: value: 17 , Index: 1
+2023-12-09 16:30:15,041:INFO:root:handleSlider: Sliders Values: [40, 18, 0, 0]
+2023-12-09 16:30:15,041:INFO:root:handleSlider: Current: 58
+2023-12-09 16:30:15,041:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,041:INFO:root:handleSlider: Remainder: 42
+2023-12-09 16:30:15,041:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,041:INFO:root:handleSlider: Sliders Values: [40, 17, 0, 0]
+2023-12-09 16:30:15,041:INFO:root:handleSlider: Current: 57
+2023-12-09 16:30:15,041:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,041:INFO:root:handleSlider: Remainder: 43
+2023-12-09 16:30:15,041:INFO:root:===============================================================
+2023-12-09 16:30:15,057:INFO:root:handleSlider: value: 16 , Index: 1
+2023-12-09 16:30:15,057:INFO:root:handleSlider: Sliders Values: [40, 17, 0, 0]
+2023-12-09 16:30:15,057:INFO:root:handleSlider: Current: 57
+2023-12-09 16:30:15,057:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,057:INFO:root:handleSlider: Remainder: 43
+2023-12-09 16:30:15,057:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,057:INFO:root:handleSlider: Sliders Values: [40, 16, 0, 0]
+2023-12-09 16:30:15,057:INFO:root:handleSlider: Current: 56
+2023-12-09 16:30:15,057:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,057:INFO:root:handleSlider: Remainder: 44
+2023-12-09 16:30:15,057:INFO:root:===============================================================
+2023-12-09 16:30:15,104:INFO:root:handleSlider: value: 15 , Index: 1
+2023-12-09 16:30:15,105:INFO:root:handleSlider: Sliders Values: [40, 16, 0, 0]
+2023-12-09 16:30:15,105:INFO:root:handleSlider: Current: 56
+2023-12-09 16:30:15,105:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,105:INFO:root:handleSlider: Remainder: 44
+2023-12-09 16:30:15,105:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,105:INFO:root:handleSlider: Sliders Values: [40, 15, 0, 0]
+2023-12-09 16:30:15,105:INFO:root:handleSlider: Current: 55
+2023-12-09 16:30:15,105:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,105:INFO:root:handleSlider: Remainder: 45
+2023-12-09 16:30:15,105:INFO:root:===============================================================
+2023-12-09 16:30:15,133:INFO:root:handleSlider: value: 14 , Index: 1
+2023-12-09 16:30:15,133:INFO:root:handleSlider: Sliders Values: [40, 15, 0, 0]
+2023-12-09 16:30:15,133:INFO:root:handleSlider: Current: 55
+2023-12-09 16:30:15,133:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,133:INFO:root:handleSlider: Remainder: 45
+2023-12-09 16:30:15,133:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,133:INFO:root:handleSlider: Sliders Values: [40, 14, 0, 0]
+2023-12-09 16:30:15,133:INFO:root:handleSlider: Current: 54
+2023-12-09 16:30:15,133:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,133:INFO:root:handleSlider: Remainder: 46
+2023-12-09 16:30:15,133:INFO:root:===============================================================
+2023-12-09 16:30:15,161:INFO:root:handleSlider: value: 13 , Index: 1
+2023-12-09 16:30:15,161:INFO:root:handleSlider: Sliders Values: [40, 14, 0, 0]
+2023-12-09 16:30:15,161:INFO:root:handleSlider: Current: 54
+2023-12-09 16:30:15,161:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,161:INFO:root:handleSlider: Remainder: 46
+2023-12-09 16:30:15,161:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,161:INFO:root:handleSlider: Sliders Values: [40, 13, 0, 0]
+2023-12-09 16:30:15,161:INFO:root:handleSlider: Current: 53
+2023-12-09 16:30:15,161:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,161:INFO:root:handleSlider: Remainder: 47
+2023-12-09 16:30:15,162:INFO:root:===============================================================
+2023-12-09 16:30:15,267:INFO:root:handleSlider: value: 14 , Index: 1
+2023-12-09 16:30:15,267:INFO:root:handleSlider: Sliders Values: [40, 13, 0, 0]
+2023-12-09 16:30:15,267:INFO:root:handleSlider: Current: 53
+2023-12-09 16:30:15,267:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,267:INFO:root:handleSlider: Remainder: 47
+2023-12-09 16:30:15,267:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,267:INFO:root:handleSlider: Sliders Values: [40, 14, 0, 0]
+2023-12-09 16:30:15,267:INFO:root:handleSlider: Current: 54
+2023-12-09 16:30:15,267:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,267:INFO:root:handleSlider: Remainder: 46
+2023-12-09 16:30:15,267:INFO:root:===============================================================
+2023-12-09 16:30:15,275:INFO:root:handleSlider: value: 15 , Index: 1
+2023-12-09 16:30:15,275:INFO:root:handleSlider: Sliders Values: [40, 14, 0, 0]
+2023-12-09 16:30:15,275:INFO:root:handleSlider: Current: 54
+2023-12-09 16:30:15,275:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,275:INFO:root:handleSlider: Remainder: 46
+2023-12-09 16:30:15,275:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,275:INFO:root:handleSlider: Sliders Values: [40, 15, 0, 0]
+2023-12-09 16:30:15,275:INFO:root:handleSlider: Current: 55
+2023-12-09 16:30:15,275:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,275:INFO:root:handleSlider: Remainder: 45
+2023-12-09 16:30:15,275:INFO:root:===============================================================
+2023-12-09 16:30:15,289:INFO:root:handleSlider: value: 16 , Index: 1
+2023-12-09 16:30:15,289:INFO:root:handleSlider: Sliders Values: [40, 15, 0, 0]
+2023-12-09 16:30:15,289:INFO:root:handleSlider: Current: 55
+2023-12-09 16:30:15,289:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,289:INFO:root:handleSlider: Remainder: 45
+2023-12-09 16:30:15,289:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,289:INFO:root:handleSlider: Sliders Values: [40, 16, 0, 0]
+2023-12-09 16:30:15,289:INFO:root:handleSlider: Current: 56
+2023-12-09 16:30:15,289:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,290:INFO:root:handleSlider: Remainder: 44
+2023-12-09 16:30:15,290:INFO:root:===============================================================
+2023-12-09 16:30:15,296:INFO:root:handleSlider: value: 17 , Index: 1
+2023-12-09 16:30:15,296:INFO:root:handleSlider: Sliders Values: [40, 16, 0, 0]
+2023-12-09 16:30:15,296:INFO:root:handleSlider: Current: 56
+2023-12-09 16:30:15,296:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,296:INFO:root:handleSlider: Remainder: 44
+2023-12-09 16:30:15,296:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,296:INFO:root:handleSlider: Sliders Values: [40, 17, 0, 0]
+2023-12-09 16:30:15,296:INFO:root:handleSlider: Current: 57
+2023-12-09 16:30:15,296:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,296:INFO:root:handleSlider: Remainder: 43
+2023-12-09 16:30:15,296:INFO:root:===============================================================
+2023-12-09 16:30:15,303:INFO:root:handleSlider: value: 18 , Index: 1
+2023-12-09 16:30:15,303:INFO:root:handleSlider: Sliders Values: [40, 17, 0, 0]
+2023-12-09 16:30:15,303:INFO:root:handleSlider: Current: 57
+2023-12-09 16:30:15,303:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,303:INFO:root:handleSlider: Remainder: 43
+2023-12-09 16:30:15,303:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,303:INFO:root:handleSlider: Sliders Values: [40, 18, 0, 0]
+2023-12-09 16:30:15,303:INFO:root:handleSlider: Current: 58
+2023-12-09 16:30:15,303:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,303:INFO:root:handleSlider: Remainder: 42
+2023-12-09 16:30:15,303:INFO:root:===============================================================
+2023-12-09 16:30:15,331:INFO:root:handleSlider: value: 19 , Index: 1
+2023-12-09 16:30:15,331:INFO:root:handleSlider: Sliders Values: [40, 18, 0, 0]
+2023-12-09 16:30:15,331:INFO:root:handleSlider: Current: 58
+2023-12-09 16:30:15,331:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,331:INFO:root:handleSlider: Remainder: 42
+2023-12-09 16:30:15,331:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,331:INFO:root:handleSlider: Sliders Values: [40, 19, 0, 0]
+2023-12-09 16:30:15,331:INFO:root:handleSlider: Current: 59
+2023-12-09 16:30:15,331:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,331:INFO:root:handleSlider: Remainder: 41
+2023-12-09 16:30:15,331:INFO:root:===============================================================
+2023-12-09 16:30:15,345:INFO:root:handleSlider: value: 20 , Index: 1
+2023-12-09 16:30:15,345:INFO:root:handleSlider: Sliders Values: [40, 19, 0, 0]
+2023-12-09 16:30:15,345:INFO:root:handleSlider: Current: 59
+2023-12-09 16:30:15,346:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,346:INFO:root:handleSlider: Remainder: 41
+2023-12-09 16:30:15,346:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,346:INFO:root:handleSlider: Sliders Values: [40, 20, 0, 0]
+2023-12-09 16:30:15,346:INFO:root:handleSlider: Current: 60
+2023-12-09 16:30:15,346:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,346:INFO:root:handleSlider: Remainder: 40
+2023-12-09 16:30:15,346:INFO:root:===============================================================
+2023-12-09 16:30:15,359:INFO:root:handleSlider: value: 21 , Index: 1
+2023-12-09 16:30:15,359:INFO:root:handleSlider: Sliders Values: [40, 20, 0, 0]
+2023-12-09 16:30:15,359:INFO:root:handleSlider: Current: 60
+2023-12-09 16:30:15,359:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,359:INFO:root:handleSlider: Remainder: 40
+2023-12-09 16:30:15,359:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,359:INFO:root:handleSlider: Sliders Values: [40, 21, 0, 0]
+2023-12-09 16:30:15,360:INFO:root:handleSlider: Current: 61
+2023-12-09 16:30:15,360:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,360:INFO:root:handleSlider: Remainder: 39
+2023-12-09 16:30:15,360:INFO:root:===============================================================
+2023-12-09 16:30:15,422:INFO:root:handleSlider: value: 22 , Index: 1
+2023-12-09 16:30:15,423:INFO:root:handleSlider: Sliders Values: [40, 21, 0, 0]
+2023-12-09 16:30:15,423:INFO:root:handleSlider: Current: 61
+2023-12-09 16:30:15,423:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,423:INFO:root:handleSlider: Remainder: 39
+2023-12-09 16:30:15,423:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,423:INFO:root:handleSlider: Sliders Values: [40, 22, 0, 0]
+2023-12-09 16:30:15,423:INFO:root:handleSlider: Current: 62
+2023-12-09 16:30:15,423:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,423:INFO:root:handleSlider: Remainder: 38
+2023-12-09 16:30:15,423:INFO:root:===============================================================
+2023-12-09 16:30:15,479:INFO:root:handleSlider: value: 24 , Index: 1
+2023-12-09 16:30:15,479:INFO:root:handleSlider: Sliders Values: [40, 22, 0, 0]
+2023-12-09 16:30:15,479:INFO:root:handleSlider: Current: 62
+2023-12-09 16:30:15,479:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,479:INFO:root:handleSlider: Remainder: 38
+2023-12-09 16:30:15,479:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,479:INFO:root:handleSlider: Sliders Values: [40, 24, 0, 0]
+2023-12-09 16:30:15,479:INFO:root:handleSlider: Current: 64
+2023-12-09 16:30:15,479:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,479:INFO:root:handleSlider: Remainder: 36
+2023-12-09 16:30:15,479:INFO:root:===============================================================
+2023-12-09 16:30:15,528:INFO:root:handleSlider: value: 25 , Index: 1
+2023-12-09 16:30:15,528:INFO:root:handleSlider: Sliders Values: [40, 24, 0, 0]
+2023-12-09 16:30:15,528:INFO:root:handleSlider: Current: 64
+2023-12-09 16:30:15,528:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,528:INFO:root:handleSlider: Remainder: 36
+2023-12-09 16:30:15,528:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,528:INFO:root:handleSlider: Sliders Values: [40, 25, 0, 0]
+2023-12-09 16:30:15,528:INFO:root:handleSlider: Current: 65
+2023-12-09 16:30:15,529:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,529:INFO:root:handleSlider: Remainder: 35
+2023-12-09 16:30:15,529:INFO:root:===============================================================
+2023-12-09 16:30:15,585:INFO:root:handleSlider: value: 26 , Index: 1
+2023-12-09 16:30:15,585:INFO:root:handleSlider: Sliders Values: [40, 25, 0, 0]
+2023-12-09 16:30:15,585:INFO:root:handleSlider: Current: 65
+2023-12-09 16:30:15,585:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,585:INFO:root:handleSlider: Remainder: 35
+2023-12-09 16:30:15,585:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,585:INFO:root:handleSlider: Sliders Values: [40, 26, 0, 0]
+2023-12-09 16:30:15,585:INFO:root:handleSlider: Current: 66
+2023-12-09 16:30:15,585:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,585:INFO:root:handleSlider: Remainder: 34
+2023-12-09 16:30:15,585:INFO:root:===============================================================
+2023-12-09 16:30:15,599:INFO:root:handleSlider: value: 27 , Index: 1
+2023-12-09 16:30:15,599:INFO:root:handleSlider: Sliders Values: [40, 26, 0, 0]
+2023-12-09 16:30:15,599:INFO:root:handleSlider: Current: 66
+2023-12-09 16:30:15,599:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,599:INFO:root:handleSlider: Remainder: 34
+2023-12-09 16:30:15,599:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,599:INFO:root:handleSlider: Sliders Values: [40, 27, 0, 0]
+2023-12-09 16:30:15,599:INFO:root:handleSlider: Current: 67
+2023-12-09 16:30:15,599:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,599:INFO:root:handleSlider: Remainder: 33
+2023-12-09 16:30:15,599:INFO:root:===============================================================
+2023-12-09 16:30:15,634:INFO:root:handleSlider: value: 28 , Index: 1
+2023-12-09 16:30:15,634:INFO:root:handleSlider: Sliders Values: [40, 27, 0, 0]
+2023-12-09 16:30:15,634:INFO:root:handleSlider: Current: 67
+2023-12-09 16:30:15,634:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,634:INFO:root:handleSlider: Remainder: 33
+2023-12-09 16:30:15,634:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,634:INFO:root:handleSlider: Sliders Values: [40, 28, 0, 0]
+2023-12-09 16:30:15,634:INFO:root:handleSlider: Current: 68
+2023-12-09 16:30:15,634:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,634:INFO:root:handleSlider: Remainder: 32
+2023-12-09 16:30:15,634:INFO:root:===============================================================
+2023-12-09 16:30:15,705:INFO:root:handleSlider: value: 29 , Index: 1
+2023-12-09 16:30:15,705:INFO:root:handleSlider: Sliders Values: [40, 28, 0, 0]
+2023-12-09 16:30:15,705:INFO:root:handleSlider: Current: 68
+2023-12-09 16:30:15,705:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,705:INFO:root:handleSlider: Remainder: 32
+2023-12-09 16:30:15,705:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,705:INFO:root:handleSlider: Sliders Values: [40, 29, 0, 0]
+2023-12-09 16:30:15,705:INFO:root:handleSlider: Current: 69
+2023-12-09 16:30:15,705:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,705:INFO:root:handleSlider: Remainder: 31
+2023-12-09 16:30:15,705:INFO:root:===============================================================
+2023-12-09 16:30:15,740:INFO:root:handleSlider: value: 30 , Index: 1
+2023-12-09 16:30:15,740:INFO:root:handleSlider: Sliders Values: [40, 29, 0, 0]
+2023-12-09 16:30:15,740:INFO:root:handleSlider: Current: 69
+2023-12-09 16:30:15,740:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,740:INFO:root:handleSlider: Remainder: 31
+2023-12-09 16:30:15,740:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,740:INFO:root:handleSlider: Sliders Values: [40, 30, 0, 0]
+2023-12-09 16:30:15,741:INFO:root:handleSlider: Current: 70
+2023-12-09 16:30:15,741:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,741:INFO:root:handleSlider: Remainder: 30
+2023-12-09 16:30:15,741:INFO:root:===============================================================
+2023-12-09 16:30:15,768:INFO:root:handleSlider: value: 31 , Index: 1
+2023-12-09 16:30:15,768:INFO:root:handleSlider: Sliders Values: [40, 30, 0, 0]
+2023-12-09 16:30:15,768:INFO:root:handleSlider: Current: 70
+2023-12-09 16:30:15,768:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,768:INFO:root:handleSlider: Remainder: 30
+2023-12-09 16:30:15,768:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,768:INFO:root:handleSlider: Sliders Values: [40, 31, 0, 0]
+2023-12-09 16:30:15,768:INFO:root:handleSlider: Current: 71
+2023-12-09 16:30:15,768:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,768:INFO:root:handleSlider: Remainder: 29
+2023-12-09 16:30:15,769:INFO:root:===============================================================
+2023-12-09 16:30:15,896:INFO:root:handleSlider: value: 32 , Index: 1
+2023-12-09 16:30:15,896:INFO:root:handleSlider: Sliders Values: [40, 31, 0, 0]
+2023-12-09 16:30:15,896:INFO:root:handleSlider: Current: 71
+2023-12-09 16:30:15,896:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,896:INFO:root:handleSlider: Remainder: 29
+2023-12-09 16:30:15,896:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,896:INFO:root:handleSlider: Sliders Values: [40, 32, 0, 0]
+2023-12-09 16:30:15,896:INFO:root:handleSlider: Current: 72
+2023-12-09 16:30:15,896:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,896:INFO:root:handleSlider: Remainder: 28
+2023-12-09 16:30:15,896:INFO:root:===============================================================
+2023-12-09 16:30:15,923:INFO:root:handleSlider: value: 33 , Index: 1
+2023-12-09 16:30:15,923:INFO:root:handleSlider: Sliders Values: [40, 32, 0, 0]
+2023-12-09 16:30:15,923:INFO:root:handleSlider: Current: 72
+2023-12-09 16:30:15,923:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,924:INFO:root:handleSlider: Remainder: 28
+2023-12-09 16:30:15,924:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,924:INFO:root:handleSlider: Sliders Values: [40, 33, 0, 0]
+2023-12-09 16:30:15,924:INFO:root:handleSlider: Current: 73
+2023-12-09 16:30:15,924:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,924:INFO:root:handleSlider: Remainder: 27
+2023-12-09 16:30:15,924:INFO:root:===============================================================
+2023-12-09 16:30:15,959:INFO:root:handleSlider: value: 34 , Index: 1
+2023-12-09 16:30:15,959:INFO:root:handleSlider: Sliders Values: [40, 33, 0, 0]
+2023-12-09 16:30:15,959:INFO:root:handleSlider: Current: 73
+2023-12-09 16:30:15,959:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,959:INFO:root:handleSlider: Remainder: 27
+2023-12-09 16:30:15,959:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:15,959:INFO:root:handleSlider: Sliders Values: [40, 34, 0, 0]
+2023-12-09 16:30:15,959:INFO:root:handleSlider: Current: 74
+2023-12-09 16:30:15,960:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:15,960:INFO:root:handleSlider: Remainder: 26
+2023-12-09 16:30:15,960:INFO:root:===============================================================
+2023-12-09 16:30:16,079:INFO:root:handleSlider: value: 35 , Index: 1
+2023-12-09 16:30:16,079:INFO:root:handleSlider: Sliders Values: [40, 34, 0, 0]
+2023-12-09 16:30:16,079:INFO:root:handleSlider: Current: 74
+2023-12-09 16:30:16,079:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,079:INFO:root:handleSlider: Remainder: 26
+2023-12-09 16:30:16,079:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,079:INFO:root:handleSlider: Sliders Values: [40, 35, 0, 0]
+2023-12-09 16:30:16,079:INFO:root:handleSlider: Current: 75
+2023-12-09 16:30:16,079:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,079:INFO:root:handleSlider: Remainder: 25
+2023-12-09 16:30:16,079:INFO:root:===============================================================
+2023-12-09 16:30:16,100:INFO:root:handleSlider: value: 36 , Index: 1
+2023-12-09 16:30:16,100:INFO:root:handleSlider: Sliders Values: [40, 35, 0, 0]
+2023-12-09 16:30:16,100:INFO:root:handleSlider: Current: 75
+2023-12-09 16:30:16,100:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,100:INFO:root:handleSlider: Remainder: 25
+2023-12-09 16:30:16,101:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,101:INFO:root:handleSlider: Sliders Values: [40, 36, 0, 0]
+2023-12-09 16:30:16,101:INFO:root:handleSlider: Current: 76
+2023-12-09 16:30:16,101:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,101:INFO:root:handleSlider: Remainder: 24
+2023-12-09 16:30:16,101:INFO:root:===============================================================
+2023-12-09 16:30:16,135:INFO:root:handleSlider: value: 37 , Index: 1
+2023-12-09 16:30:16,135:INFO:root:handleSlider: Sliders Values: [40, 36, 0, 0]
+2023-12-09 16:30:16,135:INFO:root:handleSlider: Current: 76
+2023-12-09 16:30:16,135:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,135:INFO:root:handleSlider: Remainder: 24
+2023-12-09 16:30:16,135:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,136:INFO:root:handleSlider: Sliders Values: [40, 37, 0, 0]
+2023-12-09 16:30:16,136:INFO:root:handleSlider: Current: 77
+2023-12-09 16:30:16,136:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,136:INFO:root:handleSlider: Remainder: 23
+2023-12-09 16:30:16,136:INFO:root:===============================================================
+2023-12-09 16:30:16,206:INFO:root:handleSlider: value: 38 , Index: 1
+2023-12-09 16:30:16,206:INFO:root:handleSlider: Sliders Values: [40, 37, 0, 0]
+2023-12-09 16:30:16,206:INFO:root:handleSlider: Current: 77
+2023-12-09 16:30:16,206:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,206:INFO:root:handleSlider: Remainder: 23
+2023-12-09 16:30:16,206:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,206:INFO:root:handleSlider: Sliders Values: [40, 38, 0, 0]
+2023-12-09 16:30:16,206:INFO:root:handleSlider: Current: 78
+2023-12-09 16:30:16,206:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,206:INFO:root:handleSlider: Remainder: 22
+2023-12-09 16:30:16,206:INFO:root:===============================================================
+2023-12-09 16:30:16,241:INFO:root:handleSlider: value: 39 , Index: 1
+2023-12-09 16:30:16,242:INFO:root:handleSlider: Sliders Values: [40, 38, 0, 0]
+2023-12-09 16:30:16,242:INFO:root:handleSlider: Current: 78
+2023-12-09 16:30:16,242:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,242:INFO:root:handleSlider: Remainder: 22
+2023-12-09 16:30:16,242:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,242:INFO:root:handleSlider: Sliders Values: [40, 39, 0, 0]
+2023-12-09 16:30:16,242:INFO:root:handleSlider: Current: 79
+2023-12-09 16:30:16,242:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,242:INFO:root:handleSlider: Remainder: 21
+2023-12-09 16:30:16,242:INFO:root:===============================================================
+2023-12-09 16:30:16,263:INFO:root:handleSlider: value: 40 , Index: 1
+2023-12-09 16:30:16,263:INFO:root:handleSlider: Sliders Values: [40, 39, 0, 0]
+2023-12-09 16:30:16,263:INFO:root:handleSlider: Current: 79
+2023-12-09 16:30:16,263:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,263:INFO:root:handleSlider: Remainder: 21
+2023-12-09 16:30:16,263:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,263:INFO:root:handleSlider: Sliders Values: [40, 40, 0, 0]
+2023-12-09 16:30:16,263:INFO:root:handleSlider: Current: 80
+2023-12-09 16:30:16,263:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,263:INFO:root:handleSlider: Remainder: 20
+2023-12-09 16:30:16,263:INFO:root:===============================================================
+2023-12-09 16:30:16,305:INFO:root:handleSlider: value: 41 , Index: 1
+2023-12-09 16:30:16,305:INFO:root:handleSlider: Sliders Values: [40, 40, 0, 0]
+2023-12-09 16:30:16,305:INFO:root:handleSlider: Current: 80
+2023-12-09 16:30:16,305:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,305:INFO:root:handleSlider: Remainder: 20
+2023-12-09 16:30:16,305:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,305:INFO:root:handleSlider: Sliders Values: [40, 41, 0, 0]
+2023-12-09 16:30:16,305:INFO:root:handleSlider: Current: 81
+2023-12-09 16:30:16,305:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,305:INFO:root:handleSlider: Remainder: 19
+2023-12-09 16:30:16,305:INFO:root:===============================================================
+2023-12-09 16:30:16,326:INFO:root:handleSlider: value: 42 , Index: 1
+2023-12-09 16:30:16,326:INFO:root:handleSlider: Sliders Values: [40, 41, 0, 0]
+2023-12-09 16:30:16,326:INFO:root:handleSlider: Current: 81
+2023-12-09 16:30:16,326:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,326:INFO:root:handleSlider: Remainder: 19
+2023-12-09 16:30:16,326:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,326:INFO:root:handleSlider: Sliders Values: [40, 42, 0, 0]
+2023-12-09 16:30:16,326:INFO:root:handleSlider: Current: 82
+2023-12-09 16:30:16,326:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,326:INFO:root:handleSlider: Remainder: 18
+2023-12-09 16:30:16,327:INFO:root:===============================================================
+2023-12-09 16:30:16,340:INFO:root:handleSlider: value: 43 , Index: 1
+2023-12-09 16:30:16,340:INFO:root:handleSlider: Sliders Values: [40, 42, 0, 0]
+2023-12-09 16:30:16,340:INFO:root:handleSlider: Current: 82
+2023-12-09 16:30:16,340:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,341:INFO:root:handleSlider: Remainder: 18
+2023-12-09 16:30:16,341:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,341:INFO:root:handleSlider: Sliders Values: [40, 43, 0, 0]
+2023-12-09 16:30:16,341:INFO:root:handleSlider: Current: 83
+2023-12-09 16:30:16,341:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,341:INFO:root:handleSlider: Remainder: 17
+2023-12-09 16:30:16,341:INFO:root:===============================================================
+2023-12-09 16:30:16,376:INFO:root:handleSlider: value: 44 , Index: 1
+2023-12-09 16:30:16,376:INFO:root:handleSlider: Sliders Values: [40, 43, 0, 0]
+2023-12-09 16:30:16,376:INFO:root:handleSlider: Current: 83
+2023-12-09 16:30:16,376:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,376:INFO:root:handleSlider: Remainder: 17
+2023-12-09 16:30:16,376:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,376:INFO:root:handleSlider: Sliders Values: [40, 44, 0, 0]
+2023-12-09 16:30:16,376:INFO:root:handleSlider: Current: 84
+2023-12-09 16:30:16,376:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,376:INFO:root:handleSlider: Remainder: 16
+2023-12-09 16:30:16,376:INFO:root:===============================================================
+2023-12-09 16:30:16,418:INFO:root:handleSlider: value: 46 , Index: 1
+2023-12-09 16:30:16,418:INFO:root:handleSlider: Sliders Values: [40, 44, 0, 0]
+2023-12-09 16:30:16,418:INFO:root:handleSlider: Current: 84
+2023-12-09 16:30:16,418:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,418:INFO:root:handleSlider: Remainder: 16
+2023-12-09 16:30:16,418:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,418:INFO:root:handleSlider: Sliders Values: [40, 46, 0, 0]
+2023-12-09 16:30:16,418:INFO:root:handleSlider: Current: 86
+2023-12-09 16:30:16,418:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,419:INFO:root:handleSlider: Remainder: 14
+2023-12-09 16:30:16,419:INFO:root:===============================================================
+2023-12-09 16:30:16,432:INFO:root:handleSlider: value: 47 , Index: 1
+2023-12-09 16:30:16,432:INFO:root:handleSlider: Sliders Values: [40, 46, 0, 0]
+2023-12-09 16:30:16,432:INFO:root:handleSlider: Current: 86
+2023-12-09 16:30:16,432:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,432:INFO:root:handleSlider: Remainder: 14
+2023-12-09 16:30:16,432:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,433:INFO:root:handleSlider: Sliders Values: [40, 47, 0, 0]
+2023-12-09 16:30:16,433:INFO:root:handleSlider: Current: 87
+2023-12-09 16:30:16,433:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,433:INFO:root:handleSlider: Remainder: 13
+2023-12-09 16:30:16,433:INFO:root:===============================================================
+2023-12-09 16:30:16,531:INFO:root:handleSlider: value: 48 , Index: 1
+2023-12-09 16:30:16,531:INFO:root:handleSlider: Sliders Values: [40, 47, 0, 0]
+2023-12-09 16:30:16,531:INFO:root:handleSlider: Current: 87
+2023-12-09 16:30:16,531:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,531:INFO:root:handleSlider: Remainder: 13
+2023-12-09 16:30:16,531:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,531:INFO:root:handleSlider: Sliders Values: [40, 48, 0, 0]
+2023-12-09 16:30:16,531:INFO:root:handleSlider: Current: 88
+2023-12-09 16:30:16,531:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,531:INFO:root:handleSlider: Remainder: 12
+2023-12-09 16:30:16,531:INFO:root:===============================================================
+2023-12-09 16:30:16,552:INFO:root:handleSlider: value: 49 , Index: 1
+2023-12-09 16:30:16,552:INFO:root:handleSlider: Sliders Values: [40, 48, 0, 0]
+2023-12-09 16:30:16,552:INFO:root:handleSlider: Current: 88
+2023-12-09 16:30:16,552:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,552:INFO:root:handleSlider: Remainder: 12
+2023-12-09 16:30:16,552:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,552:INFO:root:handleSlider: Sliders Values: [40, 49, 0, 0]
+2023-12-09 16:30:16,552:INFO:root:handleSlider: Current: 89
+2023-12-09 16:30:16,552:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,552:INFO:root:handleSlider: Remainder: 11
+2023-12-09 16:30:16,552:INFO:root:===============================================================
+2023-12-09 16:30:16,580:INFO:root:handleSlider: value: 50 , Index: 1
+2023-12-09 16:30:16,580:INFO:root:handleSlider: Sliders Values: [40, 49, 0, 0]
+2023-12-09 16:30:16,580:INFO:root:handleSlider: Current: 89
+2023-12-09 16:30:16,580:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,580:INFO:root:handleSlider: Remainder: 11
+2023-12-09 16:30:16,580:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,580:INFO:root:handleSlider: Sliders Values: [40, 50, 0, 0]
+2023-12-09 16:30:16,580:INFO:root:handleSlider: Current: 90
+2023-12-09 16:30:16,580:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,580:INFO:root:handleSlider: Remainder: 10
+2023-12-09 16:30:16,580:INFO:root:===============================================================
+2023-12-09 16:30:16,714:INFO:root:handleSlider: value: 51 , Index: 1
+2023-12-09 16:30:16,714:INFO:root:handleSlider: Sliders Values: [40, 50, 0, 0]
+2023-12-09 16:30:16,714:INFO:root:handleSlider: Current: 90
+2023-12-09 16:30:16,714:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,714:INFO:root:handleSlider: Remainder: 10
+2023-12-09 16:30:16,714:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,714:INFO:root:handleSlider: Sliders Values: [40, 51, 0, 0]
+2023-12-09 16:30:16,714:INFO:root:handleSlider: Current: 91
+2023-12-09 16:30:16,714:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,714:INFO:root:handleSlider: Remainder: 9
+2023-12-09 16:30:16,714:INFO:root:===============================================================
+2023-12-09 16:30:16,735:INFO:root:handleSlider: value: 52 , Index: 1
+2023-12-09 16:30:16,735:INFO:root:handleSlider: Sliders Values: [40, 51, 0, 0]
+2023-12-09 16:30:16,735:INFO:root:handleSlider: Current: 91
+2023-12-09 16:30:16,735:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,735:INFO:root:handleSlider: Remainder: 9
+2023-12-09 16:30:16,735:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,736:INFO:root:handleSlider: Sliders Values: [40, 52, 0, 0]
+2023-12-09 16:30:16,736:INFO:root:handleSlider: Current: 92
+2023-12-09 16:30:16,736:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,736:INFO:root:handleSlider: Remainder: 8
+2023-12-09 16:30:16,736:INFO:root:===============================================================
+2023-12-09 16:30:16,757:INFO:root:handleSlider: value: 53 , Index: 1
+2023-12-09 16:30:16,757:INFO:root:handleSlider: Sliders Values: [40, 52, 0, 0]
+2023-12-09 16:30:16,757:INFO:root:handleSlider: Current: 92
+2023-12-09 16:30:16,757:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,757:INFO:root:handleSlider: Remainder: 8
+2023-12-09 16:30:16,757:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,757:INFO:root:handleSlider: Sliders Values: [40, 53, 0, 0]
+2023-12-09 16:30:16,757:INFO:root:handleSlider: Current: 93
+2023-12-09 16:30:16,757:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,757:INFO:root:handleSlider: Remainder: 7
+2023-12-09 16:30:16,757:INFO:root:===============================================================
+2023-12-09 16:30:16,828:INFO:root:handleSlider: value: 54 , Index: 1
+2023-12-09 16:30:16,828:INFO:root:handleSlider: Sliders Values: [40, 53, 0, 0]
+2023-12-09 16:30:16,828:INFO:root:handleSlider: Current: 93
+2023-12-09 16:30:16,828:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,828:INFO:root:handleSlider: Remainder: 7
+2023-12-09 16:30:16,828:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,828:INFO:root:handleSlider: Sliders Values: [40, 54, 0, 0]
+2023-12-09 16:30:16,828:INFO:root:handleSlider: Current: 94
+2023-12-09 16:30:16,828:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,828:INFO:root:handleSlider: Remainder: 6
+2023-12-09 16:30:16,828:INFO:root:===============================================================
+2023-12-09 16:30:16,842:INFO:root:handleSlider: value: 55 , Index: 1
+2023-12-09 16:30:16,842:INFO:root:handleSlider: Sliders Values: [40, 54, 0, 0]
+2023-12-09 16:30:16,842:INFO:root:handleSlider: Current: 94
+2023-12-09 16:30:16,842:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,842:INFO:root:handleSlider: Remainder: 6
+2023-12-09 16:30:16,842:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,842:INFO:root:handleSlider: Sliders Values: [40, 55, 0, 0]
+2023-12-09 16:30:16,842:INFO:root:handleSlider: Current: 95
+2023-12-09 16:30:16,842:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,842:INFO:root:handleSlider: Remainder: 5
+2023-12-09 16:30:16,842:INFO:root:===============================================================
+2023-12-09 16:30:16,870:INFO:root:handleSlider: value: 56 , Index: 1
+2023-12-09 16:30:16,870:INFO:root:handleSlider: Sliders Values: [40, 55, 0, 0]
+2023-12-09 16:30:16,870:INFO:root:handleSlider: Current: 95
+2023-12-09 16:30:16,870:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,870:INFO:root:handleSlider: Remainder: 5
+2023-12-09 16:30:16,870:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:16,870:INFO:root:handleSlider: Sliders Values: [40, 56, 0, 0]
+2023-12-09 16:30:16,871:INFO:root:handleSlider: Current: 96
+2023-12-09 16:30:16,871:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:16,871:INFO:root:handleSlider: Remainder: 4
+2023-12-09 16:30:16,871:INFO:root:===============================================================
+2023-12-09 16:30:17,067:INFO:root:handleSlider: value: 57 , Index: 1
+2023-12-09 16:30:17,068:INFO:root:handleSlider: Sliders Values: [40, 56, 0, 0]
+2023-12-09 16:30:17,068:INFO:root:handleSlider: Current: 96
+2023-12-09 16:30:17,068:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,068:INFO:root:handleSlider: Remainder: 4
+2023-12-09 16:30:17,068:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,068:INFO:root:handleSlider: Sliders Values: [40, 57, 0, 0]
+2023-12-09 16:30:17,068:INFO:root:handleSlider: Current: 97
+2023-12-09 16:30:17,068:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,068:INFO:root:handleSlider: Remainder: 3
+2023-12-09 16:30:17,068:INFO:root:===============================================================
+2023-12-09 16:30:17,103:INFO:root:handleSlider: value: 58 , Index: 1
+2023-12-09 16:30:17,103:INFO:root:handleSlider: Sliders Values: [40, 57, 0, 0]
+2023-12-09 16:30:17,103:INFO:root:handleSlider: Current: 97
+2023-12-09 16:30:17,103:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,103:INFO:root:handleSlider: Remainder: 3
+2023-12-09 16:30:17,103:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,103:INFO:root:handleSlider: Sliders Values: [40, 58, 0, 0]
+2023-12-09 16:30:17,103:INFO:root:handleSlider: Current: 98
+2023-12-09 16:30:17,103:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,103:INFO:root:handleSlider: Remainder: 2
+2023-12-09 16:30:17,103:INFO:root:===============================================================
+2023-12-09 16:30:17,124:INFO:root:handleSlider: value: 59 , Index: 1
+2023-12-09 16:30:17,124:INFO:root:handleSlider: Sliders Values: [40, 58, 0, 0]
+2023-12-09 16:30:17,124:INFO:root:handleSlider: Current: 98
+2023-12-09 16:30:17,124:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,124:INFO:root:handleSlider: Remainder: 2
+2023-12-09 16:30:17,124:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,124:INFO:root:handleSlider: Sliders Values: [40, 59, 0, 0]
+2023-12-09 16:30:17,124:INFO:root:handleSlider: Current: 99
+2023-12-09 16:30:17,124:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,124:INFO:root:handleSlider: Remainder: 1
+2023-12-09 16:30:17,124:INFO:root:===============================================================
+2023-12-09 16:30:17,173:INFO:root:handleSlider: value: 60 , Index: 1
+2023-12-09 16:30:17,173:INFO:root:handleSlider: Sliders Values: [40, 59, 0, 0]
+2023-12-09 16:30:17,173:INFO:root:handleSlider: Current: 99
+2023-12-09 16:30:17,173:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,173:INFO:root:handleSlider: Remainder: 1
+2023-12-09 16:30:17,173:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,173:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,173:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,173:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,173:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,173:INFO:root:===============================================================
+2023-12-09 16:30:17,258:INFO:root:handleSlider: value: 61 , Index: 1
+2023-12-09 16:30:17,258:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,258:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,258:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,258:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,258:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,258:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,258:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,258:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,258:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,258:INFO:root:===============================================================
+2023-12-09 16:30:17,287:INFO:root:handleSlider: value: 62 , Index: 1
+2023-12-09 16:30:17,287:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,287:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,287:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,287:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,287:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,287:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,287:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,287:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,287:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,287:INFO:root:===============================================================
+2023-12-09 16:30:17,378:INFO:root:handleSlider: value: 63 , Index: 1
+2023-12-09 16:30:17,378:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,378:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,378:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,378:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,378:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,378:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,378:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,378:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,378:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,378:INFO:root:===============================================================
+2023-12-09 16:30:17,470:INFO:root:handleSlider: value: 64 , Index: 1
+2023-12-09 16:30:17,470:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,470:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,470:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,470:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,470:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,470:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,470:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,470:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,470:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,470:INFO:root:===============================================================
+2023-12-09 16:30:17,505:INFO:root:handleSlider: value: 65 , Index: 1
+2023-12-09 16:30:17,505:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,505:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,505:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,505:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,505:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,505:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,505:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,505:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,505:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,505:INFO:root:===============================================================
+2023-12-09 16:30:17,590:INFO:root:handleSlider: value: 66 , Index: 1
+2023-12-09 16:30:17,590:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,590:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,590:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,590:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,590:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,590:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,590:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,590:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,590:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,590:INFO:root:===============================================================
+2023-12-09 16:30:17,625:INFO:root:handleSlider: value: 67 , Index: 1
+2023-12-09 16:30:17,625:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,626:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,626:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,626:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,626:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,626:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,626:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,626:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,626:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,626:INFO:root:===============================================================
+2023-12-09 16:30:17,639:INFO:root:handleSlider: value: 68 , Index: 1
+2023-12-09 16:30:17,639:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,639:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,639:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,639:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,639:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,640:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,640:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,640:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,640:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,640:INFO:root:===============================================================
+2023-12-09 16:30:17,696:INFO:root:handleSlider: value: 69 , Index: 1
+2023-12-09 16:30:17,696:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,696:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,696:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,696:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,696:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,696:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,696:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,696:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,696:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,696:INFO:root:===============================================================
+2023-12-09 16:30:17,752:INFO:root:handleSlider: value: 70 , Index: 1
+2023-12-09 16:30:17,752:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,752:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,752:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,752:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,752:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,752:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,752:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,752:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,752:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,752:INFO:root:===============================================================
+2023-12-09 16:30:17,774:INFO:root:handleSlider: value: 71 , Index: 1
+2023-12-09 16:30:17,774:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,774:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,774:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,774:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,774:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,774:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,774:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,774:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,774:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,774:INFO:root:===============================================================
+2023-12-09 16:30:17,865:INFO:root:handleSlider: value: 72 , Index: 1
+2023-12-09 16:30:17,865:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,865:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,865:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,865:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,865:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,865:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,865:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,865:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,865:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,865:INFO:root:===============================================================
+2023-12-09 16:30:17,936:INFO:root:handleSlider: value: 73 , Index: 1
+2023-12-09 16:30:17,936:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,936:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,936:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,936:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,936:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:17,936:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:17,936:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:17,936:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:17,936:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:17,936:INFO:root:===============================================================
+2023-12-09 16:30:18,020:INFO:root:handleSlider: value: 74 , Index: 1
+2023-12-09 16:30:18,020:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,020:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,020:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,020:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,020:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,020:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,020:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,020:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,021:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,021:INFO:root:===============================================================
+2023-12-09 16:30:18,027:INFO:root:handleSlider: value: 75 , Index: 1
+2023-12-09 16:30:18,027:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,027:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,028:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,028:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,028:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,028:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,028:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,028:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,028:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,028:INFO:root:===============================================================
+2023-12-09 16:30:18,035:INFO:root:handleSlider: value: 76 , Index: 1
+2023-12-09 16:30:18,035:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,035:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,035:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,035:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,035:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,035:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,035:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,035:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,035:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,035:INFO:root:===============================================================
+2023-12-09 16:30:18,042:INFO:root:handleSlider: value: 77 , Index: 1
+2023-12-09 16:30:18,043:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,043:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,043:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,043:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,043:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,043:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,043:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,043:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,043:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,043:INFO:root:===============================================================
+2023-12-09 16:30:18,063:INFO:root:handleSlider: value: 78 , Index: 1
+2023-12-09 16:30:18,063:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,063:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,063:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,063:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,063:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,063:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,063:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,063:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,063:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,063:INFO:root:===============================================================
+2023-12-09 16:30:18,070:INFO:root:handleSlider: value: 79 , Index: 1
+2023-12-09 16:30:18,070:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,070:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,070:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,070:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,070:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,070:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,070:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,070:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,070:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,070:INFO:root:===============================================================
+2023-12-09 16:30:18,091:INFO:root:handleSlider: value: 80 , Index: 1
+2023-12-09 16:30:18,091:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,091:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,091:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,091:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,091:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,091:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,091:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,091:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,091:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,091:INFO:root:===============================================================
+2023-12-09 16:30:18,106:INFO:root:handleSlider: value: 81 , Index: 1
+2023-12-09 16:30:18,106:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,106:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,106:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,106:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,106:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,106:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,106:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,106:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,106:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,106:INFO:root:===============================================================
+2023-12-09 16:30:18,112:INFO:root:handleSlider: value: 82 , Index: 1
+2023-12-09 16:30:18,112:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,112:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,112:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,112:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,113:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,113:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,113:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,113:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,113:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,113:INFO:root:===============================================================
+2023-12-09 16:30:18,141:INFO:root:handleSlider: value: 83 , Index: 1
+2023-12-09 16:30:18,141:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,141:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,141:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,141:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,141:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,141:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,141:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,141:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,141:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,141:INFO:root:===============================================================
+2023-12-09 16:30:18,218:INFO:root:handleSlider: value: 85 , Index: 1
+2023-12-09 16:30:18,218:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,218:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,218:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,218:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,218:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,218:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,218:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,218:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,218:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,218:INFO:root:===============================================================
+2023-12-09 16:30:18,262:INFO:root:handleSlider: value: 84 , Index: 1
+2023-12-09 16:30:18,262:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,262:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,262:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,262:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,262:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,262:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,262:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,262:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,262:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,262:INFO:root:===============================================================
+2023-12-09 16:30:18,289:INFO:root:handleSlider: value: 83 , Index: 1
+2023-12-09 16:30:18,290:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,290:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,290:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,290:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,290:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,290:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,290:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,290:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,290:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,290:INFO:root:===============================================================
+2023-12-09 16:30:18,296:INFO:root:handleSlider: value: 81 , Index: 1
+2023-12-09 16:30:18,296:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,296:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,296:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,296:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,296:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,296:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,296:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,296:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,296:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,296:INFO:root:===============================================================
+2023-12-09 16:30:18,302:INFO:root:handleSlider: value: 80 , Index: 1
+2023-12-09 16:30:18,302:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,302:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,302:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,302:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,303:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,303:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,303:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,303:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,303:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,303:INFO:root:===============================================================
+2023-12-09 16:30:18,310:INFO:root:handleSlider: value: 78 , Index: 1
+2023-12-09 16:30:18,310:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,310:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,310:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,310:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,310:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,310:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,310:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,310:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,310:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,310:INFO:root:===============================================================
+2023-12-09 16:30:18,317:INFO:root:handleSlider: value: 77 , Index: 1
+2023-12-09 16:30:18,317:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,317:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,317:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,317:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,317:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,317:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,317:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,317:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,317:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,317:INFO:root:===============================================================
+2023-12-09 16:30:18,331:INFO:root:handleSlider: value: 76 , Index: 1
+2023-12-09 16:30:18,332:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,332:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,332:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,332:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,332:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,332:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,332:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,332:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,332:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,332:INFO:root:===============================================================
+2023-12-09 16:30:18,339:INFO:root:handleSlider: value: 74 , Index: 1
+2023-12-09 16:30:18,339:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,339:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,339:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,339:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,339:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,339:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,339:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,339:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,339:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,339:INFO:root:===============================================================
+2023-12-09 16:30:18,353:INFO:root:handleSlider: value: 73 , Index: 1
+2023-12-09 16:30:18,353:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,353:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,353:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,353:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,353:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,353:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,353:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,353:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,353:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,353:INFO:root:===============================================================
+2023-12-09 16:30:18,367:INFO:root:handleSlider: value: 72 , Index: 1
+2023-12-09 16:30:18,367:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,367:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,367:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,367:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,367:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,367:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,367:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,367:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,367:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,367:INFO:root:===============================================================
+2023-12-09 16:30:18,380:INFO:root:handleSlider: value: 71 , Index: 1
+2023-12-09 16:30:18,380:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,381:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,381:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,381:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,381:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,381:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,381:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,381:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,381:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,381:INFO:root:===============================================================
+2023-12-09 16:30:18,444:INFO:root:handleSlider: value: 70 , Index: 1
+2023-12-09 16:30:18,444:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,444:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,444:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,444:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,444:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:18,444:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:18,444:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:18,444:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:18,444:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:18,445:INFO:root:===============================================================
+2023-12-09 16:30:20,894:INFO:root:handleSlider: value: 2 , Index: 2
+2023-12-09 16:30:20,894:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,894:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,894:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,894:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,894:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,894:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,894:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,894:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,894:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,894:INFO:root:===============================================================
+2023-12-09 16:30:20,901:INFO:root:handleSlider: value: 4 , Index: 2
+2023-12-09 16:30:20,901:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,901:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,901:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,901:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,901:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,901:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,901:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,901:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,901:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,901:INFO:root:===============================================================
+2023-12-09 16:30:20,908:INFO:root:handleSlider: value: 7 , Index: 2
+2023-12-09 16:30:20,908:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,908:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,908:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,908:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,908:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,909:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,909:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,909:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,909:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,909:INFO:root:===============================================================
+2023-12-09 16:30:20,916:INFO:root:handleSlider: value: 9 , Index: 2
+2023-12-09 16:30:20,916:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,916:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,916:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,916:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,916:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,916:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,916:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,916:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,916:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,916:INFO:root:===============================================================
+2023-12-09 16:30:20,923:INFO:root:handleSlider: value: 11 , Index: 2
+2023-12-09 16:30:20,923:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,923:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,923:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,923:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,923:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,923:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,923:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,923:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,923:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,923:INFO:root:===============================================================
+2023-12-09 16:30:20,929:INFO:root:handleSlider: value: 14 , Index: 2
+2023-12-09 16:30:20,929:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,929:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,929:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,929:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,929:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,929:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,930:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,930:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,930:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,930:INFO:root:===============================================================
+2023-12-09 16:30:20,936:INFO:root:handleSlider: value: 17 , Index: 2
+2023-12-09 16:30:20,936:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,936:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,936:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,936:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,936:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,937:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,937:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,937:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,937:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,937:INFO:root:===============================================================
+2023-12-09 16:30:20,943:INFO:root:handleSlider: value: 22 , Index: 2
+2023-12-09 16:30:20,943:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,943:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,943:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,943:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,943:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,943:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,943:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,943:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,943:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,943:INFO:root:===============================================================
+2023-12-09 16:30:20,950:INFO:root:handleSlider: value: 27 , Index: 2
+2023-12-09 16:30:20,950:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,950:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,950:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,950:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,950:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,950:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,950:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,950:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,950:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,950:INFO:root:===============================================================
+2023-12-09 16:30:20,958:INFO:root:handleSlider: value: 28 , Index: 2
+2023-12-09 16:30:20,958:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,958:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,958:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,959:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,959:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,959:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,959:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,959:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,959:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,959:INFO:root:===============================================================
+2023-12-09 16:30:20,965:INFO:root:handleSlider: value: 33 , Index: 2
+2023-12-09 16:30:20,965:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,965:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,965:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,965:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,965:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,965:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,965:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,965:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,965:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,965:INFO:root:===============================================================
+2023-12-09 16:30:20,972:INFO:root:handleSlider: value: 34 , Index: 2
+2023-12-09 16:30:20,972:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,972:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,972:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,972:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,972:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,972:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,972:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,972:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,972:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,972:INFO:root:===============================================================
+2023-12-09 16:30:20,979:INFO:root:handleSlider: value: 36 , Index: 2
+2023-12-09 16:30:20,979:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,979:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,979:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,979:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,979:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,979:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,979:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,979:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,979:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,979:INFO:root:===============================================================
+2023-12-09 16:30:20,986:INFO:root:handleSlider: value: 37 , Index: 2
+2023-12-09 16:30:20,986:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,986:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,986:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,986:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,986:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,986:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,986:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,986:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,986:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,986:INFO:root:===============================================================
+2023-12-09 16:30:20,993:INFO:root:handleSlider: value: 39 , Index: 2
+2023-12-09 16:30:20,993:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,993:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,993:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,993:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,993:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:20,993:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:20,993:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:20,993:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:20,993:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:20,993:INFO:root:===============================================================
+2023-12-09 16:30:21,000:INFO:root:handleSlider: value: 40 , Index: 2
+2023-12-09 16:30:21,000:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,000:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,000:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,001:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,001:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,001:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,001:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,001:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,001:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,001:INFO:root:===============================================================
+2023-12-09 16:30:21,007:INFO:root:handleSlider: value: 41 , Index: 2
+2023-12-09 16:30:21,007:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,007:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,007:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,007:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,007:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,007:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,007:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,007:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,007:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,008:INFO:root:===============================================================
+2023-12-09 16:30:21,014:INFO:root:handleSlider: value: 44 , Index: 2
+2023-12-09 16:30:21,014:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,014:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,014:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,014:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,014:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,014:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,014:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,014:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,014:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,015:INFO:root:===============================================================
+2023-12-09 16:30:21,021:INFO:root:handleSlider: value: 45 , Index: 2
+2023-12-09 16:30:21,021:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,021:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,021:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,021:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,021:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,021:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,021:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,021:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,021:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,021:INFO:root:===============================================================
+2023-12-09 16:30:21,028:INFO:root:handleSlider: value: 47 , Index: 2
+2023-12-09 16:30:21,028:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,028:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,028:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,028:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,028:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,028:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,028:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,028:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,028:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,028:INFO:root:===============================================================
+2023-12-09 16:30:21,043:INFO:root:handleSlider: value: 49 , Index: 2
+2023-12-09 16:30:21,043:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,043:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,043:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,043:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,043:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,043:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,043:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,043:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,043:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,043:INFO:root:===============================================================
+2023-12-09 16:30:21,050:INFO:root:handleSlider: value: 50 , Index: 2
+2023-12-09 16:30:21,050:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,050:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,050:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,050:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,050:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,050:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,050:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,050:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,050:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,050:INFO:root:===============================================================
+2023-12-09 16:30:21,058:INFO:root:handleSlider: value: 52 , Index: 2
+2023-12-09 16:30:21,058:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,058:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,058:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,058:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,058:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,058:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,058:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,058:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,058:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,058:INFO:root:===============================================================
+2023-12-09 16:30:21,070:INFO:root:handleSlider: value: 53 , Index: 2
+2023-12-09 16:30:21,070:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,070:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,070:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,070:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,070:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,070:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,070:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,070:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,070:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,070:INFO:root:===============================================================
+2023-12-09 16:30:21,099:INFO:root:handleSlider: value: 54 , Index: 2
+2023-12-09 16:30:21,099:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,099:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,099:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,099:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,099:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,099:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,099:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,099:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,099:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,099:INFO:root:===============================================================
+2023-12-09 16:30:21,105:INFO:root:handleSlider: value: 56 , Index: 2
+2023-12-09 16:30:21,105:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,105:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,105:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,105:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,105:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,105:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,105:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,105:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,106:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,106:INFO:root:===============================================================
+2023-12-09 16:30:21,127:INFO:root:handleSlider: value: 59 , Index: 2
+2023-12-09 16:30:21,127:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,127:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,127:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,127:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,127:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,127:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,127:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,128:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,128:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,128:INFO:root:===============================================================
+2023-12-09 16:30:21,134:INFO:root:handleSlider: value: 60 , Index: 2
+2023-12-09 16:30:21,134:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,134:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,134:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,134:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,134:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,134:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,134:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,134:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,134:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,134:INFO:root:===============================================================
+2023-12-09 16:30:21,149:INFO:root:handleSlider: value: 62 , Index: 2
+2023-12-09 16:30:21,149:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,149:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,149:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,149:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,149:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,149:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,149:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,149:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,149:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,149:INFO:root:===============================================================
+2023-12-09 16:30:21,155:INFO:root:handleSlider: value: 63 , Index: 2
+2023-12-09 16:30:21,155:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,155:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,155:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,155:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,155:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,156:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,156:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,156:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,156:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,156:INFO:root:===============================================================
+2023-12-09 16:30:21,162:INFO:root:handleSlider: value: 64 , Index: 2
+2023-12-09 16:30:21,162:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,162:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,162:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,162:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,162:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,162:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,162:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,162:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,162:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,162:INFO:root:===============================================================
+2023-12-09 16:30:21,176:INFO:root:handleSlider: value: 65 , Index: 2
+2023-12-09 16:30:21,177:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,177:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,177:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,177:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,177:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,177:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,177:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,177:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,177:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,177:INFO:root:===============================================================
+2023-12-09 16:30:21,198:INFO:root:handleSlider: value: 66 , Index: 2
+2023-12-09 16:30:21,198:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,198:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,198:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,198:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,198:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,198:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,198:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,198:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,198:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,198:INFO:root:===============================================================
+2023-12-09 16:30:21,212:INFO:root:handleSlider: value: 67 , Index: 2
+2023-12-09 16:30:21,212:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,212:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,212:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,212:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,212:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,212:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,212:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,212:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,212:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,213:INFO:root:===============================================================
+2023-12-09 16:30:21,233:INFO:root:handleSlider: value: 68 , Index: 2
+2023-12-09 16:30:21,233:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,233:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,233:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,233:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,233:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,233:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,233:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,233:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,233:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,233:INFO:root:===============================================================
+2023-12-09 16:30:21,240:INFO:root:handleSlider: value: 83 , Index: 2
+2023-12-09 16:30:21,240:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,240:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,240:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,240:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,240:INFO:root:-------------------------------------------------------------
+2023-12-09 16:30:21,240:INFO:root:handleSlider: Sliders Values: [40, 60, 0, 0]
+2023-12-09 16:30:21,240:INFO:root:handleSlider: Current: 100
+2023-12-09 16:30:21,240:INFO:root:handleSlider: Total: 100
+2023-12-09 16:30:21,240:INFO:root:handleSlider: Remainder: 0
+2023-12-09 16:30:21,240:INFO:root:===============================================================

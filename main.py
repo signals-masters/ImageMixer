@@ -30,6 +30,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.oriImage = None
         self.galary = Gallery.Gallery()
+        self.totalOfComponents = 100
+        self.remainderOfComponents = 100
+        self.currentSumOfComponents = 0
 
         # Browsing Images
         self.imageWidgets = [self.imageOneWidget, self.imageTwoWidget, self.imageThreeWidget, self.imageFourWidget]
@@ -60,7 +63,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             slider.setMinimum(0)
             slider.setMaximum(100)
             slider.setEnabled(False)
-            slider.valueChanged.connect(lambda value, i=i: self.handleComponentSlider(value, i))
+            # slider.valueChanged.connect(lambda value, i=i: self.handleComponentSlider(value, i))
 
         for i, combobox in enumerate(self.imageModesCombobox):
             combobox.clear()
@@ -73,6 +76,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             for i, radioButton in enumerate(radioButtons):
                 radioButton.setEnabled(False)
                 radioButton.toggled.connect(lambda checked, i=i, index=index: self.handleRadioButton(checked, i, index))
+        
+        for i , slider in enumerate(self.componentSliders):
+            slider.valueChanged.connect(lambda value, i=i: self.handleSlider(value, i))
+
 
         # Cropping
         # self.firstPushBtn.clicked.connect(lambda: self.handleCropBtn('./imgs/1.png'))
@@ -115,6 +122,36 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def handleUploadImage(self, event, index):
         if event.button() == QtCore.Qt.MouseButton.LeftButton:
             self.handleBrowseImage(index)
+    
+    # Sliders Function
+    def sumSlidersValues(self):
+        return sum(self.sliderValues)
+    
+    def handleSlider(self, value, index):
+        logging.info(f'handleSlider: value: {value} , Index: {index}')
+        logging.info(f'handleSlider: Sliders Values: {self.sliderValues}')
+        logging.info(f'handleSlider: Current: {self.currentSumOfComponents}')
+        logging.info(f'handleSlider: Total: {self.totalOfComponents}')
+        logging.info(f'handleSlider: Remainder: {self.remainderOfComponents}')
+        logging.info('-------------------------------------------------------------')
+        if self.currentSumOfComponents - self.sliderValues[index] + value <= self.totalOfComponents:
+            self.sliderValues[index] = value
+            self.currentSumOfComponents = self.sumSlidersValues()
+            self.remainderOfComponents = self.totalOfComponents - self.currentSumOfComponents
+            self.componentValueLabels[index].setText(str(value) + "%")
+            self.componentSliders[index].setValue(value)
+        else:
+            self.sliderValues[index] += self.remainderOfComponents
+            self.currentSumOfComponents = self.sumSlidersValues()
+            self.remainderOfComponents = self.totalOfComponents - self.currentSumOfComponents
+            self.componentValueLabels[index].setText(str(self.sliderValues[index]) + "%")
+        
+        logging.info(f'handleSlider: Sliders Values: {self.sliderValues}')
+        logging.info(f'handleSlider: Current: {self.currentSumOfComponents}')
+        logging.info(f'handleSlider: Total: {self.totalOfComponents}')
+        logging.info(f'handleSlider: Remainder: {self.remainderOfComponents}')
+        logging.info('===============================================================')
+
 
     def handleImageModeChange(self, index, i):
         mode = modes[index]
@@ -222,11 +259,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
                 # TODO: show the cropped image in the image widget
 
-    def handleComponentSlider(self, value, index):
-        # Disable the event
-        totalValue = sum(self.sliderValues)
-        self.componentValueLabels[index].setText(str(value) + "%")
-        self.sliderValues[index] = value
+    # def handleComponentSlider(self, value, index):
+    #     # Disable the event
+    #     totalValue = sum(self.sliderValues)
+    #     self.componentValueLabels[index].setText(str(value) + "%")
+    #     self.sliderValues[index] = value
 
 def main():
     app = QApplication([])
