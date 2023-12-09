@@ -141,8 +141,8 @@ border: none;
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-1419</y>
-         <width>577</width>
+         <y>0</y>
+         <width>573</width>
          <height>2063</height>
         </rect>
        </property>
@@ -178,137 +178,19 @@ border: none;
             <number>0</number>
            </property>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <layout class="QHBoxLayout" name="imageOneControllers">
              <property name="spacing">
               <number>27</number>
              </property>
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout_3">
-               <property name="spacing">
-                <number>1</number>
-               </property>
-               <item>
-                <spacer name="verticalSpacer_3">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QLabel" name="label">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>60</height>
-                  </size>
-                 </property>
-                 <property name="text">
-                  <string>Brightness</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QSlider" name="brightnessSlider">
-                 <property name="maximumSize">
-                  <size>
-                   <width>200</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="verticalSpacer">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_4">
-               <property name="spacing">
-                <number>1</number>
-               </property>
-               <item>
-                <spacer name="verticalSpacer_4">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_4">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>60</height>
-                  </size>
-                 </property>
-                 <property name="text">
-                  <string>Contrast</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QSlider" name="contrastSlider">
-                 <property name="maximumSize">
-                  <size>
-                   <width>200</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="verticalSpacer_2">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <widget class="QPushButton" name="firstPushBtn">
+              <widget class="QPushButton" name="imageOneCropButton">
                <property name="text">
                 <string/>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="firstImgCB">
+              <widget class="QComboBox" name="imageOneModeSelect">
                <property name="minimumSize">
                 <size>
                  <width>100</width>
@@ -345,7 +227,7 @@ border: none;
               <number>0</number>
              </property>
              <item>
-              <widget class="QWidget" name="imgWidget" native="true">
+              <widget class="QWidget" name="imageOneWidget" native="true">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -360,7 +242,7 @@ border: none;
               </widget>
              </item>
              <item>
-              <widget class="QWidget" name="transWidget" native="true">
+              <widget class="QWidget" name="imageOneComponentWidget" native="true">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -419,108 +301,14 @@ border: none;
               <number>27</number>
              </property>
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout_5">
-               <property name="spacing">
-                <number>1</number>
-               </property>
-               <item>
-                <spacer name="verticalSpacer_7">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_2">
-                 <property name="text">
-                  <string>Brightness</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QSlider" name="brightnessSlider_2">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="verticalSpacer_8">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_6">
-               <property name="spacing">
-                <number>1</number>
-               </property>
-               <item>
-                <spacer name="verticalSpacer_5">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_5">
-                 <property name="text">
-                  <string>Contrast</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QSlider" name="contrastSlider_2">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="verticalSpacer_6">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <widget class="QPushButton" name="secondPushBtn">
+              <widget class="QPushButton" name="imageTwoCropButton">
                <property name="text">
                 <string/>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="firstImgCB_2">
+              <widget class="QComboBox" name="imageTwoModeSelect">
                <property name="minimumSize">
                 <size>
                  <width>100</width>
@@ -557,7 +345,7 @@ border: none;
               <number>0</number>
              </property>
              <item>
-              <widget class="QWidget" name="transWidget_2" native="true">
+              <widget class="QWidget" name="imageTwoWidget" native="true">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -572,7 +360,7 @@ border: none;
               </widget>
              </item>
              <item>
-              <widget class="QWidget" name="imgWidget_2" native="true">
+              <widget class="QWidget" name="imageTwoComponentWidget" native="true">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -634,108 +422,14 @@ border: none;
               <number>27</number>
              </property>
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout_7">
-               <property name="spacing">
-                <number>1</number>
-               </property>
-               <item>
-                <spacer name="verticalSpacer_11">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_3">
-                 <property name="text">
-                  <string>Brightness</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QSlider" name="brightnessSlider_3">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="verticalSpacer_12">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_8">
-               <property name="spacing">
-                <number>1</number>
-               </property>
-               <item>
-                <spacer name="verticalSpacer_9">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_6">
-                 <property name="text">
-                  <string>Contrast</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QSlider" name="contrastSlider_3">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="verticalSpacer_10">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <widget class="QPushButton" name="thirdPushBtn">
+              <widget class="QPushButton" name="imageThreeCropButton">
                <property name="text">
                 <string/>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="firstImgCB_3">
+              <widget class="QComboBox" name="imageThreeModeSelect">
                <property name="minimumSize">
                 <size>
                  <width>100</width>
@@ -772,7 +466,7 @@ border: none;
               <number>0</number>
              </property>
              <item>
-              <widget class="QWidget" name="transWidget_3" native="true">
+              <widget class="QWidget" name="imageThreeWidget" native="true">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -787,7 +481,7 @@ border: none;
               </widget>
              </item>
              <item>
-              <widget class="QWidget" name="imgWidget_3" native="true">
+              <widget class="QWidget" name="imageThreeComponentWidget" native="true">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -849,108 +543,14 @@ border: none;
               <number>27</number>
              </property>
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout_9">
-               <property name="spacing">
-                <number>1</number>
-               </property>
-               <item>
-                <spacer name="verticalSpacer_15">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_7">
-                 <property name="text">
-                  <string>Brightness</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QSlider" name="brightnessSlider_4">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="verticalSpacer_16">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_10">
-               <property name="spacing">
-                <number>1</number>
-               </property>
-               <item>
-                <spacer name="verticalSpacer_13">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_8">
-                 <property name="text">
-                  <string>Contrast</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QSlider" name="contrastSlider_4">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="verticalSpacer_14">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <widget class="QPushButton" name="fourthPushBtn">
+              <widget class="QPushButton" name="imageFoureCropButton">
                <property name="text">
                 <string/>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="firstImgCB_4">
+              <widget class="QComboBox" name="imageFourModeSelect">
                <property name="minimumSize">
                 <size>
                  <width>100</width>
@@ -987,7 +587,7 @@ border: none;
               <number>0</number>
              </property>
              <item>
-              <widget class="QWidget" name="transWidget_4" native="true">
+              <widget class="QWidget" name="imageFourWidget" native="true">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -1002,7 +602,7 @@ border: none;
               </widget>
              </item>
              <item>
-              <widget class="QWidget" name="imgWidget_4" native="true">
+              <widget class="QWidget" name="imageFourComponentWidget" native="true">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -1026,7 +626,7 @@ border: none;
      </widget>
     </item>
     <item>
-     <widget class="QFrame" name="frame_2">
+     <widget class="QFrame" name="controllers">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -1050,7 +650,7 @@ border: none;
         <number>0</number>
        </property>
        <item>
-        <widget class="QFrame" name="compMixerFrame">
+        <widget class="QFrame" name="componentsMixerFrame">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -1059,29 +659,43 @@ border: none;
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_19">
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_14">
+           <layout class="QHBoxLayout" name="outputChannelFrame">
             <item>
-             <widget class="QLabel" name="label_12">
+             <widget class="QLabel" name="outputSelectLabel">
               <property name="text">
                <string>Mixer Output to</string>
               </property>
              </widget>
             </item>
             <item>
-             <spacer name="horizontalSpacer_3">
+             <spacer name="outputChannelSpacer">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>40</width>
+                <width>30</width>
                 <height>20</height>
                </size>
               </property>
              </spacer>
             </item>
             <item>
-             <widget class="QComboBox" name="outCB_3">
+             <widget class="QComboBox" name="mixerModeSelect">
+              <item>
+               <property name="text">
+                <string>Real/Imaginary</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Magnitude/Phase</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="outputSelect">
               <item>
                <property name="text">
                 <string>Output 1</string>
@@ -1097,16 +711,16 @@ border: none;
            </layout>
           </item>
           <item>
-           <widget class="QScrollArea" name="scrollArea">
+           <widget class="QScrollArea" name="componentsFrame">
             <property name="widgetResizable">
              <bool>true</bool>
             </property>
-            <widget class="QWidget" name="scrollAreaWidgetContents_2">
+            <widget class="QWidget" name="componentsFrameItems">
              <property name="geometry">
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>554</width>
+               <width>550</width>
                <height>418</height>
               </rect>
              </property>
@@ -1124,7 +738,7 @@ border: none;
                <number>0</number>
               </property>
               <item>
-               <widget class="QFrame" name="firstCompFrame">
+               <widget class="QFrame" name="componentOneFrame">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1133,16 +747,16 @@ border: none;
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_20">
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_15">
+                  <layout class="QHBoxLayout" name="componentOneRatioFrame">
                    <item>
-                    <widget class="QLabel" name="label_13">
+                    <widget class="QLabel" name="componentOneLabel">
                      <property name="text">
                       <string>Component 1: </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QComboBox" name="firstComponentCB_2">
+                    <widget class="QComboBox" name="componentOneImageSelect">
                      <item>
                       <property name="text">
                        <string>Image 1</string>
@@ -1179,14 +793,14 @@ border: none;
                     </spacer>
                    </item>
                    <item>
-                    <widget class="QSlider" name="firstComponentSlider_2">
+                    <widget class="QSlider" name="componentOneRatioSlider">
                      <property name="orientation">
                       <enum>Qt::Horizontal</enum>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="firstComponentLabel_2">
+                    <widget class="QLabel" name="componentOneRatioLabel">
                      <property name="minimumSize">
                       <size>
                        <width>45</width>
@@ -1196,67 +810,50 @@ border: none;
                      <property name="font">
                       <font>
                        <pointsize>-1</pointsize>
+                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
                      <property name="text">
-                      <string>0 %</string>
+                      <string>0%</string>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_16">
+                  <layout class="QHBoxLayout" name="componentOneModeFrame">
                    <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_21">
+                    <layout class="QVBoxLayout" name="componentOneRectangularSelect">
                      <item>
-                      <widget class="QRadioButton" name="realRadBtn">
+                      <widget class="QRadioButton" name="componentOneRealRadio">
                        <property name="text">
                         <string>Real</string>
                        </property>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="uniPhaseRadBtn">
-                       <property name="text">
-                        <string>Uni Phase</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                   <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_22">
-                     <item>
-                      <widget class="QRadioButton" name="imaginaryRadBtn">
+                      <widget class="QRadioButton" name="componentOneImaginaryRadio">
                        <property name="text">
                         <string>Imaginary</string>
                        </property>
                       </widget>
                      </item>
-                     <item>
-                      <widget class="QRadioButton" name="phaseRadBtn">
-                       <property name="text">
-                        <string>Phase</string>
-                       </property>
-                      </widget>
-                     </item>
                     </layout>
                    </item>
                    <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_23">
+                    <layout class="QVBoxLayout" name="componentOnePolarSelect">
                      <item>
-                      <widget class="QRadioButton" name="magRadBtn">
+                      <widget class="QRadioButton" name="componentOneMagnitudeRadio">
                        <property name="text">
                         <string>Magnitude</string>
                        </property>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="uniMagRadBtn">
+                      <widget class="QRadioButton" name="componentOnePhaseRadio">
                        <property name="text">
-                        <string>Uni Magnitude</string>
+                        <string>Phase</string>
                        </property>
                       </widget>
                      </item>
@@ -1268,7 +865,7 @@ border: none;
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="secondCompFrame">
+               <widget class="QFrame" name="componentTwoFrame">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1279,14 +876,14 @@ border: none;
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_17">
                    <item>
-                    <widget class="QLabel" name="label_14">
+                    <widget class="QLabel" name="componentTwoLabel">
                      <property name="text">
                       <string>Component 2: </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QComboBox" name="secondComponentCB">
+                    <widget class="QComboBox" name="componentTwoImageSelect">
                      <item>
                       <property name="text">
                        <string>Image 1</string>
@@ -1323,14 +920,14 @@ border: none;
                     </spacer>
                    </item>
                    <item>
-                    <widget class="QSlider" name="secondComponentSlider">
+                    <widget class="QSlider" name="componentTwoRatioSlider">
                      <property name="orientation">
                       <enum>Qt::Horizontal</enum>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="secondComponentLabel">
+                    <widget class="QLabel" name="componentTwoRatioLabel">
                      <property name="minimumSize">
                       <size>
                        <width>45</width>
@@ -1340,11 +937,12 @@ border: none;
                      <property name="font">
                       <font>
                        <pointsize>-1</pointsize>
+                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
                      <property name="text">
-                      <string>0 %</string>
+                      <string>0%</string>
                      </property>
                     </widget>
                    </item>
@@ -1353,54 +951,36 @@ border: none;
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_18">
                    <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_25">
+                    <layout class="QVBoxLayout" name="componentTwoRectangularSelect">
                      <item>
-                      <widget class="QRadioButton" name="realRadBtn_2">
+                      <widget class="QRadioButton" name="componentTwoRealRadio">
                        <property name="text">
                         <string>Real</string>
                        </property>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="uniPhaseRadBtn_2">
-                       <property name="text">
-                        <string>Uni Phase</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                   <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_26">
-                     <item>
-                      <widget class="QRadioButton" name="imaginaryRadBtn_2">
+                      <widget class="QRadioButton" name="componentTwoImaginaryRadio">
                        <property name="text">
                         <string>Imaginary</string>
                        </property>
                       </widget>
                      </item>
-                     <item>
-                      <widget class="QRadioButton" name="phaseRadBtn_2">
-                       <property name="text">
-                        <string>Phase</string>
-                       </property>
-                      </widget>
-                     </item>
                     </layout>
                    </item>
                    <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_27">
+                    <layout class="QVBoxLayout" name="componentTwoPolarSelect">
                      <item>
-                      <widget class="QRadioButton" name="magRadBtn_2">
+                      <widget class="QRadioButton" name="componentTwoMagnitudeRadio">
                        <property name="text">
                         <string>Magnitude</string>
                        </property>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="uniMagRadBtn_2">
+                      <widget class="QRadioButton" name="componentTwoPhaseRadio">
                        <property name="text">
-                        <string>Uni Magnitude</string>
+                        <string>Phase</string>
                        </property>
                       </widget>
                      </item>
@@ -1412,7 +992,7 @@ border: none;
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="thirdCompFrame">
+               <widget class="QFrame" name="componentFourFrame">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1421,16 +1001,16 @@ border: none;
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_28">
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_19">
+                  <layout class="QHBoxLayout" name="componentThreeRatioFrame_2">
                    <item>
-                    <widget class="QLabel" name="label_15">
+                    <widget class="QLabel" name="componentThreeLabel">
                      <property name="text">
                       <string>Component 3: </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QComboBox" name="thirdComponentCB">
+                    <widget class="QComboBox" name="componentThreeImageSelect">
                      <item>
                       <property name="text">
                        <string>Image 1</string>
@@ -1467,14 +1047,14 @@ border: none;
                     </spacer>
                    </item>
                    <item>
-                    <widget class="QSlider" name="thirdComponentSlider">
+                    <widget class="QSlider" name="componentThreeRatioSlider">
                      <property name="orientation">
                       <enum>Qt::Horizontal</enum>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="thirdComponentLabel">
+                    <widget class="QLabel" name="componentThreeRatioLabel">
                      <property name="minimumSize">
                       <size>
                        <width>45</width>
@@ -1484,11 +1064,12 @@ border: none;
                      <property name="font">
                       <font>
                        <pointsize>-1</pointsize>
+                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
                      <property name="text">
-                      <string>0 %</string>
+                      <string>0%</string>
                      </property>
                     </widget>
                    </item>
@@ -1497,54 +1078,36 @@ border: none;
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_20">
                    <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_29">
+                    <layout class="QVBoxLayout" name="componentThreeRectangularSelect">
                      <item>
-                      <widget class="QRadioButton" name="realRadBtn_3">
+                      <widget class="QRadioButton" name="componentThreeRealRadio">
                        <property name="text">
                         <string>Real</string>
                        </property>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="uniPhaseRadBtn_3">
-                       <property name="text">
-                        <string>Uni Phase</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                   <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_30">
-                     <item>
-                      <widget class="QRadioButton" name="imaginaryRadBtn_3">
+                      <widget class="QRadioButton" name="componentThreeImaginaryRadio">
                        <property name="text">
                         <string>Imaginary</string>
                        </property>
                       </widget>
                      </item>
-                     <item>
-                      <widget class="QRadioButton" name="phaseRadBtn_3">
-                       <property name="text">
-                        <string>Phase</string>
-                       </property>
-                      </widget>
-                     </item>
                     </layout>
                    </item>
                    <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_31">
+                    <layout class="QVBoxLayout" name="componentThreePolarSelect">
                      <item>
-                      <widget class="QRadioButton" name="magRadBtn_3">
+                      <widget class="QRadioButton" name="componentThreeMagnitudeRadio">
                        <property name="text">
                         <string>Magnitude</string>
                        </property>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="uniMagRadBtn_3">
+                      <widget class="QRadioButton" name="componentThreePhaseRadio">
                        <property name="text">
-                        <string>Uni Magnitude</string>
+                        <string>Phase</string>
                        </property>
                       </widget>
                      </item>
@@ -1556,7 +1119,7 @@ border: none;
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="firstCompFrame_4">
+               <widget class="QFrame" name="componentThreeFrame">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1565,16 +1128,16 @@ border: none;
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_32">
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_21">
+                  <layout class="QHBoxLayout" name="componentThreeRatioFrame">
                    <item>
-                    <widget class="QLabel" name="label_16">
+                    <widget class="QLabel" name="componentFourLabel">
                      <property name="text">
                       <string>Component 4: </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QComboBox" name="fourthComponentCB">
+                    <widget class="QComboBox" name="componentFourImageSelect">
                      <item>
                       <property name="text">
                        <string>Image 1</string>
@@ -1611,14 +1174,14 @@ border: none;
                     </spacer>
                    </item>
                    <item>
-                    <widget class="QSlider" name="fourthComponentSlider">
+                    <widget class="QSlider" name="componentFourRatioSlider">
                      <property name="orientation">
                       <enum>Qt::Horizontal</enum>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="fourthComponentLabel">
+                    <widget class="QLabel" name="componentFourRatioLabel">
                      <property name="minimumSize">
                       <size>
                        <width>45</width>
@@ -1634,11 +1197,12 @@ border: none;
                      <property name="font">
                       <font>
                        <pointsize>-1</pointsize>
+                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
                      <property name="text">
-                      <string>0 %</string>
+                      <string>0%</string>
                      </property>
                     </widget>
                    </item>
@@ -1647,54 +1211,36 @@ border: none;
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_22">
                    <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_33">
+                    <layout class="QVBoxLayout" name="componentFourRectangularSelect">
                      <item>
-                      <widget class="QRadioButton" name="realRadBtn_4">
+                      <widget class="QRadioButton" name="componentFourRealRadio">
                        <property name="text">
                         <string>Real</string>
                        </property>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="uniPhaseRadBtn_4">
-                       <property name="text">
-                        <string>Uni Phase</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                   <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_34">
-                     <item>
-                      <widget class="QRadioButton" name="imaginaryRadBtn_4">
+                      <widget class="QRadioButton" name="componentFourImaginaryRadio">
                        <property name="text">
                         <string>Imaginary</string>
                        </property>
                       </widget>
                      </item>
-                     <item>
-                      <widget class="QRadioButton" name="phaseRadBtn_4">
-                       <property name="text">
-                        <string>Phase</string>
-                       </property>
-                      </widget>
-                     </item>
                     </layout>
                    </item>
                    <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_35">
+                    <layout class="QVBoxLayout" name="componentFourPolarSelect">
                      <item>
-                      <widget class="QRadioButton" name="magRadBtn_4">
+                      <widget class="QRadioButton" name="componentFourMagnitudeRadio">
                        <property name="text">
                         <string>Magnitude</string>
                        </property>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="uniMagRadBtn_4">
+                      <widget class="QRadioButton" name="componentFourPhaseRadio">
                        <property name="text">
-                        <string>Uni Magnitude</string>
+                        <string>Phase</string>
                        </property>
                       </widget>
                      </item>
@@ -1730,14 +1276,14 @@ border: none;
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_37">
             <item>
-             <widget class="QLabel" name="label_17">
+             <widget class="QLabel" name="outputOneLabel">
               <property name="text">
                <string>Output 1</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="outputWidget" native="true">
+             <widget class="QWidget" name="outputOneWidget" native="true">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -1756,14 +1302,14 @@ border: none;
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_38">
             <item>
-             <widget class="QLabel" name="label_18">
+             <widget class="QLabel" name="outputTwoLabel">
               <property name="text">
                <string>Output 2</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="outputWidget_2" native="true">
+             <widget class="QWidget" name="outputTwoWidget" native="true">
               <property name="minimumSize">
                <size>
                 <width>0</width>
