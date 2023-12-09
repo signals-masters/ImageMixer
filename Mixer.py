@@ -46,6 +46,11 @@ class Mixer():
         self.types = [type_1, type_2, type_3, type_4]
         # weights
         self.weights = [w1, w2, w3, w4]
+        print(self.types, self.weights)
+        print(self.img_id1)
+        print(self.img_id2)
+        print(self.img_id3)
+        print(self.img_id4)
         
     def extract_img_from_gallery(self, gallery):
         """
@@ -150,6 +155,7 @@ class Mixer():
         Raises:
         - ValueError: If the mode determined by the types is not supported (not all "magnitude" or "phase").
         """
+        print(gallery)
         img_objs = self.extract_img_from_gallery(gallery)
         mode = self.choose_mode()
 

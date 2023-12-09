@@ -21,7 +21,7 @@ logging.basicConfig(filename='mainLog.log', filemode='w',level=logging.INFO, for
 x_start, y_start, x_end, y_end = 0, 0, 0, 0
 cropping = False
 
-modes = ['Magnitude', 'Phase', 'Real', 'Imaginary']
+modes = ['Real', 'Imaginary', 'Magnitude', 'Phase']
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     image = None
@@ -29,7 +29,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         self.oriImage = None
-        self.galary = Gallery.Gallery()
+        self.gallery = Gallery.Gallery()
         self.totalOfComponents = 100
         self.remainderOfComponents = 100
         self.currentSumOfComponents = 0
@@ -47,6 +47,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.magnitudeRadioButtons = [self.componentOneMagnitudeRadio, self.componentTwoMagnitudeRadio, self.componentThreeMagnitudeRadio, self.componentFourMagnitudeRadio]
         self.phaseRadioButtons = [self.componentOnePhaseRadio, self.componentTwoPhaseRadio, self.componentThreePhaseRadio, self.componentFourPhaseRadio]
         self.radioButtons = [self.realRadioButtons, self.imaginaryRadioButtons, self.magnitudeRadioButtons, self.phaseRadioButtons]
+        self.componentsImagesSelect = [self.componentOneImageSelect, self.componentTwoImageSelect, self.componentThreeImageSelect, self.componentFourImageSelect]
+
+        self.componentsTypes = ['', '', '', '']
+        self.componentsIds = [0, 0, 0, 0]
+        self.currentOutput = 0
 
         self.mixerModeSelect.currentIndexChanged.connect(self.handleMixerModeChange)
 
@@ -58,12 +63,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         for i, widget in enumerate(self.transWidgets):
             layout = QHBoxLayout()
             widget.setLayout(layout)
+
+        for i, combobox in enumerate(self.componentsImagesSelect):
+            combobox.currentIndexChanged.connect(lambda index, i=i: self.handleImageChange(index, i))            
         
         for i, slider in enumerate(self.componentSliders):
             slider.setMinimum(0)
             slider.setMaximum(100)
             slider.setEnabled(False)
             # slider.valueChanged.connect(lambda value, i=i: self.handleComponentSlider(value, i))
+
+        self.convertButton.clicked.connect(self.handleConvertBtn)
 
         for i, combobox in enumerate(self.imageModesCombobox):
             combobox.clear()
@@ -74,7 +84,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         for index, radioButtons in enumerate(self.radioButtons):
             for i, radioButton in enumerate(radioButtons):
-                radioButton.setEnabled(False)
+                if index > 1:
+                    radioButton.setEnabled(False)
                 radioButton.toggled.connect(lambda checked, i=i, index=index: self.handleRadioButton(checked, i, index))
         
         for i , slider in enumerate(self.componentSliders):
@@ -86,6 +97,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # self.secondPushBtn.clicked.connect(lambda: self.handleCropBtn('./imgs/1.png'))
         # self.thirdPushBtn.clicked.connect(lambda: self.handleCropBtn('./imgs/1.png'))
         # self.fourthPushBtn.clicked.connect(lambda: self.handleCropBtn('./imgs/1.png'))
+
+    def handleImageChange(self, index, i):
+        print(index)
+        print(i)
+        self.componentsIds[i] = index
+        print(self.componentsIds)
 
     def handleMixerModeChange(self, index):
         for slider in self.componentSliders:
@@ -112,12 +129,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 for radioButton in radioButtons:
                     radioButton.setEnabled(False)
                     radioButton.setCheckable(False)
+        self.componentsTypes = ['', '', '', '']
 
     def handleRadioButton(self, checked, index, mode):
         if checked:
             self.componentSliders[index].setEnabled(True)
+            self.componentsTypes[index] = modes[mode].lower()
         else:
             self.componentSliders[index].setEnabled(False)
+            self.componentsTypes[index] = ''
 
     def handleUploadImage(self, event, index):
         if event.button() == QtCore.Qt.MouseButton.LeftButton:
@@ -128,12 +148,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         return sum(self.sliderValues)
     
     def handleSlider(self, value, index):
-        logging.info(f'handleSlider: value: {value} , Index: {index}')
-        logging.info(f'handleSlider: Sliders Values: {self.sliderValues}')
-        logging.info(f'handleSlider: Current: {self.currentSumOfComponents}')
-        logging.info(f'handleSlider: Total: {self.totalOfComponents}')
-        logging.info(f'handleSlider: Remainder: {self.remainderOfComponents}')
-        logging.info('-------------------------------------------------------------')
+        # logging.info(f'handleSlider: value: {value} , Index: {index}')
+        # logging.info(f'handleSlider: Sliders Values: {self.sliderValues}')
+        # logging.info(f'handleSlider: Current: {self.currentSumOfComponents}')
+        # logging.info(f'handleSlider: Total: {self.totalOfComponents}')
+        # logging.info(f'handleSlider: Remainder: {self.remainderOfComponents}')
+        # logging.info('-------------------------------------------------------------')
         if self.currentSumOfComponents - self.sliderValues[index] + value <= self.totalOfComponents:
             self.sliderValues[index] = value
             self.currentSumOfComponents = self.sumSlidersValues()
@@ -146,17 +166,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.remainderOfComponents = self.totalOfComponents - self.currentSumOfComponents
             self.componentValueLabels[index].setText(str(self.sliderValues[index]) + "%")
         
-        logging.info(f'handleSlider: Sliders Values: {self.sliderValues}')
-        logging.info(f'handleSlider: Current: {self.currentSumOfComponents}')
-        logging.info(f'handleSlider: Total: {self.totalOfComponents}')
-        logging.info(f'handleSlider: Remainder: {self.remainderOfComponents}')
-        logging.info('===============================================================')
+        # logging.info(f'handleSlider: Sliders Values: {self.sliderValues}')
+        # logging.info(f'handleSlider: Current: {self.currentSumOfComponents}')
+        # logging.info(f'handleSlider: Total: {self.totalOfComponents}')
+        # logging.info(f'handleSlider: Remainder: {self.remainderOfComponents}')
+        # logging.info('===============================================================')
 
 
     def handleImageModeChange(self, index, i):
         mode = modes[index]
 
-        image = self.galary.get_gallery()[i]
+        image = self.gallery.get_gallery()[i]
 
         layout = self.transWidgets[i].layout()
         while layout.count():
@@ -210,10 +230,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.imageModesCombobox[index].setEnabled(True)
             self.imageModesCombobox[index].setCurrentIndex(0)
             # TODO: Add the image to gallery
-            self.galary.add_image(image, index)
+            self.gallery.add_image(image, index)
 
             # TODO: Call reshape_all with a list of images in gallery
-            Image.Image.reshape_all(self.galary.get_gallery().values())
+            Image.Image.reshape_all(self.gallery.get_gallery().values())
+
+    def handleConvertBtn(self):
+        currentMixer = Mixer.Mixer(self.sliderValues[0], self.sliderValues[1], self.sliderValues[2], self.sliderValues[3], self.componentsIds[0], self.componentsIds[1], self.componentsIds[2], self.componentsIds[3], self.componentsTypes[0], self.componentsTypes[1], self.componentsTypes[2], self.componentsTypes[3])
+        output = currentMixer.inverse_fft(self.gallery.get_gallery())
+        
+        print(output)
+        layout = QHBoxLayout()
+        self.outputOneWidget.setLayout(layout)
+        currentOutput = pg.image(output)
+        print(currentOutput)
+        self.outputOneWidget.layout().addWidget(self.currentOutput)
 
 
     def handleCropBtn(self,path):
