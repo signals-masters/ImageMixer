@@ -18,9 +18,6 @@ import logging
 logging.basicConfig(filename='mainLog.log', filemode='w',level=logging.INFO, format='%(asctime)s:%(levelname)s:%(name)s:%(message)s')
 
 
-x_start, y_start, x_end, y_end = 0, 0, 0, 0
-cropping = False
-
 modes = ['Real', 'Imaginary', 'Magnitude', 'Phase']
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -28,8 +25,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None) -> None:
         super().__init__()
         self.setupUi(self)
-        self.oriImage = None
+        # self.oriImage = None
         self.gallery = Gallery.Gallery()
+        self.cropping = False
+        self.x_start, self.y_start, self.x_end, self.y_end = 0, 0, 0, 0
+        self.image = cv2.imread('./imgs/1.png')
+        self.oriImage = self.image.copy()
         self.totalOfComponents = 100
         self.remainderOfComponents = 100
         self.currentSumOfComponents = 0
@@ -49,16 +50,25 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.radioButtons = [self.realRadioButtons, self.imaginaryRadioButtons, self.magnitudeRadioButtons, self.phaseRadioButtons]
         self.componentsImagesSelect = [self.componentOneImageSelect, self.componentTwoImageSelect, self.componentThreeImageSelect, self.componentFourImageSelect]
 
+        self.imagePaths = ['', '', '', '']
         self.componentsTypes = ['', '', '', '']
         self.componentsIds = [0, 0, 0, 0]
+        self.outputWidgets = [self.outputOneWidget, self.outputTwoWidget]
         self.currentOutput = 0
+        self.outputSelect.currentIndexChanged.connect(self.handleOutputChange)
 
         self.mixerModeSelect.currentIndexChanged.connect(self.handleMixerModeChange)
+
+        self.leaveCropping = False
 
         for i, widget in enumerate(self.imageWidgets):
             layout = QHBoxLayout()
             widget.setLayout(layout)
             widget.mouseDoubleClickEvent = lambda event, i=i: self.handleUploadImage(event, i)
+
+        for i, widget in enumerate(self.outputWidgets):
+            layout = QHBoxLayout()
+            widget.setLayout(layout)
         
         for i, widget in enumerate(self.transWidgets):
             layout = QHBoxLayout()
@@ -71,7 +81,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             slider.setMinimum(0)
             slider.setMaximum(100)
             slider.setEnabled(False)
-            # slider.valueChanged.connect(lambda value, i=i: self.handleComponentSlider(value, i))
 
         self.convertButton.clicked.connect(self.handleConvertBtn)
 
@@ -91,18 +100,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         for i , slider in enumerate(self.componentSliders):
             slider.valueChanged.connect(lambda value, i=i: self.handleSlider(value, i))
 
+        self.x_start, self.y_start, self.x_end, self.y_end , self.cropping
+
 
         # Cropping
-        # self.firstPushBtn.clicked.connect(lambda: self.handleCropBtn('./imgs/1.png'))
-        # self.secondPushBtn.clicked.connect(lambda: self.handleCropBtn('./imgs/1.png'))
-        # self.thirdPushBtn.clicked.connect(lambda: self.handleCropBtn('./imgs/1.png'))
-        # self.fourthPushBtn.clicked.connect(lambda: self.handleCropBtn('./imgs/1.png'))
+        self.imageOneCropButton.clicked.connect(lambda: self.handleCropBtn(0))
+        self.imageTwoCropButton.clicked.connect(lambda: self.handleCropBtn(1))
+        self.imageThreeCropButton.clicked.connect(lambda: self.handleCropBtn(2))
+        self.imageFoureCropButton.clicked.connect(lambda: self.handleCropBtn(3))
+
+    def handleOutputChange(self, index):
+        self.currentOutput = index
 
     def handleImageChange(self, index, i):
-        print(index)
-        print(i)
         self.componentsIds[i] = index
-        print(self.componentsIds)
 
     def handleMixerModeChange(self, index):
         for slider in self.componentSliders:
@@ -204,6 +215,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if img:
             image = Image.Image()
             imagePath = img[0].strip().split("/")[-1]
+            self.imagePaths[index] = img[0]
             image.load_img(imagePath, show=True)
             image.compute_fourier_transform()
             graph = pg.image(image.get_img())
@@ -224,8 +236,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 if child.widget():
                     child.widget().deleteLater()
 
-            magGraph = pg.image(image.get_mag())
-            widget2.layout().addWidget(magGraph)
+            realGraph = pg.image(image.get_real())
+            widget2.layout().addWidget(realGraph)
 
             self.imageModesCombobox[index].setEnabled(True)
             self.imageModesCombobox[index].setCurrentIndex(0)
@@ -236,65 +248,79 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             Image.Image.reshape_all(self.gallery.get_gallery().values())
 
     def handleConvertBtn(self):
-        currentMixer = Mixer.Mixer(0.5, 0.5, 1, 0, self.componentsIds[0], self.componentsIds[1], self.componentsIds[2], self.componentsIds[3], self.componentsTypes[0], self.componentsTypes[1], self.componentsTypes[2], self.componentsTypes[3])
+        weights = [value / 100 for value in self.sliderValues]
+        currentMixer = Mixer.Mixer(*weights, *self.componentsIds, *self.componentsTypes)
         output = currentMixer.inverse_fft(self.gallery.get_gallery()).T
+
+        outputWidget = self.outputWidgets[self.currentOutput]
+        layout = outputWidget.layout()
+        while layout.count():
+            child = layout.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
         
-        print(output)
-        layout = QHBoxLayout()
-        self.outputOneWidget.setLayout(layout)
-        currentOutput = pg.image(output)
-        print(currentOutput)
-        self.outputOneWidget.layout().addWidget(currentOutput)
+        outputImage = pg.image(output)
+        outputWidget.layout().addWidget(outputImage)
 
-
-    def handleCropBtn(self,path):
-        image = cv2.imread(path)
+    def handleCropBtn(self, index):
+        # image = np.array(self.gallery.get_gallery()[index].get_img())
+        # print(image.shape)
+        image = cv2.imread(self.imagePaths[index])
+        image =  cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        # print(gimage)
+        # print(type(readed_image))
         self.oriImage = image.copy()
         cv2.namedWindow("image")
         cv2.setMouseCallback("image", self.mouseCrop)
-        i = image.copy()
-        if not cropping:
-            cv2.imshow("image", image)
-        elif cropping:
-            cv2.rectangle(i, (self.x_start, self.y_start), (self.x_end, self.y_end), (255, 0, 0), 2)
+        cv2.imshow("image", image)
+        self.leaveCropping = False
+        while True:
+            if self.leaveCropping:
+                break
+            i = image.copy()
+            # if not self.cropping:
+            cv2.rectangle(i, (self.x_start, self.y_start), (self.x_end, self.y_end), (255, 255, 0), 2)
             cv2.imshow("image", i)
-        cv2.waitKey(1)
+            cv2.waitKey(1)
 
     def mouseCrop(self, event, x, y, flags, param):
-        global x_start, y_start, x_end, y_end , cropping
 
         if event == cv2.EVENT_LBUTTONDOWN:
-            x_start, y_start, x_end, y_end = x, y, x, y
-            cropping = True
+            self.x_start, self.y_start, self.x_end, self.y_end = x, y, x, y
+            self.cropping = True
+            logging.info(f'mouseCrop: x_start: {self.x_start} , y_start: {self.y_start} , x_end: {self.x_end} , y_end: {self.y_end} , Cropping {self.cropping}' )
 
         elif event == cv2.EVENT_MOUSEMOVE:
-            if cropping == True:
-                x_end, y_end = x, y
+            if self.cropping == True:
+                self.x_end, self.y_end = x, y
+            logging.info(f'mouseCrop: x_start: {self.x_start} , y_start: {self.y_start} , x_end: {self.x_end} , y_end: {self.y_end} , Cropping {self.cropping}' )
 
         elif event == cv2.EVENT_LBUTTONUP:
-            x_end, y_end = x, y
-            cropping = False
+            self.x_end, self.y_end = x, y
+            self.cropping = False
+            logging.info(f'mouseCrop: x_start: {self.x_start} , y_start: {self.y_start} , x_end: {self.x_end} , y_end: {self.y_end} , Cropping {self.cropping}' )
 
-            refPoint = [(x_start, y_start), (x_end, y_end)]
+            refPoint = [(self.x_start, self.y_start), (self.x_end, self.y_end)]
 
             if len(refPoint) == 2:
                 roi = self.oriImage[refPoint[0][1]:refPoint[1][1], refPoint[0][0]:refPoint[1][0]]
-                # save the cropped image to disk
-                # TODO: get x, y, width, height and call crop_imgs
-
-                # Remove those later
-                cv2.imwrite("cropped.png", roi)
-                # Close the window
-                # Keep this
+                x_min = min(self.x_start, self.x_end)
+                y_min = min(self.y_start, self.y_end)
+                self.leaveCropping = True
                 cv2.destroyAllWindows()
+                self.gallery.crop_imgs(x_min, y_min, abs(self.x_start - self.x_end), abs(self.y_start - self.y_end))
+                current_images = self.gallery.get_gallery()
+                for i in current_images:
+                    widget1 = self.imageWidgets[i]
+                    widget2 = self.transWidgets[i]
 
-                # TODO: show the cropped image in the image widget
+                    layout = widget1.layout()
+                    while layout.count():
+                        child = layout.takeAt(0)
+                        if child.widget():
+                            child.widget().deleteLater()
 
-    # def handleComponentSlider(self, value, index):
-    #     # Disable the event
-    #     totalValue = sum(self.sliderValues)
-    #     self.componentValueLabels[index].setText(str(value) + "%")
-    #     self.sliderValues[index] = value
+                    widget1.layout().addWidget(pg.image(current_images[i].get_img()))
 
 def main():
     app = QApplication([])
