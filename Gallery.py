@@ -22,6 +22,7 @@ class Gallery():
             img.set_img(current_img[y:y+height, x:x+width])
             img.set_shape((width, height))
             img.compute_fourier_transform()
+            print(img)
 
     def reset_imgs(self):
         for _, img in self.ids_to_objs.items():
