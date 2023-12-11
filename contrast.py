@@ -3,6 +3,8 @@ from PyQt6.QtWidgets import QApplication, QLabel, QVBoxLayout, QWidget
 from PyQt6.QtGui import QPixmap, QMouseEvent
 from PyQt6 import QtCore
 
+from Image import Image
+
 class ImageDisplayApp(QWidget):
     def __init__(self):
         super().__init__()
@@ -10,14 +12,21 @@ class ImageDisplayApp(QWidget):
         # Create labels and set image paths
         self.x = None
         self.y = None
-        image_path1 = "./imgs/1.png"
-        image_path2 = "./imgs/1.png"
-        self.label1 = QLabel(self)
-        label2 = QLabel(self)
+        image_path1 = "./moza1.png"
+        image_path2 = "./moza2.png"
 
+        self.label1 = QLabel(self)
+        self.image = Image()
+        self.image.load_img(image_path1)
+        output_path1 = self.image.save_img()
+        
+        label2 = QLabel(self)
+        self.image2 = Image()
+        self.image2.load_img(image_path2)
+        output_path2 = self.image2.save_img()
         # Set images to labels
-        self.set_image(self.label1, image_path1)
-        self.set_image(label2, image_path2)
+        self.set_image(self.label1, output_path1)
+        self.set_image(label2, output_path2)
 
         # Set red background color for labels
         self.label1.setStyleSheet("background-color: red;")

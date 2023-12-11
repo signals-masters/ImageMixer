@@ -43,6 +43,7 @@ class Image():
         self.imaginary = None
         self.components_shifted = None
         self.type_to_component = None # contatiner for the types mapped to components of the shifted Fourier Transform
+        self.title = ''
 
     ######################################Encapsulation Layer####################################################
     def get_id(self):
@@ -50,6 +51,12 @@ class Image():
     
     def get_img(self):
         return self.img.T
+
+    def save_img(self):
+        cv2.imwrite(f'./imgs/{self.title}', self.img)
+    
+    def get_img_path(self):
+        return f'./imgs/{self.title}'
     
     def set_img(self, img):
         self.img = img
@@ -98,12 +105,12 @@ class Image():
         Returns:
         - None
         """
-
         # try:
         self.img = cv2.imread(pth).astype(np.float32)
         self.img = cv2.cvtColor(self.img, cv2.COLOR_BGR2GRAY)
         self.shape = self.img.shape
         self.img_back_up = self.img.copy()
+        self.title = pth.split('/')[-1]
 
         if show:
             # cv2.imshow('Image', self.img)
@@ -114,6 +121,10 @@ class Image():
         # except:
             # print(f"Error: Couldn't load the image at {pth}")
 
+
+    def get_title(self):
+        return self.title
+    
     def reshape(self, new_height, new_width):
         """
         Resize the image to the specified dimensions.
@@ -129,6 +140,7 @@ class Image():
         self.img = cv2.resize(self.img, (new_width, new_height))
         # Update the shape attribute
         self.shape = self.img.shape
+        self.save_img()
 
     @classmethod
     def reshape_all(cls, image_instances):

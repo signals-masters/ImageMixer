@@ -33,6 +33,7 @@ class Gallery():
         
         for _, img in self.ids_to_objs.items():
             img.compute_fourier_transform()
+            img.save_img()
             
     def delete_image(self, img_id):
         self.ids_to_objs.pop(img_id)

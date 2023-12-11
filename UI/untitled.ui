@@ -141,7 +141,7 @@ border: none;
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-1060</y>
+         <y>-1419</y>
          <width>573</width>
          <height>2063</height>
         </rect>
@@ -235,7 +235,7 @@ border: none;
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_15">
+            <layout class="QVBoxLayout" name="verticalLayout_3">
              <property name="bottomMargin">
               <number>0</number>
              </property>
@@ -366,7 +366,7 @@ border: none;
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_16">
+            <layout class="QVBoxLayout" name="verticalLayout_4">
              <property name="spacing">
               <number>0</number>
              </property>
@@ -500,7 +500,7 @@ border: none;
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_17">
+            <layout class="QVBoxLayout" name="verticalLayout_5">
              <property name="spacing">
               <number>0</number>
              </property>
@@ -634,7 +634,7 @@ border: none;
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_18">
+            <layout class="QVBoxLayout" name="verticalLayout_6">
              <property name="spacing">
               <number>0</number>
              </property>
@@ -1393,6 +1393,40 @@ border: none;
           </item>
          </layout>
         </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <widget class="QProgressBar" name="progressBar">
+           <property name="value">
+            <number>24</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="stopButton">
+           <property name="text">
+            <string>Stop</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </widget>

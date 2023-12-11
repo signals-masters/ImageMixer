@@ -1,11 +1,12 @@
 from math import comb
+import random
 from PyQt6 import QtCore , QtGui
 from PyQt6.QtWidgets import QApplication, QMainWindow , QLabel , QFileDialog , QWidget , QVBoxLayout , QHBoxLayout
 from mainwindow import Ui_MainWindow
 import os
 import Gallery , Image , Mixer
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from PyQt6.QtCore import Qt, QRect
+from PyQt6.QtCore import Qt, QRect, QThread, pyqtSignal, QTimer
 from PyQt6.QtGui import QPainter, QScreen, QPixmap
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
@@ -18,7 +19,69 @@ import logging
 logging.basicConfig(filename='mainLog.log', filemode='w',level=logging.INFO, format='%(asctime)s:%(levelname)s:%(name)s:%(message)s')
 
 
+import numpy as np
+
 modes = ['Real', 'Imaginary', 'Magnitude', 'Phase']
+
+class ImageProcessingThread(QThread):
+    processingDone = pyqtSignal(object)
+
+    def __init__(self, weights, componentsIds, componentsTypes, gallery):
+        QThread.__init__(self)
+        self.weights = weights
+        self.componentsIds = componentsIds
+        self.componentsTypes = componentsTypes
+        self.gallery = gallery
+
+    def run(self):
+        weights = [value / 100 for value in self.weights]
+        currentMixer = Mixer.Mixer(*weights, *self.componentsIds, *self.componentsTypes)
+        output = currentMixer.inverse_fft(self.gallery.get_gallery()).T
+        self.processingDone.emit(output)
+
+class CustomViewBox(pg.ViewBox):
+    def __init__(self, imageViewComponent, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.dragStartPos = None
+        self.child = imageViewComponent
+        self.currentBrightness = 0
+        self.currentContrast = 0
+
+    def mouseDragEvent(self, event, axis=None):
+        if event.button() == QtCore.Qt.MouseButton.LeftButton:
+            dx, dy = 0, 0
+            if self.dragStartPos is not None:
+                dx = event.pos().x() - self.dragStartPos.x()
+                dy = event.pos().y() - self.dragStartPos.y()
+            self.dragStartPos = event.pos()
+            if abs(dx) > 2:
+                self.currentBrightness += dx
+            if abs(dy) > 2:
+                self.currentContrast += dy * 0.01
+            newImage = np.clip((self.child.originalImage + self.currentBrightness) * (1 + self.currentContrast) , 0, 255.0)
+            self.child.setImage(newImage)
+            event.accept()  # Accept the event
+        
+    def mouseReleaseEvent(self, event):
+        if event.button() == QtCore.Qt.MouseButton.LeftButton:
+            self.dragStartPos = None
+            print("HGFJFOGFDJIgfhdfiuygdfiokhgfujgkdf")
+        super(CustomViewBox, self).mouseReleaseEvent(event)
+
+class CustomImageView(pg.ImageView):
+    def __init__(self, *args, **kwargs):
+        kwargs['view'] = CustomViewBox(imageViewComponent=self)
+        super().__init__(*args, **kwargs)
+        self.imageItem = self.getImageItem()
+        self.originalImage = None
+        self.firstTime = True
+
+    def setImage(self, img, *args, **kwargs):
+        super().setImage(img, *args, **kwargs)
+        self.imageItem = self.getImageItem()
+        if (self.firstTime):
+            self.firstTime = False
+            self.originalImage = self.getImageItem().image.copy()
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     image = None
@@ -34,6 +97,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.totalOfComponents = 100
         self.remainderOfComponents = 100
         self.currentSumOfComponents = 0
+        self.progressBar.setVisible(False)
 
         # Browsing Images
         self.imageWidgets = [self.imageOneWidget, self.imageTwoWidget, self.imageThreeWidget, self.imageFourWidget]
@@ -75,6 +139,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             widget.setLayout(layout)
 
         for i, combobox in enumerate(self.componentsImagesSelect):
+            combobox.deleteLater()
             combobox.currentIndexChanged.connect(lambda index, i=i: self.handleImageChange(index, i))            
         
         for i, slider in enumerate(self.componentSliders):
@@ -101,6 +166,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             slider.valueChanged.connect(lambda value, i=i: self.handleSlider(value, i))
 
         self.x_start, self.y_start, self.x_end, self.y_end , self.cropping
+        self.stopButton.setVisible(False)
+        self.stopButton.clicked.connect(self.cancelProgressBar)
+        self.stopped = False
 
 
         # Cropping
@@ -194,19 +262,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             child = layout.takeAt(0)
             if child.widget():
                 child.widget().deleteLater()
-
+        graph = None
         if mode == 'Magnitude':
             graph = pg.image(image.get_mag())
-            self.transWidgets[i].layout().addWidget(graph)
         elif mode == 'Phase':
             graph = pg.image(image.get_phase())
-            self.transWidgets[i].layout().addWidget(graph)
         elif mode == 'Real':
             graph = pg.image(image.get_real())
-            self.transWidgets[i].layout().addWidget(graph)
         elif mode == 'Imaginary':
             graph = pg.image(image.get_imaginary())
-            self.transWidgets[i].layout().addWidget(graph)
+        graph.ui.roiBtn.hide()
+        graph.ui.histogram.hide()
+        graph.ui.menuBtn.hide()
+        self.transWidgets[i].layout().addWidget(graph)
 
     def handleBrowseImage(self, index):
         img = QFileDialog.getOpenFileName(
@@ -218,7 +286,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.imagePaths[index] = img[0]
             image.load_img(imagePath, show=True)
             image.compute_fourier_transform()
-            graph = pg.image(image.get_img())
+            graph = CustomImageView()
+            graph.setImage(image.get_img())
+            graph.ui.roiBtn.hide()
+            graph.ui.menuBtn.hide()
+            graph.ui.histogram.hide()
+
             widget1 = self.imageWidgets[index]
             widget2 = self.transWidgets[index]
             
@@ -237,6 +310,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     child.widget().deleteLater()
 
             realGraph = pg.image(image.get_real())
+            realGraph.ui.roiBtn.hide()
+            realGraph.ui.menuBtn.hide()
+            realGraph.ui.histogram.hide()
+            realGraph.getView().setMouseEnabled(x=False, y=False)
+
             widget2.layout().addWidget(realGraph)
 
             self.imageModesCombobox[index].setEnabled(True)
@@ -248,24 +326,68 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             Image.Image.reshape_all(self.gallery.get_gallery().values())
 
     def handleConvertBtn(self):
-        weights = [value / 100 for value in self.sliderValues]
-        currentMixer = Mixer.Mixer(*weights, *self.componentsIds, *self.componentsTypes)
-        output = currentMixer.inverse_fft(self.gallery.get_gallery()).T
+        # Show progress bar
+        self.progressBar.setVisible(True)
+        self.stopButton.setVisible(True)
+        self.progressBar.setValue(0)
 
-        outputWidget = self.outputWidgets[self.currentOutput]
-        layout = outputWidget.layout()
-        while layout.count():
-            child = layout.takeAt(0)
-            if child.widget():
-                child.widget().deleteLater()
-        
-        outputImage = pg.image(output)
-        outputWidget.layout().addWidget(outputImage)
+        # Start a QTimer to periodically update the progress bar value
+        self.progressTimer = QTimer()
+        self.progressTimer.timeout.connect(self.updateProgressBar)
+        self.progressTimer.start(100)  # update every 100 ms
+
+        # Start image processing in a separate thread
+        self.stopped = False
+        self.thread = ImageProcessingThread(self.sliderValues, self.componentsIds, self.componentsTypes, self.gallery)
+        self.thread.processingDone.connect(self.delayShowImage)
+        self.thread.start()
+
+    def updateProgressBar(self):
+        value = self.progressBar.value()
+        if value < 99:
+            self.progressBar.setValue(value + random.randint(3, 6))
+        else:
+            self.progressTimer.stop()
+
+    def delayShowImage(self, output):
+        QTimer.singleShot(2000, lambda: self.showImage(output))
+
+    def showImage(self, output):
+        if not self.stopped:
+            outputWidget = self.outputWidgets[self.currentOutput]
+            layout = outputWidget.layout()
+            while layout.count():
+                child = layout.takeAt(0)
+                if child.widget():
+                    child.widget().deleteLater()
+
+            outputImage = pg.image(output)
+            outputImage.ui.roiBtn.hide()
+            outputImage.ui.menuBtn.hide()
+            outputImage.ui.histogram.hide()
+            outputWidget.layout().addWidget(outputImage)
+
+        # Hide progress bar
+        self.progressTimer.stop()
+        self.progressBar.setValue(100)
+        QTimer.singleShot(2000, self.hideProgressbar)
+
+    def hideProgressbar(self):
+        self.progressBar.setVisible(False)
+        self.stopButton.setVisible(False)
+
+    def cancelProgressBar(self):
+        # Terminate the thread if progress bar is cancelled
+        if self.thread.isRunning():
+            self.thread.terminate()
+        self.progressTimer.stop()
+        self.stopped = True
+        self.hideProgressbar()
 
     def handleCropBtn(self, index):
         # image = np.array(self.gallery.get_gallery()[index].get_img())
         # print(image.shape)
-        image = cv2.imread(self.imagePaths[index])
+        image = cv2.imread(self.gallery.get_gallery()[index].get_img_path())
         image =  cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         # print(gimage)
         # print(type(readed_image))
