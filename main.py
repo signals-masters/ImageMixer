@@ -1,14 +1,10 @@
 from math import comb
 import random
-from PyQt6 import QtCore , QtGui
+from PyQt6 import QtCore
 from PyQt6.QtWidgets import QApplication, QMainWindow , QLabel , QFileDialog , QWidget , QVBoxLayout , QHBoxLayout
 from mainwindow import Ui_MainWindow
-import os
 import Gallery , Image , Mixer
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from PyQt6.QtCore import Qt, QRect, QThread, pyqtSignal, QTimer
-from PyQt6.QtGui import QPainter, QScreen, QPixmap
-from matplotlib.figure import Figure
+from PyQt6.QtCore import QThread, pyqtSignal, QTimer, QRectF
 import matplotlib.pyplot as plt
 import pyqtgraph as pg
 import cv2
@@ -107,6 +103,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.sliderValues = [0, 0, 0, 0]
         self.imageModesCombobox = [self.imageOneModeSelect, self.imageTwoModeSelect, self.imageThreeModeSelect, self.imageFourModeSelect]
         self.realRadioButtons = [self.componentOneRealRadio, self.componentTwoRealRadio, self.componentThreeRealRadio, self.componentFourRealRadio]
+        self.rois = [None, None, None, None]
 
         self.imaginaryRadioButtons = [self.componentOneImaginaryRadio, self.componentTwoImaginaryRadio, self.componentThreeImaginaryRadio, self.componentFourImaginaryRadio]
         self.magnitudeRadioButtons = [self.componentOneMagnitudeRadio, self.componentTwoMagnitudeRadio, self.componentThreeMagnitudeRadio, self.componentFourMagnitudeRadio]
@@ -286,36 +283,44 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.imagePaths[index] = img[0]
             image.load_img(imagePath, show=True)
             image.compute_fourier_transform()
-            graph = CustomImageView()
-            graph.setImage(image.get_img())
-            graph.ui.roiBtn.hide()
-            graph.ui.menuBtn.hide()
-            graph.ui.histogram.hide()
+            # graph = CustomImageView()
+            # graph.setImage(image.get_img())
+            # graph.ui.roiBtn.hide()
+            # graph.ui.menuBtn.hide()
+            # graph.ui.histogram.hide()
 
-            widget1 = self.imageWidgets[index]
-            widget2 = self.transWidgets[index]
+            # widget1 = self.imageWidgets[index]
+            # widget2 = self.transWidgets[index]
             
-            layout = widget1.layout()
-            while layout.count():
-                child = layout.takeAt(0)
-                if child.widget():
-                    child.widget().deleteLater()
+            # layout = widget1.layout()
+            # while layout.count():
+                # child = layout.takeAt(0)
+                # if child.widget():
+                    # child.widget().deleteLater()
 
-            widget1.layout().addWidget(graph)
+            # widget1.layout().addWidget(graph)
             
-            layout2 = widget2.layout()
-            while layout2.count():
-                child = layout2.takeAt(0)
-                if child.widget():
-                    child.widget().deleteLater()
+            # layout2 = widget2.layout()
+            # while layout2.count():
+                # child = layout2.takeAt(0)
+                # if child.widget():
+                    # child.widget().deleteLater()
 
-            realGraph = pg.image(image.get_real())
-            realGraph.ui.roiBtn.hide()
-            realGraph.ui.menuBtn.hide()
-            realGraph.ui.histogram.hide()
-            realGraph.getView().setMouseEnabled(x=False, y=False)
+            # realGraph = pg.image(image.get_real())
+            # realGraph.ui.roiBtn.hide()
+            # realGraph.ui.menuBtn.hide()
+            # realGraph.ui.histogram.hide()
+            # realGraph.getView().setMouseEnabled(x=False, y=False)
+            # widget2.layout().addWidget(realGraph)
+            # ROI_Maxbounds = QRectF(0, 0, 100, 100)
+            # ROI_Maxbounds.adjust(0, 0, realGraph.getImageItem().width() - 100, realGraph.getImageItem().height() - 100)
+            # roi = pg.ROI(pos = realGraph.getView().viewRect().center(), size = (50, 50), hoverPen='b', resizable= True, 
+            # invertible= True, rotatable= False, maxBounds= ROI_Maxbounds)
+            # self.rois[index] = roi
+            # roi.sigRegionChangeFinished.connect(lambda: self.modify_regions(index))
+            # realGraph.getView().addItem(roi)
+            # realGraph.getView().item
 
-            widget2.layout().addWidget(realGraph)
 
             self.imageModesCombobox[index].setEnabled(True)
             self.imageModesCombobox[index].setCurrentIndex(0)
@@ -324,6 +329,46 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
             # TODO: Call reshape_all with a list of images in gallery
             Image.Image.reshape_all(self.gallery.get_gallery().values())
+            current_images = self.gallery.get_gallery()
+            for i in current_images:
+                widget1 = self.imageWidgets[i]
+                widget2 = self.transWidgets[i]
+
+                layout = widget1.layout()
+                while layout.count():
+                    child = layout.takeAt(0)
+                    if child.widget():
+                        child.widget().deleteLater()
+                newGraph = CustomImageView()
+                newGraph.setImage(current_images[i].get_img())
+                newGraph.ui.roiBtn.hide()
+                newGraph.ui.menuBtn.hide()
+                newGraph.ui.histogram.hide()
+                widget1.layout().addWidget(newGraph)
+
+                layout2 = widget2.layout()
+                while layout2.count():
+                    child = layout2.takeAt(0)
+                    if child.widget():
+                        child.widget().deleteLater()
+                
+                realGraph = pg.image(current_images[i].get_real())
+                realGraph.ui.roiBtn.hide()
+                realGraph.ui.menuBtn.hide()
+                realGraph.ui.histogram.hide()
+                realGraph.getView().setMouseEnabled(x=False, y=False)
+                widget2.layout().addWidget(realGraph)
+                ROI_Maxbounds = QRectF(0, 0, 100, 100)
+                ROI_Maxbounds.adjust(0, 0, realGraph.getImageItem().width() - 100, realGraph.getImageItem().height() - 100)
+                roi = pg.ROI(pos = realGraph.getView().viewRect().center(), size = (50, 50), hoverPen='b', resizable= True, 
+                invertible= True, rotatable= False, maxBounds= ROI_Maxbounds)
+                self.rois[i] = roi
+                roi.sigRegionChangeFinished.connect(lambda: self.modify_regions(i))
+                print(self.rois)
+                realGraph.getView().addItem(roi)
+
+
+
 
     def handleConvertBtn(self):
         # Show progress bar
@@ -372,9 +417,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.progressBar.setValue(100)
         QTimer.singleShot(2000, self.hideProgressbar)
 
+    def modify_regions(self, index):
+        new_state = self.rois[index].getState()
+        for roi in self.rois:
+            if roi:
+                roi.setState(new_state, update = False)
+                roi.stateChanged(finish = False)
+
     def hideProgressbar(self):
         self.progressBar.setVisible(False)
         self.stopButton.setVisible(False)
+        self.sttop
 
     def cancelProgressBar(self):
         # Terminate the thread if progress bar is cancelled
@@ -385,12 +438,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.hideProgressbar()
 
     def handleCropBtn(self, index):
-        # image = np.array(self.gallery.get_gallery()[index].get_img())
-        # print(image.shape)
         image = cv2.imread(self.gallery.get_gallery()[index].get_img_path())
         image =  cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        # print(gimage)
-        # print(type(readed_image))
         self.oriImage = image.copy()
         cv2.namedWindow("image")
         cv2.setMouseCallback("image", self.mouseCrop)
@@ -398,6 +447,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.leaveCropping = False
         while True:
             if self.leaveCropping:
+                # remove the current rectangle
                 break
             i = image.copy()
             # if not self.cropping:
@@ -406,7 +456,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             cv2.waitKey(1)
 
     def mouseCrop(self, event, x, y, flags, param):
-
         if event == cv2.EVENT_LBUTTONDOWN:
             self.x_start, self.y_start, self.x_end, self.y_end = x, y, x, y
             self.cropping = True
@@ -441,8 +490,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                         child = layout.takeAt(0)
                         if child.widget():
                             child.widget().deleteLater()
-
-                    widget1.layout().addWidget(pg.image(current_images[i].get_img()))
+                    newGraph = CustomImageView()
+                    newGraph.setImage(current_images[i].get_img())
+                    newGraph.ui.roiBtn.hide()
+                    newGraph.ui.menuBtn.hide()
+                    newGraph.ui.histogram.hide()
+                    widget1.layout().addWidget(newGraph)
 
 def main():
     app = QApplication([])
@@ -453,6 +506,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-
-        
