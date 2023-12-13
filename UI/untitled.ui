@@ -141,7 +141,7 @@ border: none;
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-1419</y>
+         <y>-72</y>
          <width>573</width>
          <height>2063</height>
         </rect>
@@ -182,13 +182,6 @@ border: none;
              <property name="spacing">
               <number>27</number>
              </property>
-             <item>
-              <widget class="QPushButton" name="imageOneCropButton">
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
              <item>
               <spacer name="horizontalSpacer">
                <property name="orientation">
@@ -313,13 +306,6 @@ border: none;
              <property name="spacing">
               <number>27</number>
              </property>
-             <item>
-              <widget class="QPushButton" name="imageTwoCropButton">
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
              <item>
               <spacer name="horizontalSpacer_2">
                <property name="orientation">
@@ -448,13 +434,6 @@ border: none;
               <number>27</number>
              </property>
              <item>
-              <widget class="QPushButton" name="imageThreeCropButton">
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item>
               <spacer name="horizontalSpacer_3">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
@@ -581,13 +560,6 @@ border: none;
              <property name="spacing">
               <number>27</number>
              </property>
-             <item>
-              <widget class="QPushButton" name="imageFoureCropButton">
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
              <item>
               <spacer name="horizontalSpacer_8">
                <property name="orientation">
@@ -821,30 +793,6 @@ border: none;
                     </widget>
                    </item>
                    <item>
-                    <widget class="QComboBox" name="componentOneImageSelect">
-                     <item>
-                      <property name="text">
-                       <string>Image 1</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Image 2</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Image 3</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Image 4</string>
-                      </property>
-                     </item>
-                    </widget>
-                   </item>
-                   <item>
                     <spacer name="horizontalSpacer_4">
                      <property name="orientation">
                       <enum>Qt::Horizontal</enum>
@@ -945,30 +893,6 @@ border: none;
                      <property name="text">
                       <string>Component 2: </string>
                      </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QComboBox" name="componentTwoImageSelect">
-                     <item>
-                      <property name="text">
-                       <string>Image 1</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Image 2</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Image 3</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Image 4</string>
-                      </property>
-                     </item>
                     </widget>
                    </item>
                    <item>
@@ -1075,30 +999,6 @@ border: none;
                     </widget>
                    </item>
                    <item>
-                    <widget class="QComboBox" name="componentThreeImageSelect">
-                     <item>
-                      <property name="text">
-                       <string>Image 1</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Image 2</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Image 3</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Image 4</string>
-                      </property>
-                     </item>
-                    </widget>
-                   </item>
-                   <item>
                     <spacer name="horizontalSpacer_6">
                      <property name="orientation">
                       <enum>Qt::Horizontal</enum>
@@ -1199,30 +1099,6 @@ border: none;
                      <property name="text">
                       <string>Component 4: </string>
                      </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QComboBox" name="componentFourImageSelect">
-                     <item>
-                      <property name="text">
-                       <string>Image 1</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Image 2</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Image 3</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Image 4</string>
-                      </property>
-                     </item>
                     </widget>
                    </item>
                    <item>

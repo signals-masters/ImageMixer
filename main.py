@@ -109,7 +109,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.magnitudeRadioButtons = [self.componentOneMagnitudeRadio, self.componentTwoMagnitudeRadio, self.componentThreeMagnitudeRadio, self.componentFourMagnitudeRadio]
         self.phaseRadioButtons = [self.componentOnePhaseRadio, self.componentTwoPhaseRadio, self.componentThreePhaseRadio, self.componentFourPhaseRadio]
         self.radioButtons = [self.realRadioButtons, self.imaginaryRadioButtons, self.magnitudeRadioButtons, self.phaseRadioButtons]
-        self.componentsImagesSelect = [self.componentOneImageSelect, self.componentTwoImageSelect, self.componentThreeImageSelect, self.componentFourImageSelect]
 
         self.imagePaths = ['', '', '', '']
         self.componentsTypes = ['', '', '', '']
@@ -135,10 +134,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             layout = QHBoxLayout()
             widget.setLayout(layout)
 
-        for i, combobox in enumerate(self.componentsImagesSelect):
-            combobox.deleteLater()
-            combobox.currentIndexChanged.connect(lambda index, i=i: self.handleImageChange(index, i))            
-        
         for i, slider in enumerate(self.componentSliders):
             slider.setMinimum(0)
             slider.setMaximum(100)
@@ -167,18 +162,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.stopButton.clicked.connect(self.cancelProgressBar)
         self.stopped = False
 
-
-        # Cropping
-        self.imageOneCropButton.clicked.connect(lambda: self.handleCropBtn(0))
-        self.imageTwoCropButton.clicked.connect(lambda: self.handleCropBtn(1))
-        self.imageThreeCropButton.clicked.connect(lambda: self.handleCropBtn(2))
-        self.imageFoureCropButton.clicked.connect(lambda: self.handleCropBtn(3))
-
     def handleOutputChange(self, index):
         self.currentOutput = index
-
-    def handleImageChange(self, index, i):
-        self.componentsIds[i] = index
 
     def handleMixerModeChange(self, index):
         for slider in self.componentSliders:
@@ -436,66 +421,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.progressTimer.stop()
         self.stopped = True
         self.hideProgressbar()
-
-    def handleCropBtn(self, index):
-        image = cv2.imread(self.gallery.get_gallery()[index].get_img_path())
-        image =  cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        self.oriImage = image.copy()
-        cv2.namedWindow("image")
-        cv2.setMouseCallback("image", self.mouseCrop)
-        cv2.imshow("image", image)
-        self.leaveCropping = False
-        while True:
-            if self.leaveCropping:
-                # remove the current rectangle
-                break
-            i = image.copy()
-            # if not self.cropping:
-            cv2.rectangle(i, (self.x_start, self.y_start), (self.x_end, self.y_end), (255, 255, 0), 2)
-            cv2.imshow("image", i)
-            cv2.waitKey(1)
-
-    def mouseCrop(self, event, x, y, flags, param):
-        if event == cv2.EVENT_LBUTTONDOWN:
-            self.x_start, self.y_start, self.x_end, self.y_end = x, y, x, y
-            self.cropping = True
-            logging.info(f'mouseCrop: x_start: {self.x_start} , y_start: {self.y_start} , x_end: {self.x_end} , y_end: {self.y_end} , Cropping {self.cropping}' )
-
-        elif event == cv2.EVENT_MOUSEMOVE:
-            if self.cropping == True:
-                self.x_end, self.y_end = x, y
-            logging.info(f'mouseCrop: x_start: {self.x_start} , y_start: {self.y_start} , x_end: {self.x_end} , y_end: {self.y_end} , Cropping {self.cropping}' )
-
-        elif event == cv2.EVENT_LBUTTONUP:
-            self.x_end, self.y_end = x, y
-            self.cropping = False
-            logging.info(f'mouseCrop: x_start: {self.x_start} , y_start: {self.y_start} , x_end: {self.x_end} , y_end: {self.y_end} , Cropping {self.cropping}' )
-
-            refPoint = [(self.x_start, self.y_start), (self.x_end, self.y_end)]
-
-            if len(refPoint) == 2:
-                roi = self.oriImage[refPoint[0][1]:refPoint[1][1], refPoint[0][0]:refPoint[1][0]]
-                x_min = min(self.x_start, self.x_end)
-                y_min = min(self.y_start, self.y_end)
-                self.leaveCropping = True
-                cv2.destroyAllWindows()
-                self.gallery.crop_imgs(x_min, y_min, abs(self.x_start - self.x_end), abs(self.y_start - self.y_end))
-                current_images = self.gallery.get_gallery()
-                for i in current_images:
-                    widget1 = self.imageWidgets[i]
-                    widget2 = self.transWidgets[i]
-
-                    layout = widget1.layout()
-                    while layout.count():
-                        child = layout.takeAt(0)
-                        if child.widget():
-                            child.widget().deleteLater()
-                    newGraph = CustomImageView()
-                    newGraph.setImage(current_images[i].get_img())
-                    newGraph.ui.roiBtn.hide()
-                    newGraph.ui.menuBtn.hide()
-                    newGraph.ui.histogram.hide()
-                    widget1.layout().addWidget(newGraph)
 
 def main():
     app = QApplication([])
