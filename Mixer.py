@@ -143,13 +143,14 @@ class Mixer():
     #         return np.clip(np.abs(np.fft.ifft2(real + imaginary * 1j)), 0, 225)
 
 
-    def inverse_fft(self, gallery):
+    def inverse_fft(self, gallery, crop_mode=None, dimensions=None):
         """
         Performs inverse FFT on images extracted from the given gallery based on stored parameters.
 
         Parameters:
         - gallery (dict): A dictionary representing a gallery of images where keys are image IDs.
-
+        - crop_mode (int): 1 for inner, 2 for outer
+        - dimensions (list): x1,x2,y1,y2
         Returns:
         - ndarray: Reconstructed image using inverse FFT.
 
@@ -158,6 +159,19 @@ class Mixer():
         """
         print(gallery)
         img_objs = self.extract_img_from_gallery(gallery)
+        mask = np.ones(img_objs[0].shape)
+        # inner mode
+        # dimensions x1,x2, y1,y2
+        if crop_mode == 1:
+            mask = np.zeros(img_objs[0].shape)
+            mask[dimensions[0]:dimensions[1]+1, dimensions[2]:dimensions[3]+1] = 1
+        
+        elif crop_mode == 2:
+            mask = np.ones(img_objs[0].shape)
+            mask[dimensions[0]:dimensions[1]+1, dimensions[2]:dimensions[3]+1] = 0
+        
+        
+
         mode = self.choose_mode()
 
         # Determine the total number of iterations for the progress bar
@@ -183,7 +197,7 @@ class Mixer():
             progress_bar.close()
 
             print("using mag phase")
-            return np.clip(np.abs(np.fft.ifft2(magnitudes * np.exp(1j * phases))), 0, 225) 
+            return np.clip(np.abs(np.fft.ifft2((magnitudes*mask) * np.exp(1j * (phases*mask)))), 0, 225) 
 
         elif mode == 1:
             real = np.zeros(img_objs[0].shape)
@@ -202,7 +216,7 @@ class Mixer():
             progress_bar.close()
 
             print("using real imag")
-            return np.clip(np.abs(np.fft.ifft2(real + imaginary * 1j)), 0, 225)
+            return np.clip(np.abs(np.fft.ifft2(real*mask + imaginary*mask * 1j)), 0, 225)
 
 
 
