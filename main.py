@@ -22,17 +22,20 @@ modes = ['Real', 'Imaginary', 'Magnitude', 'Phase']
 class ImageProcessingThread(QThread):
     processingDone = pyqtSignal(object)
 
-    def __init__(self, weights, componentsIds, componentsTypes, gallery):
+    def __init__(self, weights, componentsIds, componentsTypes, gallery, cropMode, currentState):
         QThread.__init__(self)
         self.weights = weights
         self.componentsIds = componentsIds
         self.componentsTypes = componentsTypes
         self.gallery = gallery
+        self.cropMode = cropMode
+        self.currentState = currentState
 
     def run(self):
-        weights = [value / 100 for value in self.weights]
-        currentMixer = Mixer.Mixer(*weights, *self.componentsIds, *self.componentsTypes)
-        output = currentMixer.inverse_fft(self.gallery.get_gallery()).T
+        currentMixer = Mixer.Mixer(*self.weights, *self.componentsIds, *self.componentsTypes)
+        coords = [self.currentState['pos'][0], self.currentState['pos'][0] + self.currentState['size'][0], self.currentState['pos'][1], self.currentState['pos'][1] + self.currentState['size'][1]]
+        print(coords)
+        output = currentMixer.inverse_fft(self.gallery.get_gallery(), self.cropMode, coords).T
         self.processingDone.emit(output)
 
 class CustomViewBox(pg.ViewBox):
@@ -101,6 +104,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.componentSliders = [self.componentOneRatioSlider, self.componentTwoRatioSlider, self.componentThreeRatioSlider, self.componentFourRatioSlider]
         self.componentValueLabels = [self.componentOneRatioLabel, self.componentTwoRatioLabel, self.componentThreeRatioLabel, self.componentFourRatioLabel]
         self.sliderValues = [0, 0, 0, 0]
+        self.outputSliderValues = [0, 0, 0, 0]
         self.imageModesCombobox = [self.imageOneModeSelect, self.imageTwoModeSelect, self.imageThreeModeSelect, self.imageFourModeSelect]
         self.realRadioButtons = [self.componentOneRealRadio, self.componentTwoRealRadio, self.componentThreeRealRadio, self.componentFourRealRadio]
         self.rois = [None, None, None, None]
@@ -120,6 +124,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.mixerModeSelect.currentIndexChanged.connect(self.handleMixerModeChange)
 
         self.leaveCropping = False
+        self.currentState = {'pos': (0.000000, 0.000000), 'size': (50.000000, 50.000000), 'angle': 0.0}
+        self.cropMode = 1
+        self.cropModeSelect.currentIndexChanged.connect(self.handleCropModeChange)
 
         for i, widget in enumerate(self.imageWidgets):
             layout = QHBoxLayout()
@@ -161,6 +168,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.stopButton.setVisible(False)
         self.stopButton.clicked.connect(self.cancelProgressBar)
         self.stopped = False
+
+    def handleCropModeChange(self, index):
+        self.cropMode = index + 1
 
     def handleOutputChange(self, index):
         self.currentOutput = index
@@ -209,36 +219,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         return sum(self.sliderValues)
     
     def handleSlider(self, value, index):
-        # logging.info(f'handleSlider: value: {value} , Index: {index}')
-        # logging.info(f'handleSlider: Sliders Values: {self.sliderValues}')
-        # logging.info(f'handleSlider: Current: {self.currentSumOfComponents}')
-        # logging.info(f'handleSlider: Total: {self.totalOfComponents}')
-        # logging.info(f'handleSlider: Remainder: {self.remainderOfComponents}')
-        # logging.info('-------------------------------------------------------------')
-        if self.currentSumOfComponents - self.sliderValues[index] + value <= self.totalOfComponents:
-            self.sliderValues[index] = value
-            self.currentSumOfComponents = self.sumSlidersValues()
-            self.remainderOfComponents = self.totalOfComponents - self.currentSumOfComponents
-            self.componentValueLabels[index].setText(str(value) + "%")
-            self.componentSliders[index].setValue(value)
+        self.sliderValues[index] = value
+        self.componentValueLabels[index].setText(str(value) + "%")
+        self.componentSliders[index].setValue(value)
+        currentSumOfComponents = self.sumSlidersValues()
+        if currentSumOfComponents > 100:
+            self.outputSliderValues = [(value / currentSumOfComponents) * 1 for value in self.sliderValues]
         else:
-            self.sliderValues[index] += self.remainderOfComponents
-            self.currentSumOfComponents = self.sumSlidersValues()
-            self.remainderOfComponents = self.totalOfComponents - self.currentSumOfComponents
-            self.componentValueLabels[index].setText(str(self.sliderValues[index]) + "%")
-        
-        # logging.info(f'handleSlider: Sliders Values: {self.sliderValues}')
-        # logging.info(f'handleSlider: Current: {self.currentSumOfComponents}')
-        # logging.info(f'handleSlider: Total: {self.totalOfComponents}')
-        # logging.info(f'handleSlider: Remainder: {self.remainderOfComponents}')
-        # logging.info('===============================================================')
-
+            self.outputSliderValues = [(value / 100) for value in self.sliderValues]
 
     def handleImageModeChange(self, index, i):
         mode = modes[index]
-
         image = self.gallery.get_gallery()[i]
-
         layout = self.transWidgets[i].layout()
         while layout.count():
             child = layout.takeAt(0)
@@ -256,6 +248,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         graph.ui.roiBtn.hide()
         graph.ui.histogram.hide()
         graph.ui.menuBtn.hide()
+        ROI_Maxbounds = QRectF(0, 0, 100, 100)
+        ROI_Maxbounds.adjust(0, 0, graph.getImageItem().width() - 100, graph.getImageItem().height() - 100)
+        roi = pg.ROI(pos = self.currentState['pos'], size = self.currentState['size'], hoverPen='b', resizable= True, 
+        invertible= True, rotatable= False, maxBounds= ROI_Maxbounds)
+        self.rois[i] = roi
+        roi.sigRegionChangeFinished.connect(lambda: self.modify_regions(i))
+        graph.getView().addItem(roi)
         self.transWidgets[i].layout().addWidget(graph)
 
     def handleBrowseImage(self, index):
@@ -268,45 +267,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.imagePaths[index] = img[0]
             image.load_img(imagePath, show=True)
             image.compute_fourier_transform()
-            # graph = CustomImageView()
-            # graph.setImage(image.get_img())
-            # graph.ui.roiBtn.hide()
-            # graph.ui.menuBtn.hide()
-            # graph.ui.histogram.hide()
-
-            # widget1 = self.imageWidgets[index]
-            # widget2 = self.transWidgets[index]
-            
-            # layout = widget1.layout()
-            # while layout.count():
-                # child = layout.takeAt(0)
-                # if child.widget():
-                    # child.widget().deleteLater()
-
-            # widget1.layout().addWidget(graph)
-            
-            # layout2 = widget2.layout()
-            # while layout2.count():
-                # child = layout2.takeAt(0)
-                # if child.widget():
-                    # child.widget().deleteLater()
-
-            # realGraph = pg.image(image.get_real())
-            # realGraph.ui.roiBtn.hide()
-            # realGraph.ui.menuBtn.hide()
-            # realGraph.ui.histogram.hide()
-            # realGraph.getView().setMouseEnabled(x=False, y=False)
-            # widget2.layout().addWidget(realGraph)
-            # ROI_Maxbounds = QRectF(0, 0, 100, 100)
-            # ROI_Maxbounds.adjust(0, 0, realGraph.getImageItem().width() - 100, realGraph.getImageItem().height() - 100)
-            # roi = pg.ROI(pos = realGraph.getView().viewRect().center(), size = (50, 50), hoverPen='b', resizable= True, 
-            # invertible= True, rotatable= False, maxBounds= ROI_Maxbounds)
-            # self.rois[index] = roi
-            # roi.sigRegionChangeFinished.connect(lambda: self.modify_regions(index))
-            # realGraph.getView().addItem(roi)
-            # realGraph.getView().item
-
-
             self.imageModesCombobox[index].setEnabled(True)
             self.imageModesCombobox[index].setCurrentIndex(0)
             # TODO: Add the image to gallery
@@ -315,6 +275,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             # TODO: Call reshape_all with a list of images in gallery
             Image.Image.reshape_all(self.gallery.get_gallery().values())
             current_images = self.gallery.get_gallery()
+            self.componentsIds[index] = index
+            print(self.componentsIds)
             for i in current_images:
                 widget1 = self.imageWidgets[i]
                 widget2 = self.transWidgets[i]
@@ -345,7 +307,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 widget2.layout().addWidget(realGraph)
                 ROI_Maxbounds = QRectF(0, 0, 100, 100)
                 ROI_Maxbounds.adjust(0, 0, realGraph.getImageItem().width() - 100, realGraph.getImageItem().height() - 100)
-                roi = pg.ROI(pos = realGraph.getView().viewRect().center(), size = (50, 50), hoverPen='b', resizable= True, 
+                roi = pg.ROI(pos = self.currentState['pos'], size = self.currentState['size'], hoverPen='b', resizable= True, 
                 invertible= True, rotatable= False, maxBounds= ROI_Maxbounds)
                 self.rois[i] = roi
                 roi.sigRegionChangeFinished.connect(lambda: self.modify_regions(i))
@@ -368,7 +330,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # Start image processing in a separate thread
         self.stopped = False
-        self.thread = ImageProcessingThread(self.sliderValues, self.componentsIds, self.componentsTypes, self.gallery)
+        self.thread = ImageProcessingThread(self.outputSliderValues, self.componentsIds, self.componentsTypes, self.gallery, self.cropMode, self.currentState)
         self.thread.processingDone.connect(self.delayShowImage)
         self.thread.start()
 
@@ -403,10 +365,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         QTimer.singleShot(2000, self.hideProgressbar)
 
     def modify_regions(self, index):
-        new_state = self.rois[index].getState()
+        newState = self.rois[index].getState()
+        print(newState)
+        self.currentState = newState
         for roi in self.rois:
             if roi:
-                roi.setState(new_state, update = False)
+                roi.setState(newState, update = False)
                 roi.stateChanged(finish = False)
 
     def hideProgressbar(self):
