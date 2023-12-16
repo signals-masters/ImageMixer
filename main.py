@@ -35,7 +35,6 @@ class ImageProcessingThread(QThread):
         currentMixer = Mixer.Mixer(*self.weights, *self.componentsIds, *self.componentsTypes)
         coords = [self.currentState['pos'][0], self.currentState['pos'][0] + self.currentState['size'][0], self.currentState['pos'][1], self.currentState['pos'][1] + self.currentState['size'][1]]
         coords = [int(coord) for coord in coords]
-        print(coords)
         output = currentMixer.inverse_fft(self.gallery.get_gallery(), 0, coords).T
         self.processingDone.emit(output)
 
@@ -65,7 +64,6 @@ class CustomViewBox(pg.ViewBox):
     def mouseReleaseEvent(self, event):
         if event.button() == QtCore.Qt.MouseButton.LeftButton:
             self.dragStartPos = None
-            print("HGFJFOGFDJIgfhdfiuygdfiokhgfujgkdf")
         super(CustomViewBox, self).mouseReleaseEvent(event)
 
 class CustomImageView(pg.ImageView):
@@ -81,7 +79,12 @@ class CustomImageView(pg.ImageView):
         self.imageItem = self.getImageItem()
         if (self.firstTime):
             self.firstTime = False
-            self.originalImage = self.getImageItem().image.copy()
+            self.originalImage = self.getImageItem().image  # Store a reference instead of a copy
+
+    def __del__(self):
+        self.imageItem = None
+        self.originalImage = None
+        print("DELETED")
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     image = None
@@ -89,6 +92,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         # self.oriImage = None
+        self.viewWidgets = [None, None, None, None]
+        self.freqViewWidgets = [None, None, None, None]
         self.gallery = Gallery.Gallery()
         self.cropping = False
         self.x_start, self.y_start, self.x_end, self.y_end = 0, 0, 0, 0
@@ -215,33 +220,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def handleImageModeChange(self, index, i):
         mode = modes[index]
         image = self.gallery.get_gallery()[i]
-        layout = self.transWidgets[i].layout()
-        while layout.count():
-            child = layout.takeAt(0)
-            if child.widget():
-                child.widget().deleteLater()
-        graph = None
+
+        graph = self.freqViewWidgets[i]
         if mode == 'Magnitude':
-            graph = pg.image(image.get_mag())
+            graph.setImage(image.get_mag())
         elif mode == 'Phase':
-            graph = pg.image(image.get_phase())
+            graph.setImage(image.get_phase())
         elif mode == 'Real':
-            graph = pg.image(image.get_real())
+            graph.setImage(image.get_real())
         elif mode == 'Imaginary':
-            graph = pg.image(image.get_imaginary())
+            graph.setImage(image.get_imaginary())
+
         self.componentsTypes[i] = mode.lower()
-        print(self.componentsTypes)
-        graph.ui.roiBtn.hide()
-        graph.ui.histogram.hide()
-        graph.ui.menuBtn.hide()
-        ROI_Maxbounds = QRectF(0, 0, 100, 100)
-        ROI_Maxbounds.adjust(0, 0, graph.getImageItem().width() - 100, graph.getImageItem().height() - 100)
-        roi = pg.ROI(pos = self.currentState['pos'], size = self.currentState['size'], hoverPen='b', resizable= True, 
-        invertible= True, rotatable= False, maxBounds= ROI_Maxbounds)
-        self.rois[i] = roi
-        roi.sigRegionChangeFinished.connect(lambda: self.modify_regions(i))
-        graph.getView().addItem(roi)
-        self.transWidgets[i].layout().addWidget(graph)
 
     def handleBrowseImage(self, index):
         img = QFileDialog.getOpenFileName(
@@ -250,8 +240,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if img:
             image = Image.Image()
             imagePath = img[0].strip().split("/")[-1]
-            self.imagePaths[index] = img[0]
-            image.load_img(imagePath, show=True)
+            image.load_img(imagePath)
             image.compute_fourier_transform()
             self.imageModesCombobox[index].setEnabled(True)
             self.imageModesCombobox[index].setCurrentIndex(0)
@@ -264,44 +253,43 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.componentsIds[index] = index
             self.componentSliders[index].setEnabled(True)
             for i in current_images:
-                widget1 = self.imageWidgets[i]
-                widget2 = self.transWidgets[i]
-
-                layout = widget1.layout()
-                while layout.count():
-                    child = layout.takeAt(0)
-                    if child.widget():
-                        child.widget().deleteLater()
-                newGraph = CustomImageView()
-                newGraph.setImage(current_images[i].get_img())
-                newGraph.ui.roiBtn.hide()
-                newGraph.ui.menuBtn.hide()
-                newGraph.ui.histogram.hide()
-                widget1.layout().addWidget(newGraph)
-
-                layout2 = widget2.layout()
-                while layout2.count():
-                    child = layout2.takeAt(0)
-                    if child.widget():
-                        child.widget().deleteLater()
+                if self.viewWidgets[i] == None:
+                    newGraph = CustomImageView(parent=self.imageWidgets[i])
+                    self.viewWidgets[i] = newGraph
+                    print(self.viewWidgets)
+                    self.imageWidgets[i].layout().addWidget(self.viewWidgets[i])
+                    self.viewWidgets[i].ui.roiBtn.hide()
+                    self.viewWidgets[i].ui.menuBtn.hide()
+                    self.viewWidgets[i].ui.histogram.hide()
                 
-                realGraph = pg.image(current_images[i].get_real())
-                realGraph.ui.roiBtn.hide()
-                realGraph.ui.menuBtn.hide()
-                realGraph.ui.histogram.hide()
-                realGraph.getView().setMouseEnabled(x=False, y=False)
-                widget2.layout().addWidget(realGraph)
-                ROI_Maxbounds = QRectF(0, 0, 100, 100)
-                ROI_Maxbounds.adjust(0, 0, realGraph.getImageItem().width() - 100, realGraph.getImageItem().height() - 100)
-                roi = pg.ROI(pos = self.currentState['pos'], size = self.currentState['size'], hoverPen='b', resizable= True, 
-                invertible= True, rotatable= False, maxBounds= ROI_Maxbounds)
-                self.rois[i] = roi
-                roi.sigRegionChangeFinished.connect(lambda: self.modify_regions(i))
-                realGraph.getView().addItem(roi)
-            print("UPLOADED COMPLETED")
+                self.viewWidgets[i].setImage(current_images[i].get_img())
 
+                if self.freqViewWidgets[i] == None:
+                    realGraph = pg.ImageView()
+                    self.freqViewWidgets[i] = realGraph
+                    self.transWidgets[i].layout().addWidget(self.freqViewWidgets[i])
+                    self.freqViewWidgets[i].ui.roiBtn.hide()
+                    self.freqViewWidgets[i].ui.menuBtn.hide()
+                    self.freqViewWidgets[i].ui.histogram.hide()
+                    self.freqViewWidgets[i].getView().setMouseEnabled(x=False, y=False)
 
+                currentMode = self.componentsTypes[i]
+                if currentMode == 'magnitude':
+                    self.freqViewWidgets[i].setImage(current_images[i].get_mag())
+                elif currentMode == 'phase':
+                    self.freqViewWidgets[i].setImage(current_images[i].get_phase())
+                elif currentMode == 'real':
+                    self.freqViewWidgets[i].setImage(current_images[i].get_real())
+                elif currentMode == 'imaginary':
+                    self.freqViewWidgets[i].setImage(current_images[i].get_imaginary())
 
+                if self.rois[i] == None:
+                    ROI_Maxbounds = QRectF(0, 0, 100, 100)
+                    ROI_Maxbounds.adjust(0, 0, self.freqViewWidgets[i].getImageItem().width() - 100, self.freqViewWidgets[i].getImageItem().height() - 100)
+                    roi = pg.ROI(pos = self.currentState['pos'], size = self.currentState['size'], hoverPen='b', resizable= True, invertible= True, rotatable= False, maxBounds= ROI_Maxbounds)
+                    self.rois[i] = roi
+                    roi.sigRegionChangeFinished.connect(lambda: self.modify_regions(i))
+                    self.freqViewWidgets[i].getView().addItem(roi)
 
     def handleConvertBtn(self):
         # Show progress bar
@@ -339,6 +327,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 if child.widget():
                     child.widget().deleteLater()
 
+
             outputImage = pg.image(output)
             outputImage.ui.roiBtn.hide()
             outputImage.ui.menuBtn.hide()
@@ -352,7 +341,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def modify_regions(self, index):
         newState = self.rois[index].getState()
-        print(newState)
         self.currentState = newState
         for roi in self.rois:
             if roi:

@@ -51,9 +51,6 @@ class Image():
     
     def get_img(self):
         return self.img.T
-
-    def save_img(self):
-        cv2.imwrite(f'./imgs/{self.title}', self.img)
     
     def get_img_path(self):
         return f'./imgs/{self.title}'
@@ -90,7 +87,7 @@ class Image():
     
     ##################################__main__functions__#######################################################
         
-    def load_img(self, pth, show=False):
+    def load_img(self, pth):
 
         """
         Load and process the image from the specified file path.
@@ -112,15 +109,6 @@ class Image():
         self.img_back_up = self.img.copy()
         self.title = pth.split('/')[-1]
 
-        if show:
-            # cv2.imshow('Image', self.img)
-            # cv2.waitKey(0)
-            # cv2.destroyAllWindows()
-            # return plt.imshow(self.img, cmap='gray').
-            plt.imsave("./imgs/1.png" , self.img)
-        # except:
-            # print(f"Error: Couldn't load the image at {pth}")
-
 
     def get_title(self):
         return self.title
@@ -140,7 +128,6 @@ class Image():
         self.img = cv2.resize(self.img, (new_width, new_height))
         # Update the shape attribute
         self.shape = self.img.shape
-        self.save_img()
 
     @classmethod
     def reshape_all(cls, image_instances):
