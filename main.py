@@ -35,7 +35,7 @@ class ImageProcessingThread(QThread):
         currentMixer = Mixer.Mixer(*self.weights, *self.componentsIds, *self.componentsTypes)
         coords = [self.currentState['pos'][0], self.currentState['pos'][0] + self.currentState['size'][0], self.currentState['pos'][1], self.currentState['pos'][1] + self.currentState['size'][1]]
         coords = [int(coord) for coord in coords]
-        output = currentMixer.inverse_fft(self.gallery.get_gallery(), 0, coords).T
+        output = currentMixer.inverse_fft(self.gallery.get_gallery(), self.cropMode, coords).T
         self.processingDone.emit(output)
 
 class CustomViewBox(pg.ViewBox):
