@@ -124,7 +124,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.leaveCropping = False
         self.currentState = {'pos': (0.000000, 0.000000), 'size': (50.000000, 50.000000), 'angle': 0.0}
-        self.cropMode = 1
+        self.cropMode = 0
         self.cropModeSelect.currentIndexChanged.connect(self.handleCropModeChange)
 
         for i, widget in enumerate(self.imageWidgets):
@@ -166,7 +166,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.stopped = False
 
     def handleCropModeChange(self, index):
-        self.cropMode = index + 1
+        self.cropMode = index
+        for roi in self.rois:
+            if roi:
+                if index == 0:
+                    roi.hide()
+                else:
+                    roi.show()
 
     def handleOutputChange(self, index):
         self.currentOutput = index
@@ -287,6 +293,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     ROI_Maxbounds = QRectF(0, 0, 100, 100)
                     ROI_Maxbounds.adjust(0, 0, self.freqViewWidgets[i].getImageItem().width() - 100, self.freqViewWidgets[i].getImageItem().height() - 100)
                     roi = pg.ROI(pos = self.currentState['pos'], size = self.currentState['size'], hoverPen='b', resizable= True, invertible= True, rotatable= False, maxBounds= ROI_Maxbounds)
+                    if self.cropMode == 0:
+                        roi.hide()
                     self.rois[i] = roi
                     roi.sigRegionChangeFinished.connect(lambda: self.modify_regions(i))
                     self.freqViewWidgets[i].getView().addItem(roi)
