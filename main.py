@@ -40,20 +40,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.componentSliders = [self.componentOneRatioSlider, self.componentTwoRatioSlider, self.componentThreeRatioSlider, self.componentFourRatioSlider]
         self.componentValueLabels = [self.componentOneRatioLabel, self.componentTwoRatioLabel, self.componentThreeRatioLabel, self.componentFourRatioLabel]
         self.sliderValues = [0, 0, 0, 0]
-        self.imageModesCombobox = [self.imageOneModeSelect, self.imageTwoModeSelect, self.imageThreeModeSelect, self.imageFourModeSelect]
-        self.realRadioButtons = [self.componentOneRealRadio, self.componentTwoRealRadio, self.componentThreeRealRadio, self.componentFourRealRadio]
+        # self.imageModesCombobox = [self.imageOneModeSelect, self.imageTwoModeSelect, self.imageThreeModeSelect, self.imageFourModeSelect]
+        # self.realRadioButtons = [self.componentOneRealRadio, self.componentTwoRealRadio, self.componentThreeRealRadio, self.componentFourRealRadio]
 
-        self.imaginaryRadioButtons = [self.componentOneImaginaryRadio, self.componentTwoImaginaryRadio, self.componentThreeImaginaryRadio, self.componentFourImaginaryRadio]
-        self.magnitudeRadioButtons = [self.componentOneMagnitudeRadio, self.componentTwoMagnitudeRadio, self.componentThreeMagnitudeRadio, self.componentFourMagnitudeRadio]
-        self.phaseRadioButtons = [self.componentOnePhaseRadio, self.componentTwoPhaseRadio, self.componentThreePhaseRadio, self.componentFourPhaseRadio]
-        self.radioButtons = [self.realRadioButtons, self.imaginaryRadioButtons, self.magnitudeRadioButtons, self.phaseRadioButtons]
-        self.componentsImagesSelect = [self.componentOneImageSelect, self.componentTwoImageSelect, self.componentThreeImageSelect, self.componentFourImageSelect]
+        # self.imaginaryRadioButtons = [self.componentOneImaginaryRadio, self.componentTwoImaginaryRadio, self.componentThreeImaginaryRadio, self.componentFourImaginaryRadio]
+        # self.magnitudeRadioButtons = [self.componentOneMagnitudeRadio, self.componentTwoMagnitudeRadio, self.componentThreeMagnitudeRadio, self.componentFourMagnitudeRadio]
+        # self.phaseRadioButtons = [self.componentOnePhaseRadio, self.componentTwoPhaseRadio, self.componentThreePhaseRadio, self.componentFourPhaseRadio]
+        # self.radioButtons = [self.realRadioButtons, self.imaginaryRadioButtons, self.magnitudeRadioButtons, self.phaseRadioButtons]
+        # self.componentsImagesSelect = [self.componentOneImageSelect, self.componentTwoImageSelect, self.componentThreeImageSelect, self.componentFourImageSelect]
 
         self.componentsTypes = ['', '', '', '']
         self.componentsIds = [0, 0, 0, 0]
         self.currentOutput = 0
 
-        self.mixerModeSelect.currentIndexChanged.connect(self.handleMixerModeChange)
+        # self.mixerModeSelect.currentIndexChanged.connect(self.handleMixerModeChange)
 
         for i, widget in enumerate(self.imageWidgets):
             layout = QHBoxLayout()
@@ -64,8 +64,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             layout = QHBoxLayout()
             widget.setLayout(layout)
 
-        for i, combobox in enumerate(self.componentsImagesSelect):
-            combobox.currentIndexChanged.connect(lambda index, i=i: self.handleImageChange(index, i))            
+        # for i, combobox in enumerate(self.componentsImagesSelect):
+        #     combobox.currentIndexChanged.connect(lambda index, i=i: self.handleImageChange(index, i))            
         
         for i, slider in enumerate(self.componentSliders):
             slider.setMinimum(0)
@@ -73,20 +73,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             slider.setEnabled(False)
             # slider.valueChanged.connect(lambda value, i=i: self.handleComponentSlider(value, i))
 
-        self.convertButton.clicked.connect(self.handleConvertBtn)
+        self.convertBtn.clicked.connect(self.handleConvertBtn)
 
-        for i, combobox in enumerate(self.imageModesCombobox):
-            combobox.clear()
-            for mode in modes:
-                combobox.addItem(mode)
-            combobox.setEnabled(False)
-            combobox.currentIndexChanged.connect(lambda index, i=i: self.handleImageModeChange(index, i))
+        # for i, combobox in enumerate(self.imageModesCombobox):
+        #     combobox.clear()
+        #     for mode in modes:
+        #         combobox.addItem(mode)
+        #     combobox.setEnabled(False)
+        #     combobox.currentIndexChanged.connect(lambda index, i=i: self.handleImageModeChange(index, i))
 
-        for index, radioButtons in enumerate(self.radioButtons):
-            for i, radioButton in enumerate(radioButtons):
-                if index > 1:
-                    radioButton.setEnabled(False)
-                radioButton.toggled.connect(lambda checked, i=i, index=index: self.handleRadioButton(checked, i, index))
+        # for index, radioButtons in enumerate(self.radioButtons):
+        #     for i, radioButton in enumerate(radioButtons):
+        #         if index > 1:
+        #             radioButton.setEnabled(False)
+        #         radioButton.toggled.connect(lambda checked, i=i, index=index: self.handleRadioButton(checked, i, index))
         
         for i , slider in enumerate(self.componentSliders):
             slider.valueChanged.connect(lambda value, i=i: self.handleSlider(value, i))

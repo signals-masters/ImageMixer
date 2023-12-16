@@ -1,6 +1,6 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QLabel, QVBoxLayout, QWidget
-from PyQt6.QtGui import QPixmap, QMouseEvent
+from PyQt6.QtWidgets import QApplication, QLabel, QVBoxLayout, QWidget 
+from PyQt6.QtGui import QPixmap, QMouseEvent , QImage
 from PyQt6 import QtCore
 
 class ImageDisplayApp(QWidget):
@@ -10,8 +10,8 @@ class ImageDisplayApp(QWidget):
         # Create labels and set image paths
         self.x = None
         self.y = None
-        image_path1 = "./imgs/1.png"
-        image_path2 = "./imgs/1.png"
+        image_path1 = "./cat250.jpg"
+        image_path2 = "./cat250.jpg"
         self.label1 = QLabel(self)
         label2 = QLabel(self)
 
@@ -41,7 +41,6 @@ class ImageDisplayApp(QWidget):
         self.mouse_pressed = False
 
     def set_image(self, label, image_path):
-        # Set image to the label
         pixmap = QPixmap(image_path)
         label.setPixmap(pixmap)
         label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
