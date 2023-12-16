@@ -35,7 +35,8 @@ class ImageProcessingThread(QThread):
         currentMixer = Mixer.Mixer(*self.weights, *self.componentsIds, *self.componentsTypes)
         coords = [self.currentState['pos'][0], self.currentState['pos'][0] + self.currentState['size'][0], self.currentState['pos'][1], self.currentState['pos'][1] + self.currentState['size'][1]]
         coords = [int(coord) for coord in coords]
-        output = currentMixer.inverse_fft(self.gallery.get_gallery(), self.cropMode, coords).T
+        print(coords)
+        output = currentMixer.inverse_fft(self.gallery.get_gallery(), 0, coords).T
         self.processingDone.emit(output)
 
 class CustomViewBox(pg.ViewBox):
@@ -228,7 +229,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             graph = pg.image(image.get_real())
         elif mode == 'Imaginary':
             graph = pg.image(image.get_imaginary())
-        self.componentsTypes[index] = mode.lower()
+        self.componentsTypes[i] = mode.lower()
+        print(self.componentsTypes)
         graph.ui.roiBtn.hide()
         graph.ui.histogram.hide()
         graph.ui.menuBtn.hide()
@@ -261,7 +263,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             current_images = self.gallery.get_gallery()
             self.componentsIds[index] = index
             self.componentSliders[index].setEnabled(True)
-            print(self.componentsIds)
             for i in current_images:
                 widget1 = self.imageWidgets[i]
                 widget2 = self.transWidgets[i]
@@ -296,8 +297,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 invertible= True, rotatable= False, maxBounds= ROI_Maxbounds)
                 self.rois[i] = roi
                 roi.sigRegionChangeFinished.connect(lambda: self.modify_regions(i))
-                print(self.rois)
                 realGraph.getView().addItem(roi)
+            print("UPLOADED COMPLETED")
 
 
 
@@ -361,7 +362,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def hideProgressbar(self):
         self.progressBar.setVisible(False)
         self.stopButton.setVisible(False)
-        self.sttop
 
     def cancelProgressBar(self):
         # Terminate the thread if progress bar is cancelled

@@ -46,11 +46,8 @@ class Mixer():
         self.types = [type_1, type_2, type_3, type_4]
         # weights
         self.weights = [w1, w2, w3, w4]
+        print("STARTING MIXER")
         print(self.types, self.weights)
-        print(self.img_id1)
-        print(self.img_id2)
-        print(self.img_id3)
-        print(self.img_id4)
         
     def extract_img_from_gallery(self, gallery):
         """
