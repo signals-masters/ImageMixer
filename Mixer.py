@@ -154,18 +154,22 @@ class Mixer():
         Raises:
         - ValueError: If the mode determined by the types is not supported (not all "magnitude" or "phase").
         """
-        print(gallery)
+        print(crop_mode)
+        #print(gallery)
         img_objs = self.extract_img_from_gallery(gallery)
         mask = np.ones(img_objs[0].shape)
         # inner mode
         # dimensions x1,x2, y1,y2
         if crop_mode == 1:
+            print("inner mode")
+            print(dimensions)
             mask = np.zeros(img_objs[0].shape)
-            mask[dimensions[0]:dimensions[1]+1, dimensions[2]:dimensions[3]+1] = 1
+            mask[dimensions[2]:dimensions[3]+1, dimensions[0]:dimensions[1]+1] = 1
         
         elif crop_mode == 2:
+            print(dimensions)
             mask = np.ones(img_objs[0].shape)
-            mask[dimensions[0]:dimensions[1]+1, dimensions[2]:dimensions[3]+1] = 0
+            mask[dimensions[2]:dimensions[3]+1, dimensions[0]:dimensions[1]+1] = 0
         
         
 
