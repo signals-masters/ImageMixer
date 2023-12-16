@@ -106,16 +106,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.sliderValues = [0, 0, 0, 0]
         self.outputSliderValues = [0, 0, 0, 0]
         self.imageModesCombobox = [self.imageOneModeSelect, self.imageTwoModeSelect, self.imageThreeModeSelect, self.imageFourModeSelect]
-        self.realRadioButtons = [self.componentOneRealRadio, self.componentTwoRealRadio, self.componentThreeRealRadio, self.componentFourRealRadio]
         self.rois = [None, None, None, None]
-
-        self.imaginaryRadioButtons = [self.componentOneImaginaryRadio, self.componentTwoImaginaryRadio, self.componentThreeImaginaryRadio, self.componentFourImaginaryRadio]
-        self.magnitudeRadioButtons = [self.componentOneMagnitudeRadio, self.componentTwoMagnitudeRadio, self.componentThreeMagnitudeRadio, self.componentFourMagnitudeRadio]
-        self.phaseRadioButtons = [self.componentOnePhaseRadio, self.componentTwoPhaseRadio, self.componentThreePhaseRadio, self.componentFourPhaseRadio]
-        self.radioButtons = [self.realRadioButtons, self.imaginaryRadioButtons, self.magnitudeRadioButtons, self.phaseRadioButtons]
-
         self.imagePaths = ['', '', '', '']
-        self.componentsTypes = ['', '', '', '']
+        self.componentsTypes = ['real', 'real', 'real', 'real']
         self.componentsIds = [0, 0, 0, 0]
         self.outputWidgets = [self.outputOneWidget, self.outputTwoWidget]
         self.currentOutput = 0
@@ -154,12 +147,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 combobox.addItem(mode)
             combobox.setEnabled(False)
             combobox.currentIndexChanged.connect(lambda index, i=i: self.handleImageModeChange(index, i))
-
-        for index, radioButtons in enumerate(self.radioButtons):
-            for i, radioButton in enumerate(radioButtons):
-                if index > 1:
-                    radioButton.setEnabled(False)
-                radioButton.toggled.connect(lambda checked, i=i, index=index: self.handleRadioButton(checked, i, index))
+            model = combobox.model()
+            model.item(2).setEnabled(False)
+            model.item(3).setEnabled(False)
         
         for i , slider in enumerate(self.componentSliders):
             slider.valueChanged.connect(lambda value, i=i: self.handleSlider(value, i))
@@ -176,31 +166,24 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.currentOutput = index
 
     def handleMixerModeChange(self, index):
-        for slider in self.componentSliders:
-            slider.setEnabled(False)
-            slider.setValue(0)
-
         if index == 0:
-            for radioButtons in self.radioButtons[0:2]:
-                for radioButton in radioButtons:
-                    radioButton.setEnabled(True)
-                    radioButton.setCheckable(True)
-
-            for radioButtons in self.radioButtons[2:]:
-                for radioButton in radioButtons:
-                    radioButton.setEnabled(False)
-                    radioButton.setCheckable(False)
+            for combobox in self.imageModesCombobox:
+                model = combobox.model()
+                model.item(0).setEnabled(True)
+                model.item(1).setEnabled(True)
+                model.item(2).setEnabled(False)
+                model.item(3).setEnabled(False)
+                combobox.setCurrentIndex(0)
+                self.componentsTypes = ['real', 'real', 'real', 'real']
         else:
-            for radioButtons in self.radioButtons[2:]:
-                for radioButton in radioButtons:
-                    radioButton.setEnabled(True)
-                    radioButton.setCheckable(True)
-
-            for radioButtons in self.radioButtons[0:2]:
-                for radioButton in radioButtons:
-                    radioButton.setEnabled(False)
-                    radioButton.setCheckable(False)
-        self.componentsTypes = ['', '', '', '']
+            for combobox in self.imageModesCombobox:
+                model = combobox.model()
+                model.item(0).setEnabled(False)
+                model.item(1).setEnabled(False)
+                model.item(2).setEnabled(True)
+                model.item(3).setEnabled(True)
+                combobox.setCurrentIndex(2)
+                self.componentsTypes = ['magnitude', 'magnitude', 'magnitude', 'magnitude']
 
     def handleRadioButton(self, checked, index, mode):
         if checked:
@@ -245,6 +228,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             graph = pg.image(image.get_real())
         elif mode == 'Imaginary':
             graph = pg.image(image.get_imaginary())
+        self.componentsTypes[index] = mode.lower()
         graph.ui.roiBtn.hide()
         graph.ui.histogram.hide()
         graph.ui.menuBtn.hide()
@@ -276,6 +260,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             Image.Image.reshape_all(self.gallery.get_gallery().values())
             current_images = self.gallery.get_gallery()
             self.componentsIds[index] = index
+            self.componentSliders[index].setEnabled(True)
             print(self.componentsIds)
             for i in current_images:
                 widget1 = self.imageWidgets[i]
