@@ -154,16 +154,18 @@ class Mixer():
         Raises:
         - ValueError: If the mode determined by the types is not supported (not all "magnitude" or "phase").
         """
-        print(gallery)
         img_objs = self.extract_img_from_gallery(gallery)
         mask = np.ones(img_objs[0].shape)
-        # inner mode
-        # dimensions x1,x2, y1,y2
-        if crop_mode == 1:
+        shape = img_objs[0].shape
+        dimensions = [max(0, dim) for dim in dimensions]
+        dimensions[1] = min(dimensions[1], shape[0] - 1)
+        dimensions[3] = min(dimensions[3], shape[1] - 1)
+
+        if crop_mode == 2:
             mask = np.zeros(img_objs[0].shape)
             mask[dimensions[0]:dimensions[1]+1, dimensions[2]:dimensions[3]+1] = 1
         
-        elif crop_mode == 2:
+        elif crop_mode == 1:
             mask = np.ones(img_objs[0].shape)
             mask[dimensions[0]:dimensions[1]+1, dimensions[2]:dimensions[3]+1] = 0
         
@@ -183,7 +185,7 @@ class Mixer():
 
             for i, img_obj in enumerate(img_objs):
                 if self.types[i] == "magnitude":
-                    magnitudes += self.weights[i] * img_obj.mag
+                    magnitudes += self.weights[i] * img_obj.get_mag()
                 elif self.types[i] == "phase":
                     phases += self.weights[i] * img_obj.phase
 
@@ -221,39 +223,39 @@ class Mixer():
 
 # gallery = Gallery()
 # me = Image()
-# joker = Image()
-# moza1 = Image()
-# moza2 = Image()
-# # # print(me.id, joker.id, moza1.id, moza2.id)
-# joker.load_img("joker_PNG35.png")
-# me.load_img("Screenshot 2023-08-22 182109.png")
-# moza1.load_img("moza1.png")
-# moza2.load_img("moza2.png")
-# Image.reshape_all([joker, me, moza1, moza2])
+# # joker = Image()
+# # moza1 = Image()
+# # moza2 = Image()
+# # # # print(me.id, joker.id, moza1.id, moza2.id)
+# # joker.load_img("joker_PNG35.png")
+# me.load_img("cat250.jpg")
+# # moza1.load_img("moza1.png")
+# # moza2.load_img("moza2.png")
+# # Image.reshape_all([joker, me, moza1, moza2])
 # me.compute_fourier_transform()
-# joker.compute_fourier_transform()
-# moza1.compute_fourier_transform()
-# moza2.compute_fourier_transform()
-# # # # me.plot()
-# # # # joker.plot()
-# # # # moza1.plot()
-# # # # moza2.plot()
+# # joker.compute_fourier_transform()
+# # moza1.compute_fourier_transform()
+# # moza2.compute_fourier_transform()
+# # # # # me.plot()
+# # # # # joker.plot()
+# # # # # moza1.plot()
+# # # # # moza2.plot()
 # gallery.add_image(me, me.id)
-# gallery.add_image(joker, joker.id)
-# gallery.add_image(moza1, moza1.id)
-# gallery.add_image(moza2, moza2.id)
+# # gallery.add_image(joker, joker.id)
+# # gallery.add_image(moza1, moza1.id)
+# # gallery.add_image(moza2, moza2.id)
 # g = gallery.get_gallery()
-# gallery.crop_imgs(50,50,100,100)
-# mixer = Mixer(1,1/3, 1/3, 1/3, me.id, moza2.id, moza1.id, joker.id, "phase", "magnitude", "magnitude", "magnitude")
-# output = mixer.inverse_fft(g)
-# # # output = OutputImage()
-# # # output.img = output
-# # # print(output)
+# # gallery.crop_imgs(50,50,100,100)
+# mixer = Mixer(1,1, 0, 0, me.id, me.id, me.id, me.id, "phase", "magnitude", "magnitude", "magnitude")
+# output = mixer.inverse_fft(g, 0, [0, 0,0 ,0] )
+# # # # output = OutputImage()
+# # # # output.img = output
+# # # # print(output)
 # plt.imshow(output, cmap='gray')
 # plt.title("mixer output")
 # plt.show()
-# gallery.reset_imgs()
-# output = mixer.inverse_fft(g)
-# plt.imshow(output, cmap='gray')
-# plt.title("mixer output")
-# plt.show()
+# # gallery.reset_imgs()
+# # output = mixer.inverse_fft(g)
+# # plt.imshow(output, cmap='gray')
+# # plt.title("mixer output")
+# # plt.show()

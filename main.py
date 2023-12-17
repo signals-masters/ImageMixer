@@ -60,6 +60,13 @@ class CustomViewBox(pg.ViewBox):
             newImage = np.clip((self.child.originalImage + self.currentBrightness) * (1 + self.currentContrast) , 0, 255.0)
             self.child.setImage(newImage)
             event.accept()  # Accept the event
+
+    def mouseClickEvent(self, event):
+        if event.button() == QtCore.Qt.MouseButton.RightButton:
+            self.dragStartPos = None
+            self.currentBrightness = 0
+            self.currentContrast = 0
+            self.child.setImage(self.child.originalImage)
         
     def mouseReleaseEvent(self, event):
         if event.button() == QtCore.Qt.MouseButton.LeftButton:
@@ -222,6 +229,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.outputSliderValues = [(value / currentSumOfComponents) * 1 for value in self.sliderValues]
         else:
             self.outputSliderValues = [(value / 100) for value in self.sliderValues]
+        # self.outputSliderValues = [(value / 100) for value in self.sliderValues]
 
     def handleImageModeChange(self, index, i):
         mode = modes[index]
@@ -249,7 +257,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             image.load_img(imagePath)
             image.compute_fourier_transform()
             self.imageModesCombobox[index].setEnabled(True)
-            self.imageModesCombobox[index].setCurrentIndex(0)
+            self.imageModesCombobox[index].setCurrentIndex(0 if self.mixerModeSelect.currentIndex() == 0 else 2)
             # TODO: Add the image to gallery
             self.gallery.add_image(image, index)
 
@@ -262,7 +270,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 if self.viewWidgets[i] == None:
                     newGraph = CustomImageView(parent=self.imageWidgets[i])
                     self.viewWidgets[i] = newGraph
-                    print(self.viewWidgets)
                     self.imageWidgets[i].layout().addWidget(self.viewWidgets[i])
                     self.viewWidgets[i].ui.roiBtn.hide()
                     self.viewWidgets[i].ui.menuBtn.hide()
