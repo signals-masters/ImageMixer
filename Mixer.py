@@ -183,7 +183,7 @@ class Mixer():
 
             for i, img_obj in enumerate(img_objs):
                 if self.types[i] == "magnitude":
-                    magnitudes += self.weights[i] * img_obj.get_mag()
+                    magnitudes += self.weights[i] * img_obj.mag
                 elif self.types[i] == "phase":
                     phases += self.weights[i] * img_obj.phase
 
