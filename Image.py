@@ -71,10 +71,10 @@ class Image():
         return self.fft_shifted
     
     def get_mag(self):
-        return self.components_shifted[0]
+        return self.components_shifted[0].T
     
     def get_phase(self):
-        return self.components_shifted[1]
+        return self.components_shifted[1].T
     
     def get_real(self):
         return self.components_shifted[2]

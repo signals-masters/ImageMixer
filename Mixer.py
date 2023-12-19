@@ -159,11 +159,11 @@ class Mixer():
         mask = np.ones(img_objs[0].shape)
         # inner mode
         # dimensions x1,x2, y1,y2
-        if crop_mode == 2:
+        if crop_mode == 1:
             mask = np.zeros(img_objs[0].shape)
             mask[dimensions[2]:dimensions[3]+1, dimensions[0]:dimensions[1]+1] = 1
         
-        elif crop_mode == 1:
+        elif crop_mode == 2:
             mask = np.ones(img_objs[0].shape)
             mask[dimensions[2]:dimensions[3]+1, dimensions[0]:dimensions[1]+1] = 0
         
@@ -183,9 +183,9 @@ class Mixer():
 
             for i, img_obj in enumerate(img_objs):
                 if self.types[i] == "magnitude":
-                    magnitudes += self.weights[i] * img_obj.mag
+                    magnitudes += 2*self.weights[i] * np.abs(img_obj.get_fft_shifted())
                 elif self.types[i] == "phase":
-                    phases += self.weights[i] * img_obj.phase
+                    phases += 2*self.weights[i] * np.angle(img_obj.get_fft_shifted())
 
                 # Update the progress bar
                 progress_bar.update(1)
