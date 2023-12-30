@@ -1,7 +1,6 @@
-# Sampling Studio
+# Image Mixer
 
-Sampling Studio is a desktop application built with PyQt that enables users to work with biomedical signals. With Sampling Studio, you can open biomedical signal files, visualize them, sample them at a chosen frequency, and even add noise to the signals. Additionally, you can create your own signals using the built-in signal composer by specifying different signal components like amplitude, frequency, and shift.
-
+In this project, the goal is to design and implement a desktop program that illustrates the significance of magnitude and phase components, emphasizing frequency contributions within a 2D signal, particularly images. The software incorporates various features to enhance user interaction and customization.
 ## Table of Contents
 
 - [Features](#features)
